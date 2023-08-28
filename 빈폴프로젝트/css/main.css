@@ -55,11 +55,17 @@ nav > ul > li:hover > a::after {
     margin-left: 0%;
     transition: width 0.3s;
 }
-
+nav > ul:hover > li ol {
+    height: 200px;
+}
 nav ol {
     position: absolute;
     left: 0;
     top: 80px;
+    background-color: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
 }
 .main-video {
     width: 100%;
