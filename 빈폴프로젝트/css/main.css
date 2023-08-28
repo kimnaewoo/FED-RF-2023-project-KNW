@@ -37,6 +37,9 @@ nav ul li {
     font-family: "bebas Neue";
     position: relative;
 }
+nav ul li a{
+    padding: 40px 0;
+}
 nav > ul > li > a.title-menu:hover {
     text-shadow: 1.5px 2px grey;
 }
