@@ -8,57 +8,72 @@
 @import url(../css/common.css);
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 header {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    margin: 0 auto;
-    position: fixed;
-    z-index: 1;
-    background-color:#fff;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 1;
+  background-color: #fff;
 }
 h1 {
-    font-family: "DM Serif Display";
-    font-size: 36px;
+  font-size: 36px;
 }
 nav ul {
-    display: flex;
-    align-items: center;
-    column-gap: 60px;
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
 }
 nav ul li {
-    font-size: 35px;
-    font-weight: bold;
-    font-family: "bebas Neue";
-    position: relative;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "bebas Neue";
+  position: relative;
+}
+nav ul li a {
+  padding: 40px 0 40px 40px;
 }
 nav > ul > li > a.title-menu:hover {
-    text-shadow: 1.5px 2px grey;
+  text-shadow: 1.5px 2px grey;
 }
 nav > ul > li > a::after {
-    content: "";
-    display: block;
-    width: 0%;
-    margin-left: 100%;
-    margin-top: 4px;
-    height: 5px;
-    background-color: #000;
-    transition: 0.3s;
+  content: "";
+  display: block;
+  width: 0%;
+  margin-left: 100%;
+  margin-top: 4px;
+  height: 9px;
+  background-color: #000;
+  transition: 0.3s;
 }
 nav > ul > li:hover > a::after {
-    width: 100%;
-    margin-left: 0%;
-    transition: width 0.3s;
+  width: 90%;
+  margin-left: 20%;
+  transition: width 0.3s;
+}
+nav > ul:hover > li ol {
+  height: 200px;
 }
 nav ol {
-    position: absolute;
-    left: 0;
-    top: 80px;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  background-color: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
 }
 .title>h2{
     font-weight: bold;
@@ -72,5 +87,11 @@ nav ol {
     font-family: 'DM Serif Display';
     font-size: 25px;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.2;
+}
+section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-evenly;
 }
