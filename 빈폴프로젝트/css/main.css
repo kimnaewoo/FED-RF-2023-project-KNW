@@ -8,169 +8,208 @@
 @import url(../css/common.css);
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 html,
 body {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 header {
-  top: 0;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  margin: 0 auto;
-  position: fixed;
-  z-index: 1;
-  background-color: #fff;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
 }
 h1 {
-  font-size: 36px;
+    font-size: 36px;
 }
 nav ul {
-  display: flex;
-  align-items: center;
-  column-gap: 60px;
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
 }
 nav ul li {
-  font-size: 35px;
-  font-weight: bold;
-  font-family: "bebas Neue";
-  position: relative;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: "bebas Neue";
+    position: relative;
 }
 nav ul li a {
-  padding: 40px 0 40px 40px;
+    padding: 40px 0 40px 40px;
 }
 nav > ul > li > a.title-menu:hover {
-  text-shadow: 1.5px 2px grey;
+    text-shadow: 1.5px 2px grey;
 }
 nav > ul > li > a::after {
-  content: "";
-  display: block;
-  width: 0%;
-  margin-left: 100%;
-  margin-top: 4px;
-  height: 9px;
-  background-color: #000;
-  transition: 0.3s;
+    content: "";
+    display: block;
+    width: 0%;
+    margin-left: 100%;
+    margin-top: 4px;
+    height: 9px;
+    background-color: #000;
+    transition: 0.3s;
 }
 nav > ul > li:hover > a::after {
-  width: 90%;
-  margin-left: 20%;
-  transition: width 0.3s;
+    width: 90%;
+    margin-left: 20%;
+    transition: width 0.3s;
 }
 nav > ul:hover > li ol {
-  height: 200px;
+    height: 200px;
 }
 nav ol {
-  position: absolute;
-  left: 0;
-  top: 80px;
-  background-color: #fff;
-  height: 0;
-  overflow: hidden;
-  transition: 0.5s;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    background-color: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
 }
 section {
-  padding-top: 80px;
-  height: 100vh;
+    padding-top: 80px;
+    height: 100vh;
 }
 .main-video {
-  width: 100%;
-  height: 100%;
-  /* overflow: hidden; */
-  /* padding: 0 50px; */
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    /* padding: 0 50px; */
 }
 video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100%;
+    object-fit: cover;
+    width: 100vw;
+    height: 100%;
+}
+.btn-left {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    top: 50%;
+    opacity: 1;
+}
+.btn-right {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    top: 50%;
+    right: 0;
+    
+}
+.btn-left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transform: translate(-5px,-50%) rotate(138deg);
+  opacity: 1;
+}
+.btn-right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transform: translate(-17px,-50%) rotate(311deg);
+  opacity: 1;
 }
 .message {
-  position: absolute;
-  display: block;
-  top: 600px;
-  right: 30px;
-  line-height: 1.5;
-  text-align: center;
-  font-size: 30px;
-  color: #fff;
+    position: absolute;
+    display: block;
+    top: 600px;
+    right: 30px;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
 }
 .message::first-letter {
-  color: red;
-  font-size: 3em;
+    color: red;
+    font-size: 3em;
 }
 
 .main2 {
-  position: relative;
-  width: 1185px;
-  height: 1031px;
-  margin-left: 37%;
-  background: gray url(../img/main2.jpg) no-repeat center/cover;
-  border-radius: 25px;
+    position: relative;
+    width: 1185px;
+    height: 1031px;
+    margin-left: 37%;
+    background: gray url(../img/main2.jpg) no-repeat center/cover;
+    border-radius: 25px;
 }
 @keyframes main2-ani {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .main2_main > a h2 {
-  color: #755139;
-  font-size: 100px;
-  animation: main2-ani normal 8s;
+    color: #755139;
+    font-size: 100px;
+    animation: main2-ani normal 8s;
 }
 
 .main2_main {
-  position: absolute;
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 1.2;
-  text-align: center;
-  top: 20vw;
-  left: -30vw;
-  content: "";
-  display: block;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    top: 20vw;
+    left: -30vw;
+    content: "";
+    display: block;
 }
 .main3_main {
-  width: 800px;
-  height: 850px;
-  background: url(../img/brand.jpg) no-repeat center/cover;
-  border-radius: 80px;
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 1.5;
-  text-align: center;
-  transition: 1s;
+    width: 800px;
+    height: 850px;
+    background: url(../img/brand.jpg) no-repeat center/cover;
+    border-radius: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    transition: 1s;
 }
 .main3_main:hover {
-  width: 800px;
-  height: 850px;
-  background: url(../img/brand2.jpg) no-repeat center/cover;
-  transition: 1s;
+    width: 800px;
+    height: 850px;
+    background: url(../img/brand2.jpg) no-repeat center/cover;
+    transition: 1s;
 }
 .main3 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  column-gap: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 100px;
 }
 .main3 > a h2 {
-  font-size: 100px;
-  color: darkgreen;
+    font-size: 100px;
+    color: darkgreen;
 }
 
 .main3 a {
-  line-height: 1.2;
-  text-align: center;
-  font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+    font-size: 30px;
 }
