@@ -80,7 +80,7 @@ nav ol {
     color: darkgreen;
     font-size: 60px;
 }
-.title{
+section.title{
     position: absolute;
     top: 35vh;
     margin-left: 30%;
@@ -88,10 +88,15 @@ nav ol {
     font-size: 25px;
     text-align: center;
     line-height: 1.2;
+   
 }
-section{
+section.main div{
+  height: 100%;
+  background-color: #755139;
+  background: url(../img/men01.jpg) no-repeat 80% 80% contain;
+  margin-top: 30%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-content: space-evenly;
+    align-content: space-between;
 }
