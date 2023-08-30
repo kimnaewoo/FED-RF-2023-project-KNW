@@ -15,6 +15,9 @@ body {
     width: 100%;
     height: 100%;
 }
+/* body *{
+    outline: 5px dashed red;
+} */
 header {
     top: 0;
     width: 100%;
@@ -101,11 +104,13 @@ button img {
     position: absolute;
     top: 50%;
     transform: rotate(-180deg);
+    padding: 0;
 }
 .btn-right {
     position: absolute;
     top: 50%;
     right: 0;
+    padding: 0;
 }
 .message {
     position: absolute;
@@ -125,7 +130,7 @@ button img {
 .main2 {
     position: relative;
     width: 1185px;
-    height: 1031px;
+    height: 100%;
     margin-left: 37%;
     background: gray url(../img/main2.jpg) no-repeat center/cover;
     border-radius: 25px;
@@ -180,6 +185,7 @@ button img {
     justify-content: space-around;
     align-items: center;
     column-gap: 100px;
+    padding-bottom: 80px;
 }
 .main3 > a h2 {
     font-size: 100px;
@@ -191,6 +197,36 @@ button img {
     text-align: center;
     font-weight: bold;
     font-size: 30px;
+}
+.main4 {
+  background-image: url(../img/jurnal.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100% ;
+  background-position: cover;
+  
+}
+.main4_main h2 {
+    font-size: 300px;
+    text-align: center;
+    margin-top: 100px;
+}
+.main4-tb{
+    height: 160px;
+    width: 200px;
+}
+.main4-tb img{
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    margin-left: 445%;
+    width: 60%;
+    height: 60%;
+}
+.main4_main .main4-letter {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
 }
 .flying-poster {
     position: fixed;
