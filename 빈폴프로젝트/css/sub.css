@@ -90,13 +90,3 @@ section.title{
     line-height: 1.2;
    
 }
-section.main div{
-  height: 100%;
-  background-color: #755139;
-  background: url(../img/men01.jpg) no-repeat 80% 80% contain;
-  margin-top: 30%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: space-between;
-}
