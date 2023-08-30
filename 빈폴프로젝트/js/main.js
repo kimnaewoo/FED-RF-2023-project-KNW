@@ -18,6 +18,6 @@ function loadFn() {
         moving.style.backgroundImage = `url(${
             img_src[minfo[0].innerText == "" ? "기본" : minfo[0].innerText]
         })`;
-        moving.style.display = "block";
+        // moving.style.display = "block";
     };
 }

@@ -91,12 +91,11 @@ video {
     height: 100%;
 }
 button {
-  cursor: pointer;
-  
+    cursor: pointer;
 }
-button img{
-  width: 50px;
-  height: 50px;
+button img {
+    width: 50px;
+    height: 50px;
 }
 .btn-left {
     position: absolute;
@@ -168,13 +167,13 @@ button img{
     font-weight: bold;
     line-height: 1.5;
     text-align: center;
-    transition: .7s;
+    transition: 0.7s;
 }
 .main3_main:hover {
     width: 800px;
     height: 850px;
     background: url(../img/brand2.jpg) no-repeat center/cover;
-    transition: .7s;
+    transition: 0.7s;
 }
 .main3 {
     display: flex;
@@ -188,9 +187,9 @@ button img{
 }
 
 .main3 a {
-  line-height: 1.2;
-  text-align: center;
-  font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: bold;
     font-size: 30px;
 }
 .flying-poster {
@@ -199,9 +198,9 @@ button img{
     left: 0;
     width: 150px;
     height: 150px;
-    transform: translate(-50%,-100%);
+    transform: translate(-50%, -100%);
     /* 마우스 포인터 중앙이동 */
     background: url(../img/mouse-pointer.png) no-repeat center/cover;
     transition: 0.2s ease-out;
-pointer-events : none;
+    pointer-events: none;
 }
