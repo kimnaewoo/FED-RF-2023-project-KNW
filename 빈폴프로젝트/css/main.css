@@ -240,3 +240,21 @@ button img {
     transition: 0.2s ease-out;
     pointer-events: none;
 }
+
+.main5{
+    background-image: url(../img/g-activity.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100% 100%;
+}
+.main5 h2{
+    color: gray;
+    font-size: 300px;
+}
+.main5_letter{
+    padding-left: 20px;
+    font-size: 30px;
+    color: gray;
+    font-weight: bold;
+    text-align: left;
+}
