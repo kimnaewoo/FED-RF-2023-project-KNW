@@ -75,30 +75,26 @@ nav ol {
   overflow: hidden;
   transition: 0.5s;
 }
-.title{
+.title {
   margin-top: 200px;
-    position: absolute;
-    margin-left: 9%;
-    font-family: 'DM Serif Display';
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.2;
-  }
-  .title>h2{
-      font-weight: bold;
-      color: #000;
-      font-size: 80px;
-  }
-  .title .effect img{
-   width: 200px;
-   height: 150px;
-  }
-  .bg-c{
-    background:linear-gradient(to right, );
-  }
-.tit-img img{
-  margin-left: 35.2%;
-  height: 700px;
+  position: absolute;
+  margin-left: 9%;
+  font-family: "DM Serif Display";
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
 }
-
+.title > h2 {
+  font-weight: bold;
+  color: #000;
+  font-size: 80px;
+}
+.title .effect img {
+  width: 200px;
+  height: 150px;
+}
+.tit-img img {
+  margin-left: 44.5%;
+  height: 600px;
+}
