@@ -94,5 +94,11 @@ nav ol {
    width: 200px;
    height: 150px;
   }
-
+  .bg-c{
+    background:linear-gradient(to right, );
+  }
+.tit-img img{
+  margin-left: 35.2%;
+  height: 700px;
+}
 
