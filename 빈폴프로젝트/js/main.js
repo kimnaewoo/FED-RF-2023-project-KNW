@@ -22,3 +22,8 @@ function loadFn() {
         // moving.style.display = "block";
     };
 }
+
+let sec_num=0;
+let sts_wheel=0;
+
+
