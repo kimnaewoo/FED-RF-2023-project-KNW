@@ -6,7 +6,7 @@
 /* font-family: 'DM Serif Display', serif; */
 /* font-family: 'Noto Sans KR', sans-serif; */
 @import url(../css/common.css);
-
+@import url(./main-brand.css);
 html {
     scroll-behavior: smooth;
 }
@@ -163,41 +163,7 @@ button img {
     content: "";
     display: block;
 }
-.main3_main {
-    width: 800px;
-    height: 850px;
-    background: url(../img/brand.jpg) no-repeat center/cover;
-    border-radius: 80px;
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 1.5;
-    text-align: center;
-    transition: 0.7s;
-}
-.main3_main:hover {
-    width: 800px;
-    height: 850px;
-    background: url(../img/brand2.jpg) no-repeat center/cover;
-    transition: 0.7s;
-}
-.main3 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    column-gap: 100px;
-    padding-bottom: 80px;
-}
-.main3 > a h2 {
-    font-size: 100px;
-    color: darkgreen;
-}
 
-.main3 a {
-    line-height: 1.2;
-    text-align: center;
-    font-weight: bold;
-    font-size: 30px;
-}
 .main4 {
   background-image: url(../img/jurnal.jpg);
   background-repeat: no-repeat;

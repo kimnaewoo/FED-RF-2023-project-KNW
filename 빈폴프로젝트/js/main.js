@@ -5,7 +5,7 @@ const qsa = (x) => document.querySelectorAll(x);
 
 function loadFn() {
     console.log("로딩완료!!");
-     startSS();
+     
     const body = qs("body");
     const moving = qs(".flying-poster");
     console.log("추가대상:", body, moving);
@@ -21,9 +21,8 @@ function loadFn() {
         })`;
         // moving.style.display = "block";
     };
+   
 }
 
-let sec_num=0;
-let sts_wheel=0;
-
+// startSS();
 
