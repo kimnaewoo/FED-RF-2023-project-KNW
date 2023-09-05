@@ -90,7 +90,7 @@ section {
 }
 video {
     object-fit: cover;
-    width: 100vw;
+    width: 100%;
     height: 100%;
 }
 button {
@@ -103,6 +103,7 @@ button img {
 .btn-left {
     position: absolute;
     top: 50%;
+    left: 0;
     transform: rotate(-180deg);
     padding: 0;
 }
@@ -115,8 +116,8 @@ button img {
 .message {
     position: absolute;
     display: block;
-    top: 600px;
-    right: 30px;
+    top: 60%;
+    right: 8%;
     line-height: 1.5;
     text-align: center;
     font-size: 30px;
@@ -128,11 +129,15 @@ button img {
 }
 .main2 {
     position: relative;
-    width: 1185px;
+    width: 63%;
     height: 100%;
     margin-left: 37%;
-    background: gray url(../img/main2.jpg) no-repeat center/cover;
-    border-radius: 25px;
+    background: url(../img/main2.jpg) no-repeat center/cover;
+}
+.main2_main > a h2 {
+    color: #755139;
+    font-size: 10rem;
+    animation: main2-ani normal 8s;
 }
 @keyframes main2-ani {
     0% {
@@ -144,30 +149,28 @@ button img {
         transform: translateX(0);
     }
 }
-.main2_main > a h2 {
-    color: #755139;
-    font-size: 100px;
-    animation: main2-ani normal 8s;
-}
 .main2_main {
     position: absolute;
-    font-size: 30px;
+    font-size: 200%;
     font-weight: bold;
     line-height: 1.2;
     text-align: center;
-    top: 20vw;
-    left: -30vw;
-    content: "";
-    display: block;
+    top: 65vw;
+    left: 3vw;
 }
 .main4 {
+    width: 100%;
+    height: 100%;
   background-image: url(../img/jurnal.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100% ;
   background-position: cover;
 }
-.main4_main h2 {
-    font-size: 300px;
+.main4_main{
+    margin-top: 7%;
+}
+.main4_main a{
+    font-size: 20rem;
     text-align: center;
     margin-top: 100px;
 }
@@ -176,18 +179,15 @@ button img {
     width: 200px;
 }
 .main4-tb img{
-    margin-top: 50px;
-    width: 100px;
-    height: 100px;
-    margin-left: 445%;
     width: 60%;
+    margin-left: 450%;
     height: 60%;
 }
 .main4_main .main4-letter {
-    margin-top: 50px;
-    font-size: 30px;
+    width: 30%;
+    margin-left: 36%;
+    font-size: 2rem;
     font-weight: bold;
-    text-align: center;
 }
 .main5{
     position: relative;
