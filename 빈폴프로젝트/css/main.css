@@ -126,7 +126,6 @@ button img {
     color: red;
     font-size: 3em;
 }
-
 .main2 {
     position: relative;
     width: 1185px;
@@ -145,13 +144,11 @@ button img {
         transform: translateX(0);
     }
 }
-
 .main2_main > a h2 {
     color: #755139;
     font-size: 100px;
     animation: main2-ani normal 8s;
 }
-
 .main2_main {
     position: absolute;
     font-size: 30px;
@@ -163,13 +160,11 @@ button img {
     content: "";
     display: block;
 }
-
 .main4 {
   background-image: url(../img/jurnal.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100% ;
   background-position: cover;
-  
 }
 .main4_main h2 {
     font-size: 300px;
@@ -194,19 +189,6 @@ button img {
     font-weight: bold;
     text-align: center;
 }
-.flying-poster {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    transform: translate(-50%, -100%);
-    /* 마우스 포인터 중앙이동 */
-    background: url(../img/mouse-pointer.png) no-repeat center/cover;
-    transition: 0.2s ease-out;
-    pointer-events: none;
-}
-
 .main5{
     position: relative;
     top: 0;
