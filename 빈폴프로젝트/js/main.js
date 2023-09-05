@@ -19,15 +19,25 @@ window.addEventListener("wheel", wheelFn);
 
 function loadFn() {
     ele_page = qsa("section");
-    // console.log('페이지요소:',ele_page);
+    console.log('페이지요소:',ele_page);
     total_pg = ele_page.length;
     // console.log('페이지요소:',total_pg);
-    
-    const img = qsa('span');
-    // console.log(img);
-    
-}
 
+    const moveImg = qsa('span');
+    console.log(moveImg);
+    // for(let x of moveImg){
+    //     x.classList.add("go");
+    // };
+
+    moveImg.forEach((e)=>{
+        console.log(e);
+        e.onclick=(s)=>{
+            console.log("s:",s);
+            e.classList.toggle("go");
+        }
+    });
+
+}
 function wheelFn() {
     if (sts_wheel) return;
     sts_wheel = 1;
