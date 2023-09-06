@@ -22,6 +22,7 @@ function loadFn() {
   console.log("페이지요소:", ele_page);
   total_pg = ele_page.length;
   // console.log('페이지요소:',total_pg);
+  
 }
 function wheelFn() {
   if (sts_wheel) return;
