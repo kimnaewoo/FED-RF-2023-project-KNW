@@ -177,15 +177,15 @@ button img {
   position: relative;
 }
 .cbox_container {
-  width: 100%;
   position: absolute;
+  width: 100%;
   top: -12vw;
   left: 0;
 }
 .cbox_container img {
   width: 10vw;
   height: 15vw;
-  border-radius: 5%;
+  border-radius: 8%;
 }
 .cbox {
   display: flex;
@@ -193,6 +193,9 @@ button img {
 }
 .cbox3 {
   padding: 0 12.5%;
+  position: absolute;
+  width: 100%;
+  top: 75%;
 }
 .main4 {
   width: 100%;
