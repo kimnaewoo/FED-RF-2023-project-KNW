@@ -22,38 +22,67 @@ header {
     top: 0;
     width: 100%;
     height: 80px;
+    padding: 1% 2%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    /* padding: 0 20px; */
+    /* align-items: center; */
     margin: 0 auto;
     position: fixed;
     z-index: 1;
     background-color: #fff;
 }
-
 h1 {
     font-size: 36px;
 }
-nav ul {
+nav{
+    display: flex;
+    gap: 0 2vw;
+}
+header:hover{
+    height: 300px;
+    background-color: #fff;
+    transition: .3s;
+}
+header:hover nav dd{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s
+    /* transition-delay: 0.3s; */
+}
+nav dl{
+    text-align: center;
+}
+nav dt{
+    padding-bottom: 40px;
+    font-size: 32px;
+}
+nav > dt>a:hover {
+    text-shadow: 1.5px 2px grey;
+}
+nav dd{
+    line-height: 1.5;
+    font-size: 24px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* nav ul {
     display: flex;
     align-items: center;
     column-gap: 60px;
 }
-
 nav ul li {
+    position: relative;
     font-size: 35px;
     font-weight: bold;
     font-family: "bebas Neue";
-    position: relative;
 }
-nav ul li a {
-    padding: 40px 0 40px 40px;
-}
+
 nav > ul > li > a.title-menu:hover {
     text-shadow: 1.5px 2px grey;
 }
 nav > ul > li > a::after {
+    position: absolute;
     content: "";
     display: block;
     width: 0%;
@@ -65,21 +94,32 @@ nav > ul > li > a::after {
 }
 nav > ul > li:hover > a::after {
     width: 90%;
-    margin-left: 20%;
+    margin-left: 5%;
     transition: width 0.3s;
 }
-nav > ul:hover > li ol {
-    height: 200px;
-}
-nav ol {
+
+nav .sub-menu {
+    display: flex;
+    column-gap: 60px;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 2%;
     position: absolute;
     left: 0;
     top: 80px;
     background-color: #fff;
-    height: 0;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2;
+    opacity: 0;
     overflow: hidden;
     transition: 0.5s;
 }
+
+nav ul:hover .sub-menu{
+    width: 100%;
+    height: 300px;
+} */
 section {
     padding-top: 80px;
     height: 100vh;
@@ -89,9 +129,15 @@ section {
     height: 100%;
     display: flex;
     position: relative;
+    overflow: hidden;
+}
+.videos > div {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
 }
 .main-video {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     height: 100%;
     /* overflow: hidden; */
@@ -137,13 +183,16 @@ div img {
     color: red;
     font-size: 3em;
 }
-.main2 {
+/* .main2 {
     position: relative;
-    width: 63%;
+}
+.main2 {
+    width: 100%;
     height: 100%;
     margin-left: 37%;
-    background: url(../img/main2.jpg) no-repeat center/cover;
-}
+    background: url(../img/main2.jpg) no-repeat right/cover;
+    background-size: 63%;
+} */
 .main2_main > a h2 {
     color: #755139;
     font-size: 10rem;
@@ -159,14 +208,38 @@ div img {
         transform: translateX(0);
     }
 }
-.main2_main {
+/* .main2_main {
     position: absolute;
     font-size: 200%;
     font-weight: bold;
     line-height: 1.2;
     text-align: center;
-    top: 65vw;
-    left: 3vw;
+    top: 20%;
+    left: 3%;
+} */
+
+.main2 {
+    display: flex;
+}
+.main2 > div {
+    height: 100%;
+}
+.main2_img {
+    width: 63%;
+    background: url(../img/main2.jpg) no-repeat center/cover;
+}
+.main2_main {
+    position: relative;
+    width: 37%;
+    font-size: 200%;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+}
+.main2_main a{
+    position: absolute;
+    top: 23%;
+    left: 10%;
 }
 .main3 {
     width: 100%;
@@ -209,13 +282,13 @@ div img {
     top: 75%;
 }
 .main4 {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: url(../img/jurnal02.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: cover;
-    position: relative;
 }
 .main4_main {
     position: absolute;
@@ -229,15 +302,15 @@ div img {
     position: absolute;
     top: 60%;
     text-align: center;
-    width: 100vw;
+    width: 100%;
     font-size: 2rem;
     font-weight: bold;
 }
 .main5{
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background: #070707 url(../img/main5_02.jpg) no-repeat 50% -400%/40.2%;
+    background: #0a0a0a url(../img/main5_02.jpg) no-repeat 50% -400%/41.4%;
 }
 .main5_main{
     position: absolute;
