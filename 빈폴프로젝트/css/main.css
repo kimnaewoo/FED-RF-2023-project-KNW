@@ -15,9 +15,6 @@ body {
     width: 100%;
     height: 100%;
 }
-/* body *{
-    outline: 5px dashed red;
-} */
 header {
     top: 0;
     width: 100%;
@@ -39,14 +36,14 @@ nav{
     gap: 0 2vw;
 }
 header:hover{
-    height: 300px;
+    height: 250px;
     background-color: #fff;
-    transition: .3s;
+    transition: .5s;
 }
 header:hover nav dd{
     visibility: visible;
     opacity: 1;
-    transition: 0.3s
+    transition: 0.5s
     /* transition-delay: 0.3s; */
 }
 nav dl{
@@ -56,8 +53,11 @@ nav dt{
     padding-bottom: 40px;
     font-size: 32px;
 }
-nav > dt>a:hover {
-    text-shadow: 1.5px 2px grey;
+nav > dl > dt a{
+    text-shadow: 4px 2px 2px gray;
+}
+nav > dl > dt a:hover{
+    transform: scale(1.2);
 }
 nav dd{
     line-height: 1.5;
