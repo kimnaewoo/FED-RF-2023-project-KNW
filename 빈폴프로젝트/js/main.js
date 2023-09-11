@@ -23,8 +23,8 @@ function loadFn() {
   total_pg = ele_page.length;
   // console.log('페이지요소:',total_pg);
 
-  const cbox = qsa('.cbox_container');
-  const img = qsa('.cbox');
+  const cbox = qsa(".cbox_container");
+  const img = qsa(".cbox");
 }
 function wheelFn() {
   if (sts_wheel) return;

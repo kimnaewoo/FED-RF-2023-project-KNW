@@ -8,93 +8,116 @@
 @import url(../css/common.css);
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 html,
 body {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
+}
+body{
+  position: relative;
+  font-family: 'DM Serif Display','Noto Sans KR', serif;
+;
 }
 header {
-  top: 0;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  margin: 0 auto;
-  position: fixed;
-  z-index: 1;
-  background-color: #fff;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    padding: 1% 2%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 0 auto;
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+    border-bottom: 1px double #000;
 }
 h1 {
-  font-size: 36px;
+    font-size: 36px;
 }
-nav ul {
+nav{
+    display: flex;
+    gap: 0 2vw;
+}
+header:hover{
+    height: 250px;
+    background-color: #fff;
+    transition: .5s;
+}
+header:hover nav dd{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s
+    /* transition-delay: 0.3s; */
+}
+nav dl{
+    text-align: center;
+}
+nav dt {
+    padding-bottom: 40px;
+    font-weight: bold;
+    font-size: 32px;
+}
+nav dt a, nav dd a{
+    display: inline-block;
+}
+nav > dl > dt a:hover{
+    text-shadow: 4px 2px 2px gray;
+    /* transform: scale(1.2); */
+    /* border-bottom: 2px solid #000; */
+}
+nav dd{
+    font-weight: bold;
+    line-height: 1.5;
+    font-size: 24px;
+    visibility: hidden;
+    opacity: 0;
+}
+nav dd > a:hover{
+    text-shadow: 4px 2px 2px gray;
+    transform: scale(1.2);
+    /* border-bottom: 2px solid #000; */
+}
+.title{
+  padding-top: 10%;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.position > ul{
+  font-size: 1.4rem;
+  color: #313577;
   display: flex;
-  align-items: center;
-  column-gap: 60px;
+  gap: 0 25px;
 }
-nav ul li {
-  font-size: 35px;
-  font-weight: bold;
-  font-family: "bebas Neue";
-  position: relative;
+.posiotion ul li:nth-child(3){
+  text-decoration: underline;
 }
-nav ul li a {
-  padding: 40px 0 40px 40px;
-}
-nav > ul > li > a.title-menu:hover {
-  text-shadow: 1.5px 2px grey;
-}
-nav > ul > li > a::after {
-  content: "";
-  display: block;
-  width: 0%;
-  margin-left: 100%;
-  margin-top: 4px;
-  height: 9px;
-  background-color: #000;
-  transition: 0.3s;
-}
-nav > ul > li:hover > a::after {
-  width: 90%;
-  margin-left: 20%;
-  transition: width 0.3s;
-}
-nav > ul:hover > li ol {
-  height: 200px;
-}
-nav ol {
+.content{
   position: absolute;
-  left: 0;
-  top: 80px;
-  background-color: #fff;
-  height: 0;
-  overflow: hidden;
-  transition: 0.5s;
-}
-.title {
-  margin-top: 200px;
-  position: absolute;
-  margin-left: 9%;
-  font-family: "DM Serif Display";
-  font-size: 35px;
-  font-weight: bold;
+  margin-top: 3%;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%);
   text-align: center;
-  line-height: 1.2;
 }
-.title > h2 {
-  font-weight: bold;
-  color: #000;
-  font-size: 80px;
+.content h2{
+  font-size: 3rem;
+  margin-bottom: 5%;
+  -webkit-background-clip: text;
+    background-image: linear-gradient(to right,#cf7933, rgb(99, 78, 59) );
+    color: transparent;
 }
-.title .effect img {
+.content h3{
+  line-height: 1.4;
+  font-size: 1.4rem;
+  
+}
+.tit-i{
   width: 200px;
   height: 150px;
-}
-.tit-img img {
-  margin-left: 44.5%;
-  height: 600px;
+  margin: 0 auto;
+  background: url(../img/mouse-pointer.png) no-repeat center/cover;
 }
