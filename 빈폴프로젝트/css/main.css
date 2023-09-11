@@ -49,21 +49,28 @@ header:hover nav dd{
 nav dl{
     text-align: center;
 }
-nav dt{
+nav dt {
     padding-bottom: 40px;
+    font-weight: bold;
     font-size: 32px;
 }
-nav > dl > dt a{
-    text-shadow: 4px 2px 2px gray;
+nav dt a, nav dd a{
+    display: inline-block;
 }
 nav > dl > dt a:hover{
+    text-shadow: 4px 2px 2px gray;
     transform: scale(1.2);
 }
 nav dd{
+    font-weight: bold;
     line-height: 1.5;
     font-size: 24px;
     visibility: hidden;
     opacity: 0;
+}
+nav dd > a:hover{
+    text-shadow: 4px 2px 2px gray;
+    transform: scale(1.2);
 }
 
 /* nav ul {
