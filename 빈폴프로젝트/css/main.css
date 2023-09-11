@@ -205,7 +205,7 @@ div img {
 .main2_main > a h2 {
     color: #755139;
     font-size: 10rem;
-    animation: main2-ani normal 8s;
+    animation: main2-ani normal 3s infinite;
 }
 @keyframes main2-ani {
     0% {
@@ -284,11 +284,20 @@ div img {
     display: flex;
     justify-content: space-around;
 }
+.cbox img{
+    animation: cbox-ani 3s infinite;
+}
 .cbox3 {
     padding: 0 12.5%;
     position: absolute;
     width: 100%;
     top: 75%;
+}
+@keyframes cbox-ani {
+    to{
+        transform: rotateY(360deg);
+    }
+    
 }
 .main4 {
     position: relative;
