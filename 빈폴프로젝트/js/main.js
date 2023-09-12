@@ -100,7 +100,7 @@ function autoSlide(){
           slider.style.transition = 'none';
         }, 600);
     
-  }, 2000);
+  }, 8000);
 }
 
 autoSlide();
