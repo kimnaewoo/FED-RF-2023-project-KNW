@@ -41,3 +41,12 @@ function wheelFn() {
   if (pg_num == total_pg) pg_num = total_pg - 1;
   window.scrollTo(0, window.innerHeight * pg_num);
 }
+
+const move = qsa('.cbox');
+
+move.forEach(ele=>{
+  ele.addEventListener('click',showMove);
+})
+function showMove(){
+ console.log(showMove);
+}
