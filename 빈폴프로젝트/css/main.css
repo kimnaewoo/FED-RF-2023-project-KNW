@@ -3,8 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
 /* font-family: 'DM Serif Display', serif; */
 /* font-family: 'Noto Sans KR', sans-serif; */
+/* font-family: 'Gowun Batang', serif; */
 @import url(../css/common.css);
 
 html {
@@ -80,6 +83,9 @@ nav dd > a:hover {
 section {
   padding-top: 80px;
   height: 100vh;
+}
+#footer{
+  height: 40vh;
 }
 .videos {
   width: 100%;
@@ -288,4 +294,37 @@ opacity: 0;
   -webkit-background-clip: text;
   background-image: linear-gradient(to right, #fff, lightblue);
   color: transparent;
+}
+#footer{
+  background-color: rgba(255, 235, 205, 0.712);
+  height: 65%;
+}
+.footer_logo{
+  top: -45%;
+  width: 100%;
+  text-align: center;
+}
+.footer_logo>img{
+  width: 200px;
+  height: 150px;
+}
+.fot-Menu{
+ border-bottom: 2px solid #000;
+}
+.fot-Menu>h3{
+  font-size: 3rem;
+  margin-left: 50px;
+}
+.fot-Menu ul{
+  display: flex;
+  gap: 0 30px;
+  margin: 10px 50px 5px;
+  font-size: 1.5rem;
+}
+.fot-Menu ul>li:hover{
+  transform: scale(1.2);
+}
+.footerwrap>h2{
+ font-size: 2.5rem;
+  margin: 85px 50px 10px;
 }
