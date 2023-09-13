@@ -111,7 +111,7 @@ const scAct = domFn.qsa(".cbox");
 console.log(scAct);
 domFn.addEvt(window, "scroll", showIt);
 domFn.addEvt(window, "scroll",);
-const CRITERIA = (window.innerHeight / 4) * 3;
+const CRITERIA = (('.main3').innerHeight);
 function showIt() {
   let scTop = window.scrollY;
   for (let x of scAct) addOn(x);
