@@ -125,3 +125,27 @@ function clearAuto() {
 //   if (bTop < CRITERIA) ele.classList.add("on");
 //   else ele.classList.remove("on");
 // }
+
+const stage = domFn.qs("header>h1");
+console.log("대상:", stage);
+const myText = "BEANPOLE";
+let hcode = "";
+let seqNum = 0;
+for (let x of myText) {
+
+  if (x == " ") hcode += "&nbsp;&nbsp;";
+  else hcode += `<span style='transition-delay:${seqNum*0.2}s'>${x}</span>`;
+ 
+  seqNum++;
+} 
+console.log(hcode);
+
+stage.innerHTML = hcode;
+
+setInterval(() => {
+    stage.classList.add('on');
+  },2000);
+  
+setInterval(()=>{
+  stage.classList.remove('on');
+},4000)
