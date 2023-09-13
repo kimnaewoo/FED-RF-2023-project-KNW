@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
 
 /* font-family: 'DM Serif Display', serif; */
 /* font-family: 'Noto Sans KR', sans-serif; */
@@ -58,16 +58,16 @@ nav dt {
   font-weight: bold;
   font-size: 32px;
 }
-nav>dl:nth-of-type(1)>dt:hover{
+nav > dl:nth-of-type(1) > dt:hover {
   color: #755139;
 }
-nav>dl:nth-of-type(2)>dt:hover{
+nav > dl:nth-of-type(2) > dt:hover {
   color: darkgreen;
 }
-nav>dl:nth-of-type(3)>dt:hover{
-   color: rgba(255, 140, 0, 0.712);
+nav > dl:nth-of-type(3) > dt:hover {
+  color: rgba(255, 140, 0, 0.712);
 }
-nav>dl:nth-of-type(4)>dt:hover{
+nav > dl:nth-of-type(4) > dt:hover {
   color: #fff;
   text-shadow: 4px 4px;
 }
@@ -97,7 +97,7 @@ section {
   padding-top: 80px;
   height: 100vh;
 }
-#footer{
+#footer {
   height: 40vh;
 }
 .videos {
@@ -105,13 +105,12 @@ section {
   height: 100%;
   overflow: hidden;
 }
-.slider{
+.slider {
   display: flex;
   position: relative;
   left: 0;
   width: 100%;
   height: 100%;
-
 }
 .slider > div {
   width: 100%;
@@ -130,7 +129,8 @@ video {
   width: 100%;
   height: 100%;
 }
-.main-video3 img, .main-video4 img{
+.main-video3 img,
+.main-video4 img {
   width: 100%;
   height: 100%;
 }
@@ -245,12 +245,17 @@ div img {
   justify-content: space-around;
 }
 .cbox img {
-opacity: 0;
-  transform: rotateY(180deg);
+  opacity: 0;
+  transition: 1.2s ease-in-out;
+  /* transform: rotateY(180deg); */
   /* animation: cbox-ani 3s alternate infinite; */
 }
+.cbox .on img {
+  opacity: 1;
+  transform: rotateY(180deg);
+}
 .cbox img:hover {
-  transform: scale(2);
+  transform: translate(0, 0);
   transition: 2s;
   z-index: 1;
   opacity: 1;
@@ -318,42 +323,42 @@ opacity: 0;
   background-image: linear-gradient(to right, #fff, lightblue);
   color: transparent;
 }
-#footer{
+#footer {
   background-color: rgba(255, 235, 205, 0.712);
   height: 65%;
 }
-.footer_logo{
+.footer_logo {
   top: -45%;
   width: 100%;
   text-align: center;
 }
-.footer_logo>img{
+.footer_logo > img {
   width: 200px;
   height: 150px;
 }
-.fot-Menu{
- border-bottom: 2px solid #000;
+.fot-Menu {
+  border-bottom: 2px solid #000;
 }
-.fot-Menu>h3{
+.fot-Menu > h3 {
   font-size: 3rem;
   margin-left: 50px;
 }
-.fot-Menu ul{
+.fot-Menu ul {
   display: flex;
   gap: 0 30px;
   margin: 10px 50px 5px;
   font-size: 1.5rem;
 }
-.fot-Menu ul>li:hover{
+.fot-Menu ul > li:hover {
   transform: scale(1.2);
 }
-#footer h2{
- font-size: 2.5rem;
+#footer h2 {
+  font-size: 2.5rem;
   margin: 85px 50px 10px;
 }
-#footer ul{
+#footer ul {
   font-size: 1.1rem;
-    font-weight: bold;
-    margin-left: 50px;
-    line-height: 1.4;
+  font-weight: bold;
+  margin-left: 50px;
+  line-height: 1.4;
 }
