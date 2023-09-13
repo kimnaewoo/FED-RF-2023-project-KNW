@@ -70,7 +70,7 @@ abtn.forEach((ele) => {
         slider.style.transition = "none";
       }, 600);
     } else {
-      let temp = qsa(".slider>div");
+      let temp = domFn.qsa(".slider>div");
       slider.insertBefore(temp[temp.length - 1], temp[0]);
       slider.style.left = "-100%";
       slider.style.transition = "none";
@@ -107,21 +107,21 @@ function clearAuto() {
   autoT = setTimeout(autoSlide, 3000);
 }
 
-const scAct = domFn.qsa(".cbox");
+// const scAct = domFn.qsa(".cbox");
 
 // console.log(scAct);
 
-domFn.addEvt(window, "scroll", showIt);
+// domFn.addEvt(window, "scroll", showIt);
 
-const CRITERIA = (('.main3').innerHeight);
+// const CRITERIA = (('.main3').innerHeight);
 
-function showIt() {
-  let scTop = window.scrollY;
-  for (let x of scAct) addOn(x);
-}
+// function showIt() {
+//   let scTop = window.scrollY;
+//   for (let x of scAct) addOn(x);
+// }
 
-function addOn(ele) {
-  let bTop = domFn.getBCR(ele);
-  if (bTop < CRITERIA) ele.classList.add("on");
-  else ele.classList.remove("on");
-}
+// function addOn(ele) {
+//   let bTop = domFn.getBCR(ele);
+//   if (bTop < CRITERIA) ele.classList.add("on");
+//   else ele.classList.remove("on");
+// }

@@ -58,19 +58,20 @@ nav dt {
   font-weight: bold;
   font-size: 32px;
 }
-nav > dl:nth-of-type(1) > dt:hover {
+header nav dl:nth-of-type(1):hover dt a,header nav dl:nth-of-type(1):hover dd:hover a{
   color: #755139;
 }
-nav > dl:nth-of-type(2) > dt:hover {
+header nav dl:nth-of-type(2):hover dt a,header nav dl:nth-of-type(2):hover dd:hover a{
   color: darkgreen;
 }
-nav > dl:nth-of-type(3) > dt:hover {
+header nav dl:nth-of-type(3):hover dt a,header nav dl:nth-of-type(3):hover dd:hover a{
   color: rgba(255, 140, 0, 0.712);
 }
-nav > dl:nth-of-type(4) > dt:hover {
+header nav dl:nth-of-type(4):hover dt a,header nav dl:nth-of-type(4):hover dd:hover a{
   color: #fff;
-  text-shadow: 4px 4px;
+  text-shadow: 4px 4px 4px gray;
 }
+
 nav dt a,
 nav dd a {
   display: inline-block;
@@ -324,6 +325,7 @@ div img {
   color: transparent;
 }
 #footer {
+  position: relative;
   background-color: rgba(255, 235, 205, 0.712);
   height: 65%;
 }
@@ -337,7 +339,8 @@ div img {
   height: 150px;
 }
 .fot-Menu {
-  border-bottom: 2px solid #000;
+  position: relative;
+  border-bottom: 4px solid darkgreen;
 }
 .fot-Menu > h3 {
   font-size: 3rem;
@@ -347,10 +350,31 @@ div img {
   display: flex;
   gap: 0 30px;
   margin: 10px 50px 5px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .fot-Menu ul > li:hover {
-  transform: scale(1.2);
+  transform: scale(1.4);
+}
+.sns-menu{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.sns-menu h3{
+  font-size: 3rem;
+  margin-left: 50px;
+}
+.sns-menu span {
+  display: none;
+}
+.fa-facebook:hover{
+  color: cornflowerblue;
+}
+.fa-instagram:hover{
+  color: orange;
+}
+.fa-youtube:hover{
+  color: orangered;
 }
 #footer h2 {
   font-size: 2.5rem;
@@ -362,3 +386,28 @@ div img {
   margin-left: 50px;
   line-height: 1.4;
 }
+.go_up{
+  position: absolute;
+    right: 80px;
+    bottom: auto;
+    top: 70%;
+    font-size: 2.5rem;
+    /* border-bottom: 3px solid darkgreen; */
+}
+.go_up a::after{
+  content: "";
+  display: block;
+  width: 0%;
+  margin-left: 100%;
+  margin-top: 4px;
+  height: 5px;
+  background-color: darkgreen;
+  transition: 0.3s;
+}
+
+.go_up:hover a::after{
+  width: 100%;
+  margin-left: 0%;
+  transition: width 0.3s;
+}
+
