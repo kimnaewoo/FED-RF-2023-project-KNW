@@ -108,14 +108,18 @@ function clearAuto() {
 }
 
 const scAct = domFn.qsa(".cbox");
-console.log(scAct);
+
+// console.log(scAct);
+
 domFn.addEvt(window, "scroll", showIt);
-domFn.addEvt(window, "scroll",);
+
 const CRITERIA = (('.main3').innerHeight);
+
 function showIt() {
   let scTop = window.scrollY;
   for (let x of scAct) addOn(x);
 }
+
 function addOn(ele) {
   let bTop = domFn.getBCR(ele);
   if (bTop < CRITERIA) ele.classList.add("on");
