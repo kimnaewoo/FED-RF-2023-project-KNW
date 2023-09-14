@@ -159,33 +159,53 @@ video {
 }
 .main-video3{
   background-color: #755139;
-  background-image: url(../img/main_video05.jpg);
-  background-repeat: no-repeat;
-  background-position: 80%;
-  background-size: contain;
   width: 100%;
   height: 100%;
 }
 .video3-txt{
-  padding: 5% 0 0 5%;
+  margin-bottom: 1%;
+  padding: 2% 0 0 0;
   width: 100%;
-  height: 50%;
-  font-family: "harrypoterkorean";
+  height: 10%;
+  font-family: 'harrypoter';
   font-size: 3.3rem;
-  line-height: 1.5;
+  text-align: center;
+}
+.video3-img{
+  display: flex;
+  width: 100%;
+  height: 75%;
+  justify-content: center;
+}
+.img-img{
+  width: 40%;
+  height: 100%;
+  background-image: url(../img/harrypoter01.jpg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: 1s;
+}
+.img-img:hover{
+  width: 40%;
+  height: 100%;
+  background-image: url(../img/harrypoter02.jpg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%;
+  
+}
+.video3-img img{
+  width: 40%;
+  height: 100%;
 }
 .video3-message{
-  padding: 5% 0 0 5%;
+  margin-top: 1%;
   font-family: 'harrypoter';
   color: rosybrown;
   font-size: 3.3rem;
-  line-height: 1.5;
-
+  text-align: center;
 }
-.video3-txt span:first-child{
-  font-family:'harrypoter';
-}
-
 .main-video4{
   background-image: linear-gradient(-45deg, chocolate 25%, olive 25% 50%, chocolate 50% 75%, olive 75%);
   display: flex;
