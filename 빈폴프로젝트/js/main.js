@@ -30,7 +30,7 @@ window.addEventListener("wheel", wheelFn, { passive: false });
 
 function loadFn() {
   ele_page = domFn.qsa("section");
-  console.log("페이지요소:", ele_page);
+  // console.log("페이지요소:", ele_page);
   total_pg = ele_page.length;
   // console.log('페이지요소:',total_pg);
 
@@ -53,7 +53,6 @@ function wheelFn() {
   if (pg_num == total_pg) pg_num = total_pg - 1;
   window.scrollTo(0, window.innerHeight * pg_num);
 }
-
 
 const abtn = domFn.qsa(".btn");
 const slider = domFn.qs(".slider");
@@ -127,25 +126,26 @@ function clearAuto() {
 // }
 
 const stage = domFn.qs("header>h1");
-console.log("대상:", stage);
+// console.log("대상:", stage);
 const myText = "BEANPOLE";
 let hcode = "";
 let seqNum = 0;
 for (let x of myText) {
-
   if (x == " ") hcode += "&nbsp;&nbsp;";
-  else hcode += `<span style='transition-delay:${seqNum*0.2}s'>${x}</span>`;
- 
+  else hcode += `<span style='transition-delay:${seqNum * 0.2}s'>${x}</span>`;
+
   seqNum++;
-} 
-console.log(hcode);
+}
+// console.log(hcode);
 
 stage.innerHTML = hcode;
 
 setInterval(() => {
-    stage.classList.add('on');
-  },2000);
-  
-setInterval(()=>{
-  stage.classList.remove('on');
-},4000)
+  stage.classList.add("on");
+}, 2000);
+
+setInterval(() => {
+  stage.classList.remove("on");
+}, 4000);
+
+
