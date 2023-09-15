@@ -56,19 +56,22 @@ function wheelFn() {
 
 const abtn = domFn.qsa(".btn");
 const slider = domFn.qs(".slider");
+const indic = domFn.qsa('.indic li');
 
 abtn.forEach((ele) => {
   ele.onclick = () => {
     // console.log(ele.classList.contains('btn-right'));
     if (ele.classList.contains("btn-right")) {
       slider.style.left = "-100%";
-      slider.style.transition = ".6s ease-in-out";
+      slider.style.transition = ".5s ease-in-out";
+      
       setTimeout(() => {
         slider.appendChild(domFn.qsa(".slider>div")[0]);
         slider.style.left = "0";
         slider.style.transition = "none";
       }, 600);
-    } else {
+    } 
+      else {
       let temp = domFn.qsa(".slider>div");
       slider.insertBefore(temp[temp.length - 1], temp[0]);
       slider.style.left = "-100%";
@@ -80,6 +83,7 @@ abtn.forEach((ele) => {
       }, 0);
     }
 
+    
     clearAuto();
   }; ///////// click /////////////
 }); //////////// forEach ////////////
