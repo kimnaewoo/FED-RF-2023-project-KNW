@@ -3,8 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 /* font-family: 'DM Serif Display', serif; */
 /* font-family: 'Noto Sans KR', sans-serif; */
+/* font-family: 'Gowun Batang', serif; */
+/* font-family: 'Nanum Pen Script', cursive; */
 @import url(../css/common.css);
 
 html {
