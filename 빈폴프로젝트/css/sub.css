@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 /* font-family: 'DM Serif Display', serif; */
 /* font-family: 'Noto Sans KR', sans-serif; */
 /* font-family: 'Gowun Batang', serif; */
@@ -97,50 +97,78 @@ nav dd > a:hover {
   transform: scale(1.2);
   /* border-bottom: 2px solid #000; */
 }
-.title{
+.title {
   padding-top: 10%;
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
 }
-.position > ul{
+.position > ul {
   font-size: 1.4rem;
   color: #313577;
   display: flex;
   gap: 0 15px;
 }
-.posiotion ul li:nth-child(3){
+.posiotion ul li:nth-child(3) {
   text-decoration: underline;
 }
-.position{
+.position {
   margin: 5% 0 0 2%;
 }
-.content{
+.content {
   margin-top: 3%;
 }
-.content h2{
+.content h2 {
   /* margin-bottom: 2%; */
   text-align: center;
   font-size: 3rem;
   color: #cf7933;
 }
-.tit-i{
+.tit-i {
   width: 200px;
   height: 150px;
   margin: 0 auto;
   background: url(../img/mouse-pointer.png) no-repeat center/cover;
 }
-.content h3{
+.content h3 {
   margin-bottom: 5%;
   line-height: 1.4;
   font-size: 1.3rem;
   text-align: center;
 }
-.main-category{
+.main-category {
   margin: 0 auto;
   width: 85%;
   /* text-align: center; */
   font-size: 2rem;
   line-height: 1.5;
   border-bottom: 4px solid #cf7933;
+}
+.first-img{
+  margin-top: 2%;
+  text-align: center;
+}
+.first-img img{
+  width: 10%;
+  height: 5%;
+}
+.grid {
+  position: relative;
+  display: grid;
+  margin: 2% 10%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: min(1vw, 10px);
+  grid-row-gap: min(1.5vw, 15px);
+}
+
+.grid img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  vertical-align: middle;
+}
+.grid .first{
+  grid-column: 1/3;
+  grid-row: 2/3;
 }
