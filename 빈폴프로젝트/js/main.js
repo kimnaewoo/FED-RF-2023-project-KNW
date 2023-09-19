@@ -88,27 +88,27 @@ abtn.forEach((ele) => {
   }; ///////// click /////////////
 }); //////////// forEach ////////////
 
-let autoI, autoT;
+// let autoI, autoT;
 
-function autoSlide() {
-  autoI = setInterval(() => {
-    slider.style.left = "-100%";
-    slider.style.transition = ".6s ease-in-out";
-    setTimeout(() => {
-      slider.appendChild(domFn.qsa(".slider>div")[0]);
-      slider.style.left = "0";
-      slider.style.transition = "none";
-    }, 600);
-  }, 8000);
-}
+// function autoSlide() {
+//   autoI = setInterval(() => {
+//     slider.style.left = "-100%";
+//     slider.style.transition = ".6s ease-in-out";
+//     setTimeout(() => {
+//       slider.appendChild(domFn.qsa(".slider>div")[0]);
+//       slider.style.left = "0";
+//       slider.style.transition = "none";
+//     }, 600);
+//   }, 8000);
+// }
 
-autoSlide();
+// autoSlide();
 
-function clearAuto() {
-  clearInterval(autoI);
-  clearTimeout(autoT);
-  autoT = setTimeout(autoSlide, 3000);
-}
+// function clearAuto() {
+//   clearInterval(autoI);
+//   clearTimeout(autoT);
+//   autoT = setTimeout(autoSlide, 3000);
+// }
 
 // const scAct = domFn.qsa(".cbox");
 
