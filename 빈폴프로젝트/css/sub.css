@@ -11,78 +11,91 @@
 /* font-family: 'Nanum Pen Script', cursive; */
 @import url(../css/common.css);
 
-html {
-    scroll-behavior: smooth;
-}
-html,
-body {
-    width: 100%;
-    height: 100%;
-}
-body{
-  position: relative;
-  font-family: 'DM Serif Display','Noto Sans KR', serif;
-;
-}
 header {
-    top: 0;
-    width: 100%;
-    height: 80px;
-    padding: 1% 2%;
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-    margin: 0 auto;
-    position: fixed;
-    z-index: 1;
-    background-color: #fff;
-    border-bottom: 1px double #000;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  padding: 1% 2%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  margin: 0 auto;
+  position: fixed;
+  z-index: 1;
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+  transition: 0.3s;
 }
-h1 {
-    font-size: 36px;
+h1 span {
+  font-size: 36px;
+  transition: 0.3s ease-in;
+  opacity: 0;
 }
-nav{
-    display: flex;
-    gap: 0 2vw;
+h1.on span {
+  font-size: 36px;
+  opacity: 1;
 }
-header:hover{
-    height: 250px;
-    background-color: #fff;
-    transition: .5s;
+nav {
+  display: flex;
+  gap: 0 2vw;
 }
-header:hover nav dd{
-    visibility: visible;
-    opacity: 1;
-    transition: 0.5s
-    /* transition-delay: 0.3s; */
+header:hover {
+  height: 250px;
+  background-color: #fff;
 }
-nav dl{
-    text-align: center;
+header:hover nav dd {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+}
+nav dl {
+  text-align: center;
 }
 nav dt {
-    padding-bottom: 40px;
-    font-weight: bold;
-    font-size: 32px;
+  padding-bottom: 40px;
+  font-weight: bold;
+  font-size: 32px;
 }
-nav dt a, nav dd a{
-    display: inline-block;
+header nav dl:nth-of-type(1):hover dt a,
+header nav dl:nth-of-type(1):hover dd:hover a {
+  color: #755139;
 }
-nav > dl > dt a:hover{
-    text-shadow: 4px 2px 2px gray;
-    /* transform: scale(1.2); */
-    /* border-bottom: 2px solid #000; */
+header nav dl:nth-of-type(2):hover dt a,
+header nav dl:nth-of-type(2):hover dd:hover a {
+  color: darkgreen;
 }
-nav dd{
-    font-weight: bold;
-    line-height: 1.5;
-    font-size: 24px;
-    visibility: hidden;
-    opacity: 0;
+header nav dl:nth-of-type(3):hover dt a,
+header nav dl:nth-of-type(3):hover dd:hover a {
+  color: rgba(255, 140, 0, 0.712);
 }
-nav dd > a:hover{
-    text-shadow: 4px 2px 2px gray;
-    transform: scale(1.2);
-    /* border-bottom: 2px solid #000; */
+header nav dl:nth-of-type(4):hover dt a,
+header nav dl:nth-of-type(4):hover dd:hover a {
+  color: #fff;
+  text-shadow: 4px 4px 4px gray;
+}
+
+nav dt a,
+nav dd a {
+  display: inline-block;
+}
+nav > dl > dt a:hover {
+  text-shadow: 4px 2px 2px gray;
+  /* transform: scale(1.2); */
+  /* border-bottom: 2px solid #000; */
+}
+nav dd {
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 24px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+nav dd > a:hover {
+  text-shadow: 4px 2px 2px gray;
+  transform: scale(1.2);
+  /* border-bottom: 2px solid #000; */
 }
 .title{
   padding-top: 10%;
@@ -94,34 +107,40 @@ nav dd > a:hover{
   font-size: 1.4rem;
   color: #313577;
   display: flex;
-  gap: 0 25px;
+  gap: 0 15px;
 }
 .posiotion ul li:nth-child(3){
   text-decoration: underline;
 }
+.position{
+  margin: 5% 0 0 2%;
+}
 .content{
-  position: absolute;
   margin-top: 3%;
-  width: 100%;
-  left: 50%;
-  transform: translate(-50%);
-  text-align: center;
 }
 .content h2{
+  /* margin-bottom: 2%; */
+  text-align: center;
   font-size: 3rem;
-  margin-bottom: 5%;
-  -webkit-background-clip: text;
-    background-image: linear-gradient(to right,#cf7933, rgb(99, 78, 59) );
-    color: transparent;
-}
-.content h3{
-  line-height: 1.4;
-  font-size: 1.4rem;
-  
+  color: #cf7933;
 }
 .tit-i{
   width: 200px;
   height: 150px;
   margin: 0 auto;
   background: url(../img/mouse-pointer.png) no-repeat center/cover;
+}
+.content h3{
+  margin-bottom: 5%;
+  line-height: 1.4;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.main-category{
+  margin: 0 auto;
+  width: 85%;
+  /* text-align: center; */
+  font-size: 2rem;
+  line-height: 1.5;
+  border-bottom: 4px solid #cf7933;
 }
