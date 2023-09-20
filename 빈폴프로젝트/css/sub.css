@@ -113,7 +113,8 @@ nav dd > a:hover {
   text-decoration: underline;
 }
 .position {
-  margin: 5% 0 0 2%;
+  margin: 8% 0 0 2%;
+  font-weight: bold;
 }
 .content {
   margin-top: 3%;
@@ -201,18 +202,18 @@ text-align: center;
   padding: 18% 0%;
   border-radius: 4.375rem;
   text-align: center;
-  background-color: darkgreen;
-  color: #fff;
+  background-color: #fff;
+  color: darkgreen;
   cursor: pointer;
 }
 .more h2:hover{
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   font-size: 1rem;
   padding: 18% 0%;
   border-radius: 4.375rem;
   text-align: center;
-  background-color: #fff;
-  color: darkgreen;
+  background-color: darkgreen;
+  color: #fff;
 }
 #footer {
   border-top: 4px solid #000;

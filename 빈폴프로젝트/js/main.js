@@ -135,7 +135,9 @@ abtn.forEach((ele) => {
 //////////////////////// 스크롤 등장이벤트 대상: .cbox
 const scAct = domFn.qsa(".cbox");
 const papa = domFn.qs('.main3');
-// console.log(scAct,papa);
+const img = domFn.qsa('.main4>div');
+const mama = domFn.qs('.main4');
+console.log(img);
 
 // 스크롤 등장 액션 이벤트 설정
 domFn.addEvt(window, "scroll", ()=>{
@@ -151,6 +153,19 @@ function addOn(ele) {
 
   }
 
+  domFn.addEvt(window, "scroll", ()=>{
+    let pos2 = mama.offsetTop;
+    console.log(pos2,mama.scrollTop);
+    
+    for (let x of img) addOn2(x);
+  });
+  function addOn2(ele) {
+    let bTop = domFn.getBCR(ele);
+    // console.log(bTop);
+    if (bTop < (window.scrollY/9)*4) ele.classList.add("on");
+     else ele.classList.remove("on");
+  
+    } 
 //////////////////////// 빈폴 이벤트 
 const stage = domFn.qs("header>h1");
 // console.log("대상:", stage);
