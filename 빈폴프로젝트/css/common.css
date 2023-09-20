@@ -10,6 +10,10 @@
   font-family: "harrypoterkorean";
   src: url(../font/harrypoterkorean.woff);
 }
+@font-face {
+  font-family: "journal";
+  src: url(../font/Thesignature.woff);
+}
 * {
   box-sizing: border-box;
 }

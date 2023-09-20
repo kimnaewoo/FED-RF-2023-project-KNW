@@ -132,8 +132,8 @@ section {
 }
 section .indic {
   position: absolute;
-  top: 90%;
-  left: 4%;
+  top: 95%;
+  left: 48.2%;
   transform: translateY(-50%);
   width: 10%;
   height: 10%;
@@ -164,7 +164,7 @@ section .indic {
 .indic li:hover a,
 .indic li.on a {
   width: 150%;
-  height: 100%;
+  height: 80%;
   background-color: #fff;
 }
 /* 설명글자숨기기 */
@@ -384,7 +384,7 @@ div img {
 .btn-left {
   position: absolute;
   top: 85%;
-  left: 20px;
+  left: 48%;
 }
 .btn-left img {
   transform: rotateY(180deg);
@@ -392,24 +392,14 @@ div img {
 .btn-right {
   position: absolute;
   top: 85%;
-  right: 20px;
+  left: 51%
 }
 .main2 {
-  display: flex;
-}
-.main2 > div {
-  height: 100%;
-}
-.main2_img {
-  width: 63%;
-  background: url(../img/main2.jpg) no-repeat center/cover;
+  background: #fff url(../img/main2.jpg) no-repeat 90%/60% 80%;
 }
 .main2_main {
-  position: relative;
-  width: 37%;
-  top: 23%;
-  left: 10%;
-  font-size: 200%;
+  margin: 5% 0;
+  width: 55%;
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
@@ -429,16 +419,20 @@ div img {
     transform: translateX(0);
   }
 }
-
-.main2_main a {
-  position: absolute;
-  width: 100%;
-  top: 25%;
-  left: 0%;
+.main2_tit > a {
+  font-size: 2.5rem;
 }
-.main2_main a:hover {
+.main2_tit > a:hover {
   transform: scale(1.2);
   transition: 0.5s;
+}
+.main2-more{
+  width: 55%;
+  text-align: center;
+  font-weight: bold;
+}
+.main2-more > a:hover{
+  text-decoration: underline ;
 }
 .main3 {
   width: 100%;
@@ -508,33 +502,43 @@ div img {
 }
 .main4 {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  background-image: url(../img/jurnal02.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: cover;
+    width: 100%;
+    height: 100vh;
+    background: #fff url(../img/main4-back.jpg) no-repeat 90%/100% 100%;
 }
-.main4_main {
+
+/* .main4_main {
   color: rgba(255, 140, 0, 0.712);
-  position: absolute;
-  top: 30%;
-  width: 100%;
+  top: 20%;
+  width: 50%;
+  height: 20%;
   font-size: 145px;
   text-align: center;
   font-weight: bold;
-}
-.main4_main:hover {
+} */
+/* .main4_main:hover {
   transform: scale(1.2);
   transition: 0.5s;
+} */
+.main4-img{
+  margin-top: 4%;
+  width: 40%;
+  height: 65%;
+}
+.main4-img img{
+  margin: 0 0 0 5%;
+  width: 100%;
+  height: 100%;
+  border: 15px ridge rgba(165, 42, 42, 0.863);
 }
 .main4-letter {
   position: absolute;
-  top: 60%;
-  text-align: center;
-  width: 100%;
-  font-size: 2rem;
-  font-weight: bold;
+  font-family: "journal";
+  top: 35%;
+  left: 50%;
+  font-size: 2.8rem;
+  line-height: 1.5;
+  /* font-weight: bold;  */
 }
 .main5 {
   position: relative;
