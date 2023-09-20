@@ -61,10 +61,17 @@ const abtn = domFn.qsa(".btn");
 const slider = domFn.qs(".slider");
 const indic = domFn.qsa('.indic>ul>li');
 console.log(indic);
+
+domFn.qsaEl(slider,'.main-slide').forEach((ele,idx)=>ele.setAttribute('data-seq',idx))
+
+
 abtn.forEach((ele) => {
   ele.onclick = () => {
+    let isR = ele.classList.contains("btn-right");
+    let temp = domFn.qsa(".slider>div");
+
     // console.log(ele.classList.contains('btn-right'));
-    if (ele.classList.contains("btn-right")) {
+    if (isR) {
       slider.style.left = "-100%";
       slider.style.transition = ".5s ease-in-out";
       
@@ -75,7 +82,6 @@ abtn.forEach((ele) => {
       }, 600);
     } 
       else {
-      let temp = domFn.qsa(".slider>div");
       slider.insertBefore(temp[temp.length - 1], temp[0]);
       slider.style.left = "-100%";
       slider.style.transition = "none";
@@ -86,8 +92,20 @@ abtn.forEach((ele) => {
       }, 0);
     }
 
+    // 변경된 순번 슬라이드 다시 읽기
+    temp = domFn.qsa(".slider>div");
+
+    // 인디케이터 on넣기
+    let nowNum = temp[isR?1:0].getAttribute('data-seq');
+    console.log('순번:',nowNum);
+    indic[nowNum].classList.add('on');
+    indic.forEach(ele=>{
+      // console.log(ele.isSameNode(indic[nowNum]));
+      if(!ele.isSameNode(indic[nowNum]))ele.classList.remove('on')
+    }); //////// forEach ///////////
+
     
-    clearAuto();
+    // clearAuto();
   }; ///////// click /////////////
 }); //////////// forEach ////////////
 
