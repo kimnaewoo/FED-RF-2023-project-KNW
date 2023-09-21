@@ -67,7 +67,7 @@ header nav dl:nth-of-type(2):hover dd:hover a {
 }
 header nav dl:nth-of-type(3):hover dt a,
 header nav dl:nth-of-type(3):hover dd:hover a {
-  color: rgba(255, 140, 0, 0.712);
+  color: #ff8c00b6;
 }
 header nav dl:nth-of-type(4):hover dt a,
 header nav dl:nth-of-type(4):hover dd:hover a {
