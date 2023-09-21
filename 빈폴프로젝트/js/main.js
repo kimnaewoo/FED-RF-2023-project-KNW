@@ -33,9 +33,9 @@ const domFn = {
 
 // function loadFn() {
 //   ele_page = domFn.qsa("section");
-//   // console.log("페이지요소:", ele_page);
+//   // // console.log("페이지요소:", ele_page);
 //   total_pg = ele_page.length;
-//   // console.log('페이지요소:',total_pg);
+//   // // console.log('페이지요소:',total_pg);
 
 //   const cbox = domFn.qsa(".cbox_container");
 //   const img = domFn.qsa(".cbox");
@@ -47,9 +47,9 @@ const domFn = {
 //   setTimeout(() => {
 //     sts_wheel = 0;
 //   }, 500);
-//   // console.log("휠이 잘되니?");
+//   // // console.log("휠이 잘되니?");
 //   let delta = event.wheelDelta;
-//   // console.log("휠델타?", delta);
+//   // // console.log("휠델타?", delta);
 //   if (delta < 0) pg_num++;
 //   else pg_num--;
 //   if (pg_num < 0) pg_num = 0;
@@ -60,7 +60,7 @@ const domFn = {
 const abtn = domFn.qsa(".btn");
 const slider = domFn.qs(".slider");
 const indic = domFn.qsa('.indic>ul>li');
-console.log(indic);
+// console.log(indic);
 
 domFn.qsaEl(slider,'.main-slide').forEach((ele,idx)=>ele.setAttribute('data-seq',idx))
 
@@ -70,7 +70,7 @@ abtn.forEach((ele) => {
     let isR = ele.classList.contains("btn-right");
     let temp = domFn.qsa(".slider>div");
 
-    // console.log(ele.classList.contains('btn-right'));
+    // // console.log(ele.classList.contains('btn-right'));
     if (isR) {
       slider.style.left = "-100%";
       slider.style.transition = ".5s ease-in-out";
@@ -97,10 +97,10 @@ abtn.forEach((ele) => {
 
     // 인디케이터 on넣기
     let nowNum = temp[isR?1:0].getAttribute('data-seq');
-    console.log('순번:',nowNum);
+    // console.log('순번:',nowNum);
     indic[nowNum].classList.add('on');
     indic.forEach(ele=>{
-      // console.log(ele.isSameNode(indic[nowNum]));
+      // // console.log(ele.isSameNode(indic[nowNum]));
       if(!ele.isSameNode(indic[nowNum]))ele.classList.remove('on')
     }); //////// forEach ///////////
 
@@ -132,17 +132,18 @@ abtn.forEach((ele) => {
 // }
 
 
-//////////////////////// 스크롤 등장이벤트 대상: .cbox
+///////////////////////////////////////////////////////////////////////////////////////
+// 스크롤 등장이벤트 
 const scAct = domFn.qsa(".cbox");
 const papa = domFn.qs('.main3');
 const img = domFn.qsa('.main4>div');
 const mama = domFn.qs('.main4');
-console.log(img);
+// console.log(img);
 
 // 스크롤 등장 액션 이벤트 설정
 domFn.addEvt(window, "scroll", ()=>{
   let pos1 = papa.offsetTop;
-  console.log(pos1,papa.scrollTop);
+  // console.log(pos1,papa.scrollTop);
   
   for (let x of scAct) addOn(x);
 });
@@ -152,23 +153,26 @@ function addOn(ele) {
    else ele.classList.remove("on");
 
   }
+////////////////////////////////////////////////////////////////////////
 
   domFn.addEvt(window, "scroll", ()=>{
     let pos2 = mama.offsetTop;
-    console.log(pos2,mama.scrollTop);
+    // // console.log(pos2,mama.scrollTop);
     
     for (let x of img) addOn2(x);
   });
   function addOn2(ele) {
     let bTop = domFn.getBCR(ele);
-    // console.log(bTop);
+    // // console.log(bTop);
     if (bTop < (window.scrollY/9)*4) ele.classList.add("on");
      else ele.classList.remove("on");
   
     } 
-//////////////////////// 빈폴 이벤트 
+
+//////////////////////////////////////////////////////////////////
+
 const stage = domFn.qs("header>h1");
-// console.log("대상:", stage);
+// // console.log("대상:", stage);
 const myText = "BEANPOLE";
 let hcode = "";
 let seqNum = 0;
@@ -178,8 +182,8 @@ for (let x of myText) {
 
   seqNum++;
 }
-// console.log(hcode);
-
+// // console.log(hcode);
+///////////////////////////////////////////////////////////////////////
 stage.innerHTML = hcode;
 
 setInterval(() => {
@@ -189,5 +193,8 @@ setInterval(() => {
 setInterval(() => {
   stage.classList.remove("on");
 }, 4000);
+/////////////////////////////////////////////////////////////////////
+const sun = domFn.qs('.main2>.main2_img');
+const spapa = domFn.qs('.main2');
 
-
+if(sun.offsetTop < spapa.offsetTop) sun.classList.add('on');

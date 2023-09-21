@@ -412,19 +412,36 @@ div img {
   top: 85%;
   left: 51%
 }
-.main2 {
-  background: #fff url(../img/main2.jpg) no-repeat 90%/60% 80%;
+.main2{
+  position: relative;
+}
+.main2_img{
+  position: absolute;
+  top: 20%;
+  left: 38%;
+  width: 60%;
+  height: 83%;
+  cursor: pointer;
+}
+.main2_img img{
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.1);
+}
+.main2_img img.on{
+  filter: brightness(1);
+  transition: 3s;
 }
 .main2_main {
-  margin: 5% 0;
-  width: 55%;
+  margin: 15% 0% 4% 0%;
+  width: 38%;
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
 }
 .main2_main > .main2_tit h2 {
   color: #755139;
-  font-size: 10rem;
+  font-size: 9rem;
   animation: main2-ani normal 3s forwards;
 }
 @keyframes main2-ani {
@@ -437,19 +454,21 @@ div img {
     transform: translateX(0);
   }
 }
-.main2_tit > a {
-  font-size: 2.5rem;
+.main2_tit > p {
+  font-size: 1.7rem;
 }
 .main2_tit > a:hover {
   transform: scale(1.2);
   transition: 0.5s;
 }
 .main2-more{
-  width: 55%;
+  width: 39%;
   text-align: center;
-  font-weight: bold;
+  font-size: 1.1rem;
 }
+
 .main2-more > a:hover{
+  font-weight: bold;
   text-decoration: underline ;
 }
 .main3 {
@@ -570,15 +589,24 @@ div img {
   /* font-weight: bold;  */
 }
 .main4 >div.on{
-  transition: 4s;
+  transition: 1s;
   opacity: 1;
   
+}
+.main4>div:nth-child(2):hover,.main4>div:nth-child(3):hover{
+  cursor: pointer;
+  font-family: 'DM Serif Display';
+}
+.main4-letter:hover{
+font-size: 1.8rem;
+
 }
 .main5 {
   position: relative;
   width: 100%;
   height: 100vh;
   background: #000 url(../img/main5_02.jpg) no-repeat right/cover;
+  cursor: pointer;
 }
 .main5_main {
   position: absolute;
@@ -590,7 +618,7 @@ div img {
   font-weight: bold;
 }
 .main5_main:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: 0.5s;
 }
 .main5_letter {
