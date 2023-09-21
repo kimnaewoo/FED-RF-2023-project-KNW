@@ -194,7 +194,17 @@ setInterval(() => {
   stage.classList.remove("on");
 }, 4000);
 /////////////////////////////////////////////////////////////////////
-const sun = domFn.qs('.main2>.main2_img');
+const sun = domFn.qs('.main2>.main2_img img');
 const spapa = domFn.qs('.main2');
 
 if(sun.offsetTop < spapa.offsetTop) sun.classList.add('on');
+console.log(spapa.offsetTop);
+
+domFn.addEvt(window,'scroll',()=>{
+  let scTop = this.scrollY;
+  console.log(scTop);
+  if(scTop > spapa.offsetTop)
+  sun.classList.add('on');
+  else   
+  sun.classList.remove('on');
+})
