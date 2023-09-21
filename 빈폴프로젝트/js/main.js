@@ -136,8 +136,7 @@ abtn.forEach((ele) => {
 // 스크롤 등장이벤트 
 const scAct = domFn.qsa(".cbox");
 const papa = domFn.qs('.main3');
-const img = domFn.qsa('.main4>div');
-const mama = domFn.qs('.main4');
+
 // console.log(img);
 
 // 스크롤 등장 액션 이벤트 설정
@@ -153,21 +152,6 @@ function addOn(ele) {
    else ele.classList.remove("on");
 
   }
-////////////////////////////////////////////////////////////////////////
-
-  domFn.addEvt(window, "scroll", ()=>{
-    let pos2 = mama.offsetTop;
-    // // console.log(pos2,mama.scrollTop);
-    
-    for (let x of img) addOn2(x);
-  });
-  function addOn2(ele) {
-    let bTop = domFn.getBCR(ele);
-    // // console.log(bTop);
-    if (bTop < (window.scrollY/9)*4) ele.classList.add("on");
-     else ele.classList.remove("on");
-  
-    } 
 
 //////////////////////////////////////////////////////////////////
 
@@ -197,14 +181,29 @@ setInterval(() => {
 const sun = domFn.qs('.main2>.main2_img img');
 const spapa = domFn.qs('.main2');
 
-if(sun.offsetTop < spapa.offsetTop) sun.classList.add('on');
-console.log(spapa.offsetTop);
-
 domFn.addEvt(window,'scroll',()=>{
   let scTop = this.scrollY;
-  console.log(scTop);
+  // console.log(scTop);
   if(scTop > spapa.offsetTop)
   sun.classList.add('on');
   else   
   sun.classList.remove('on');
 })
+//////////////////////////////////////////////////////////////
+const img = domFn.qsa('.main4>div');
+const mama = domFn.qs('.main4');
+
+domFn.addEvt(window, "scroll", ()=>{
+  for (let x of img) addOn2(x);
+});
+
+function addOn2(img) {
+  let bTop = this.scrollY;
+  if (bTop > (mama.offsetTop/3)*2)
+  setInterval(() => {
+    img.classList.add("on");
+  }, 2000);
+  else 
+  img.classList.remove("on");
+  // console.log(mama.offsetTop);
+}
