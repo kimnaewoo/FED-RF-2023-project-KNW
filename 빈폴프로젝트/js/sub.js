@@ -49,3 +49,4 @@ setInterval(() => {
 setInterval(() => {
   stage.classList.remove("on");
 }, 4000);
+console.log(stage);
