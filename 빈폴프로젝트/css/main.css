@@ -36,6 +36,7 @@ header {
   transition: 0.3s;
 }
 h1 span {
+  
   font-size: 36px;
   transition: 0.3s ease-in;
   opacity: 0;
@@ -44,6 +45,14 @@ h1.on span {
   font-size: 36px;
   opacity: 1;
 }
+h1.on span:nth-child(1){color:red}
+h1.on span:nth-child(2){color:orange}
+h1.on span:nth-child(3){color:yellow}
+h1.on span:nth-child(4){color:green}
+h1.on span:nth-child(5){color:blue}
+h1.on span:nth-child(6){color:navy}
+h1.on span:nth-child(7){color:purple}
+h1.on span:nth-child(8){color:#000}
 nav {
   display: flex;
   gap: 0 2vw;
@@ -76,7 +85,7 @@ header nav dl:nth-of-type(2):hover dd:hover a {
 }
 header nav dl:nth-of-type(3):hover dt a,
 header nav dl:nth-of-type(3):hover dd:hover a {
-  color: rgba(255, 140, 0, 0.712);
+  color: #ff8c00b6;
 }
 header nav dl:nth-of-type(4):hover dt a,
 header nav dl:nth-of-type(4):hover dd:hover a {
@@ -580,6 +589,7 @@ div img {
   top: 25%;
   left: 50%;
   font-weight: bold;
+  color: #ff8c00b6;
 }
 .main4-letter {
   position: absolute;
@@ -722,3 +732,6 @@ font-size: 1.8rem;
   transition: width 0.3s;
 }
 
+@media screen and (width:500px) {
+  
+}

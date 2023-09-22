@@ -1,5 +1,8 @@
 // main JS 
 
+
+
+
 // 1-1. 페이지변수
 let pg_num = 0;
 // 1-2. 휠상태 변수
@@ -86,12 +89,27 @@ function autoSlide() {
   autoI = setInterval(() => {
     slider.style.left = "-100%";
     slider.style.transition = ".6s ease-in-out";
+    let one = domFn.qsa(".slider>div");
+    let tempIndic = domFn.qsa('.indic>ul>li');
+    one.forEach((ele,idx)=>{
+      if(idx==1){
+        let num = ele.getAttribute('data-seq');
+        tempIndic.forEach((e,i)=>{
+          if(Number(num) == i){
+            e.classList.add('on');
+          }
+          else{
+            e.classList.remove('on');
+          }
+        });
+      }
+    });
     setTimeout(() => {
       slider.appendChild(domFn.qsa(".slider>div")[0]);
       slider.style.left = "0";
       slider.style.transition = "none";
     }, 600);
-  }, 8000);
+  }, 7000);
 }
 
 autoSlide();
@@ -131,14 +149,17 @@ const stage = domFn.qs("header>h1");
 const myText = "BEANPOLE";
 let hcode = "";
 let seqNum = 0;
+hcode += `<a href="main.html">`;
 for (let x of myText) {
   if (x == " ") hcode += "&nbsp;&nbsp;";
-  else hcode += `<span style='transition-delay:${seqNum * 0.2}s'>${x}</span>`;
+  else hcode += 
+  `<span style='transition-delay:${seqNum * 0.2}s'>${x}</span>`;
 
   seqNum++;
 }
 // // console.log(hcode);
 ///////////////////////////////////////////////////////////////////////
+hcode+= `</a>`;
 stage.innerHTML = hcode;
 
 setInterval(() => {
