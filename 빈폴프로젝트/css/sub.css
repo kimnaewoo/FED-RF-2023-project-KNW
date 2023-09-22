@@ -10,6 +10,14 @@
 /* font-family: 'Gowun Batang', serif; */
 /* font-family: 'Nanum Pen Script', cursive; */
 @import url(../css/common.css);
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 
 header {
   top: 0;
@@ -27,7 +35,6 @@ header {
   transition: 0.3s;
 }
 h1 span {
-  
   font-size: 36px;
   transition: 0.3s ease-in;
   opacity: 0;
@@ -44,7 +51,7 @@ h1.on span:nth-child(5){color:blue}
 h1.on span:nth-child(6){color:navy}
 h1.on span:nth-child(7){color:purple}
 h1.on span:nth-child(8){color:#000}
-}
+
 nav {
   display: flex;
   gap: 0 2vw;

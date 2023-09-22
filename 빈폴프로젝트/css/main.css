@@ -36,7 +36,6 @@ header {
   transition: 0.3s;
 }
 h1 span {
-  
   font-size: 36px;
   transition: 0.3s ease-in;
   opacity: 0;
