@@ -13,6 +13,15 @@ const domFn = {
     getBCR: (ele) => ele.getBoundingClientRect().top,
   }; /////// domFn 객체 /////////////
 
+
+  const myvid = document.querySelector('#myvid');
+myvid.addEventListener('timeupdate',()=>{
+let isStop = myvid.paused;
+    console.log('동영상재생중~',isStop);
+ if(isStop){
+        location.href = 'main.html';
+ } 
+}); 
 /* 
 // 대상: #myvid
 const myvid = document.querySelector('#myvid');
