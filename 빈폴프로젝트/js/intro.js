@@ -28,31 +28,31 @@ myvid.addEventListener('timeupdate',()=>{
 }); // timeupdate 함수  */
 
 
-const enter = domFn.qs('#enter');
-const span = domFn.qs('span');
-console.log('대상:',enter,span);
+// const enter = domFn.qs('#enter');
+// const span = domFn.qs('span');
+// console.log('대상:',enter,span);
 
 // 2. 이벤트 설정 및 함수구현 
-domFn.addEvt(span,'mouseover',()=>{
-    span.classList.add('on');
-}); // mouseover 이벤트 함수 
-domFn.addEvt(span,'mouseout',()=>{
-    span.classList.remove('on');
-}); // mouseover 이벤트 함수 
+// domFn.addEvt(span,'mouseover',()=>{
+//     span.classList.add('on');
+// }); // mouseover 이벤트 함수 
+// domFn.addEvt(span,'mouseout',()=>{
+//     span.classList.remove('on');
+// }); // mouseover 이벤트 함수 
 
-const welcome = domFn.qs('#welcome');
-console.log(welcome);
+// const welcome = domFn.qs('#welcome');
+// console.log(welcome);
  
-setInterval(() => {
-    welcome.style = `
-        display: block;
-        transition: 2s;
-        animation: wel-ani 2s forwards ;`
-}, 38500);
+// setInterval(() => {
+//     welcome.style = `
+//         display: block;
+//         transition: 2s;
+//         animation: wel-ani 2s forwards ;`
+// }, 38500);
 
-setInterval(() => {
-    span.style = `
-        display: block;
-        transition: 2s;
-        animation: en-ani 2s forwards ;`
-}, 39500);
+// setInterval(() => {
+//     span.style = `
+//         display: block;
+//         transition: 2s;
+//         animation: en-ani 2s forwards ;`
+// }, 39500);

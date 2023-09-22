@@ -38,7 +38,7 @@ body {
   font-size: 2rem;
   transform: translate(-50%, -50%);
 }
-@keyframes wel-ani {
+/* @keyframes wel-ani {
   0% {
       opacity: 0;
   }
@@ -48,7 +48,7 @@ body {
       background-image: linear-gradient(to right, #fff, orange);
       color: transparent;
   }
-}
+} */
 #enter {
   position: absolute;
   top: 67%;
@@ -57,22 +57,29 @@ body {
   color: #fff;
 }
 #enter span {
-  display: none;
+  /* display: none; */
   text-align: center;
   font-size: 2rem;
   transition: 2s;
 }
-@keyframes enter-ani {
+#enter span:hover{
+  transition: .5s;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #fff, orange);
+    color: transparent;
+
+}
+/* @keyframes enter-ani {
   0% {
       opacity: 0;
   }
   to {
       opacity: 1;
     }
-  }
-  span.on {
+  } */
+  /* span.on {
     transition: .5s;
     -webkit-background-clip: text;
     background-image: linear-gradient(to right, #fff, orange);
     color: transparent;
-  }
+  } */
