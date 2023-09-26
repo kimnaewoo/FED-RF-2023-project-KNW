@@ -52,6 +52,7 @@ h1.on span:nth-child(5){color:blue}
 h1.on span:nth-child(6){color:navy}
 h1.on span:nth-child(7){color:purple}
 h1.on span:nth-child(8){color:#000}
+
 nav {
   display: flex;
   gap: 0 2vw;
