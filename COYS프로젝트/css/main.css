@@ -2,3 +2,47 @@
 
 @import url(./common.css);
 
+/* 상단영역 */
+#top-area{
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    border: 1px dotted red;
+    text-align: center;
+    background-color: #fff;
+}
+
+#top-area ul{
+    left: 0;
+    padding-top: 15px;
+    display: flex;
+    animation: txt-ani1 10s linear infinite;
+}
+#top-area ul img{
+    width: 100px;
+    height: 100px;
+}
+@keyframes txt-ani1 {
+     to {
+       left: -100%;
+     }
+}
+
+.top-area li{
+    flex: 1;
+    text-align: center;
+    font-size: 2.1vw;
+    font-weight: bold;
+    color: rgba(9, 42, 230, 0.8);
+    text-shadow: 2px 2px 2px #fff;
+    
+    /* outline: 2px dotted red; */
+}
+
+
+.starter{
+    width: 100vw;
+    height: 100vh;
+    border: 1px dotted blue;
+    background-color: #000;
+}
