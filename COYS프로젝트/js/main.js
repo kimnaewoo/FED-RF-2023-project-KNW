@@ -12,6 +12,8 @@ setTimeout(() => {
 
 setTimeout(()=>{
     start.style.display="none";
+},4000);
+setTimeout(()=>{
     h1.style.display='block';
-},5000);
+},6000);
 
