@@ -39,7 +39,6 @@
     width: 100%;
     height: 85%;
     background-color: #000;
-    filter: brightness(0.5);
     object-fit: none;
 }
 .logo-intro{
