@@ -5,22 +5,25 @@
 
 @import url(./common.css);
 
+section{
+    padding-left: 100px;
+    width: 99.1vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
 /* 스타트영역 */
-#start-area {
-    width: 100vw;
+#intro-area {
+    width: 99.1vw;
     height: 100vh;
     overflow: hidden;
     background-color: #000;
-}
-/* 인트로영역 */
-#intro-area{
-    width: 100vw;
-    height: 100vh;
+    /* display: none; */
 }
 .cap-box{
     position: relative;
     width: 50%;
-    left: 25%;
+    left: 22%;
     top: 20%;
     display: flex;
     justify-content: space-evenly;
@@ -35,21 +38,16 @@
 }
 .intro-captain.mad{
     background: url(../images/intro/james.jpg) no-repeat 20% 100%/cover;
-    transform: translateX(-200%);
-    transition: 1.5s;
+    transform: translateY(-5%);
 }
-.intro-captain.mad.on{
-    transform: translateX(-10%);
-    display: block;
-}
+
 .intro-captain.son{
-    transform: translateY(-10%);
     background: url(../images/intro/son.jpg) no-repeat 40% 100%/cover;
-    transform: translateX(-100%);
+    transform: translateY(-20%);
 }
 .intro-captain.rom{
-    background: url(../images/intro/romero.png) no-repeat -4810% 100%/cover;
-    transform: translateX(-100%);
+    background: url(../images/intro/romero.png) no-repeat -100% 100%/cover;
+    transform: translateY(-5%);
 }
 .msg{
     position: absolute;
@@ -62,32 +60,35 @@
     display: none;
 }
 .fir{
-    top: 50%;
+    top: 60%;
 }
 .sec{
-    top: 60%;
+    top: 70%;
 }
 
 /* gnb 파트 */
 #gnb {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 100px;
-    height: 100%;
+    width: 80px;
+    height: 100vh;
     padding-left: 1%;
     border-right: 0.1px solid #ffffff;
     z-index: 999;
+    overflow: hidden;
     /* display: none; */
 }
 #gnb a img {
   width: 80%;
   height: 100%;
+  margin-left: -16%;
 }
 #menu {
     display: flex;
-    width: 100%;
-    height: 5%;
+    width: 70%;
+    height: 2%;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: stretch;
@@ -101,7 +102,6 @@
 #menu .top.on{
     transform: translateY(-100%);
     transition: all 1s;
-    
 }
 #menu .bottom{
     width: 70%;
@@ -119,14 +119,13 @@
     height: 10%;
     flex-direction: column;
     justify-content: space-around;
-    padding-left: 18%;
 }
 #gnb .sns-menu a{
    font-size: 1.8rem;
    line-height: 3;
 }
 #gnb .sns-menu a:last-child{
-    margin-left: -5%;
+    margin-left: -10%;
 }
 #gnb .sns-menu span{
     display: none;
@@ -134,32 +133,13 @@
 
 
 /* 상단영역 */
-#top-area section {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  /* transform: scale(0.1); */
+#top-area{
+    background-color: #000;
 }
-#top-area section video {
+/* #top-area section video {
   margin: 3% 0%;
   width: 100%;
   height: 85%;
   background-color: #000;
   object-fit: none;
-}
-.logo-intro {
-  display: none;
-  position: absolute;
-  width: 100vw;
-  height: 30vh;
-  top: 42%;
-  z-index: 999;
-  text-align: center;
-  font-size: 15.5vh;
-  font-family: "Archivo Black", sans-serif;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to right, #fff, #132257);
-  color: transparent;
-  filter: brightness(2);
-}
+} */
