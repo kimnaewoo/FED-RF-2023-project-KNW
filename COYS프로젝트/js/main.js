@@ -1,7 +1,7 @@
 import dFn from "./domFn.js"
 
 const msg = dFn.qsa('p');
-const cap = dFn.qsa('.intro-captain')
+const cap = dFn.qsa('.intro-captain');
 const intro = dFn.qs('#intro-area');
 
 setTimeout(()=>{

@@ -72,14 +72,14 @@ section{
 
 /* gnb 파트 */
 #gnb {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 80px;
     height: 100vh;
     padding-left: 1%;
-    border-right: 0.1px solid #ffffff;
+    border-right: 0.1px solid #ffffff40;
     z-index: 999;
     overflow: hidden;
     /* display: none; */
@@ -160,7 +160,6 @@ section{
     font-size: 7rem;
     font-weight: bold;
     color: #fff;
-    font-family: 'Bebas Neue', sans-serif;
     
 }
 #top-area h2{
@@ -175,14 +174,67 @@ section{
 .wheel{
     position: absolute;
     width: 100px;
-    height: 50px;
+    height: 100px;
     top: 75%;
     left: 48%;
     color: #fff;
+    border: 1px solid #ffffff40;
+    border-radius: 50px;    
+}
+
+.wheel::before{
+    position: absolute;
+    content: '';
+    display: block;
+    top: 21%;
+    left: 49%;
+    width: 2px;
+    height: 14%;
+    background-color: #fff;
+    animation: wheel-ani 2s infinite;
+    z-index: 1;
+}
+@keyframes wheel-ani {
+    to{
+        transform: translateY(100%);
+    }
 }
 .wheel img{
     width: 100%;
-    height: 100%;
+    height: 50%;
+    transform: translateY(20px);
 }
+
+/* 메인영역 */
+#main-area{
+    position: relative;
+}
+.news{
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    font-size: 12rem;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+}
+.news-area{
+    position: relative;
+    display: flex;
+    top: 25%;
+    height: 30vh;
+    width: 98%;
+    justify-content: space-around;
+}
+.news-area2{
+    position: relative;
+    top: 27%;
+    left: 16%;
+    
+}
+.news-area2 img{
+    width: 60%;
+}
+
 
 
