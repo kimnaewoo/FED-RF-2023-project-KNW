@@ -209,7 +209,7 @@ section{
 #main-area{
     position: relative;
 }
-.news{
+.n-tit{
     position: absolute;
     top: 5%;
     left: 30%;
@@ -225,6 +225,19 @@ section{
     height: 30vh;
     width: 98%;
     justify-content: space-around;
+}
+.news img{
+    width: 100%;
+    height: 100%;
+
+}
+.news h1{
+    position: absolute;
+    top: 70%;
+    width: 28.4%;
+    font-size: 5.3rem;
+    background-color: #ffffff6b;
+    text-align: center;
 }
 .news-area2{
     position: relative;
