@@ -7,6 +7,7 @@
 
 /* 글씨체 */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz@9..40&display=swap');
 
 
 section{
@@ -209,6 +210,9 @@ section{
 #main-area{
     position: relative;
 }
+#main-area>div{
+    cursor: pointer;
+}
 .n-tit{
     position: absolute;
     top: 5%;
@@ -222,8 +226,9 @@ section{
     position: relative;
     display: flex;
     top: 25%;
-    height: 30vh;
-    width: 98%;
+    height: 20vh;
+    width: 70%;
+    left: 10%;
     justify-content: space-around;
 }
 .news img{
@@ -231,23 +236,47 @@ section{
     height: 100%;
 
 }
+.news a{
+    overflow: hidden;
+}
+.news a:hover img{
+    transform: scale(1.4);
+}
 .news h1{
+    font-family: 'DM Sans', sans-serif;
     position: absolute;
-    top: 70%;
-    width: 28.4%;
-    font-size: 5.3rem;
-    background-color: #ffffff6b;
+    top: 100%;
+    width: 26.2%;
+    background-color: #000000;
+    color: #fff;
+    font-size: 3rem;
     text-align: center;
 }
-.news-area2{
-    position: relative;
-    top: 27%;
-    left: 16%;
-    
-}
-.news-area2 img{
-    width: 60%;
+.van h1{
+    width: 30.45%;
 }
 
+
+.news-area2{
+    position: relative;
+    top: 32%;
+    left: 11.9%;
+    width: 40%;
+}
+    
+
+.news-area2 img{
+    width: 100%;
+}
+.news-area2 h1{
+    font-family: 'DM Sans', sans-serif;
+    position: absolute;
+    top: 98.9%;
+    width: 100.1%;
+    background-color: #000000;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+}
 
 
