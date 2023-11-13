@@ -29,7 +29,7 @@ section{
     position: relative;
     width: 50%;
     left: 22%;
-    top: 20%;
+    top: 17%;
     display: flex;
     justify-content: space-evenly;
 }
@@ -37,28 +37,44 @@ section{
     width: 320px;
     height: 400px;
     clip-path: polygon(45% 0, 100% 0%, 70% 100%, 15% 100%);
-    display: none;
     overflow: hidden;
     transition: 1.5s;
 }
-.intro-captain.mad{
-    background: url(../images/intro/james.jpg) no-repeat 20% 100%/cover;
+.mad{
     transform: translateY(-5%);
 }
-
-.intro-captain.son{
-    background: url(../images/intro/son.jpg) no-repeat 40% 100%/cover;
+.mad img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-120%, -50%);
+    transition: 1s ease-out;
+}
+.son{
     transform: translateY(-20%);
 }
-.intro-captain.rom{
-    background: url(../images/intro/romero.png) no-repeat -100% 100%/cover;
+.son img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-120%, -50%);
+    transition: 1s ease-out;
+}
+.rom{
     transform: translateY(-5%);
+}
+.rom img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-135%, -50%);
+    transition: 1s ease-out;
 }
 .msg{
     position: absolute;
-    left: 20%;
+    left: 30%;
     width: 60%;
-    height: 20%;
+    height: 10%;
     font-size: 5.4rem;
     color: #fff;
     font-weight: bold;
@@ -70,7 +86,9 @@ section{
 .sec{
     top: 70%;
 }
+/* 
 
+*/
 /* gnb 파트 */
 #gnb {
     position: fixed;
@@ -232,12 +250,12 @@ section{
     justify-content: space-around;
 }
 .news img{
+    overflow: hidden;
     width: 100%;
     height: 100%;
 
 }
 .news a{
-    overflow: hidden;
 }
 .news a:hover img{
     transform: scale(1.4);
@@ -255,7 +273,6 @@ section{
 .van h1{
     width: 30.45%;
 }
-
 
 .news-area2{
     position: relative;
