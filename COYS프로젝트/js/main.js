@@ -21,4 +21,7 @@ setTimeout(()=>{
 setTimeout(()=>{
     son.style.transform='translate(-45%, -50%)';
 },5000);
+setTimeout(()=>{
+    intro.style.display='none';
+},7000);
 
