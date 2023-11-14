@@ -23,5 +23,5 @@ setTimeout(()=>{
 },5000);
 setTimeout(()=>{
     intro.style.display='none';
-},7000);
+},7500);
 

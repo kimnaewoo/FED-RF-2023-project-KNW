@@ -48,7 +48,7 @@ section{
     top: 50%;
     left: 50%;
     transform: translate(-120%, -50%);
-    transition: 1s ease-out;
+    transition: .5s ease-out;
 }
 .son{
     transform: translateY(-20%);
@@ -58,7 +58,7 @@ section{
     top: 50%;
     left: 50%;
     transform: translate(-120%, -50%);
-    transition: 1s ease-out;
+    transition: .5s ease-out;
 }
 .rom{
     transform: translateY(-5%);
@@ -68,7 +68,7 @@ section{
     top: 50%;
     left: 50%;
     transform: translate(-135%, -50%);
-    transition: 1s ease-out;
+    transition: .5s ease-out;
 }
 .msg{
     position: absolute;
