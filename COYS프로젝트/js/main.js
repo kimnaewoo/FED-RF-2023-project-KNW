@@ -33,3 +33,38 @@ setTimeout(()=>{
     topArea.style.display='block';
 },7000);
 
+// 맨 위 메뉴와 중간 메뉴 변수 할당
+const snsMenu = dFn.qs(".sns-menu");
+const Menu = dFn.qs("#menu");
+const MainArea = dFn.qs('#main-area')
+// 중간 메뉴바의 위치 계산            
+let MainAreaTop = MainArea.offsetTop;
+
+// 스크롤 이벤트 핸들러
+window.addEventListener("scroll", function(){
+
+    // 스크롤하는 높이를 체크
+    let scrollPosition = window.scrollY;
+
+    // 스크롤하는 위치가 중간 메뉴보다 클 경우 (중간 메뉴보다 더 아래로 스크롤 할 경우)
+    if (scrollPosition >= MainAreaTop) {
+        // 맨 위 메뉴바의 display 속성을 none으로 변경
+
+        snsMenu.style.color = "black";
+        Menu.style.color = 'black';
+    } 
+    // else {
+
+    //     // 맨 위 메뉴바의 display 속성을 block으로 변경                    
+    //     topMenu.style.display = "block";
+
+    //     // 중간 메뉴바를 다시 원래 속성으로 변경
+    //     middleMenu.style.position = "static";     
+    //     middleMenu.style.opacity = 0.5;     
+
+    //     // 중간 메뉴바의 투명도 이벤트 리스너 등록
+    //     middleMenu.addEventListener("mouseover", setOpacityToOne);
+    //     middleMenu.addEventListener("mouseout", setOpacityToHalf);
+    // }
+});
+
