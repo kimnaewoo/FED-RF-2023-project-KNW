@@ -8,12 +8,18 @@
 /* 글씨체 */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz@9..40&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+/* font-family: 'Noto Sans KR', sans-serif; */
 
 section {
   padding-left: 100px;
   width: 99.1vw;
   height: 100vh;
   overflow: hidden;
+  border-bottom: 1px solid #000;
+}
+#main-area {
+  border-bottom: none;
 }
 
 /* 스타트영역 */
@@ -23,6 +29,7 @@ section {
   overflow: hidden;
   background-color: #000;
   transition: 1.5s;
+  font-family: 'Bebas Neue', sans-serif;
 }
 .cap-box {
   position: relative;
@@ -156,11 +163,12 @@ section {
   display: none;
 }
 
-/* 상단영역 */
+/* top-area */
 #top-area {
   background-color: #000;
   position: relative;
   display: none;
+  font-family: 'Bebas Neue', sans-serif;
 }
 #top-area video {
   margin: 0% 0%;
@@ -231,13 +239,15 @@ section {
 #main-area {
   position: relative;
   background-color: #fff;
+
 }
 .n-tit {
-  padding-right: 40%;
+  padding-right: 15%;
   font-size: 12rem;
   text-align: center;
   font-weight: bold;
   color: rgb(9, 10, 99);
+  font-family: 'Bebas Neue', sans-serif;
 }
 .news-area {
   display: grid;
@@ -346,91 +356,168 @@ section {
 
 /* 메인영역 - MATCH DAY */
 #match-area {
-  background-color: rgb(9, 10, 99);
+  background-color: #fff;
+  /* color: #fff; */
+}
+#match-area h1 {
+  font-size: 12rem;
+  padding-left: 25%;
+  font-weight: bold;
+  /* color: #fff; */
+  font-family: 'Bebas Neue', sans-serif;
+}
+#mc-area {
+  width: 800px;
+  height: 250px;
+  margin-left: 15%;
+}
+#mcbox {
+  display: flex;
+  text-align: center;
+  gap: 20%;
+  justify-content: space-around;
+  width: 1000px;
+  height: 280px;
+  cursor: pointer;
+  /* background-color: rgb(9, 10, 99); */
+}
+
+.mcbox h4 {
+  font-size: 3rem;
+  text-decoration: overline;
+}
+.mcbox h3 {
+  font-size: 2rem;
+}
+.mc1 {
+  display: flex;
+  margin: 10%;
+  width: 70px;
+  height: 70px;
+}
+
+.mc1 img {
+  width: 100%;
+  height: 100%;
+}
+.score {
+  margin-top: 30%;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+}
+.mcbox p:first-of-type {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.ht {
+  position: relative;
+  display: flex;
+  gap: 5%;
+  width: 1500px;
+  height: 450px;
+  padding-left: 8%;
+  cursor: pointer;
   color: #fff;
 }
-#match-area h1{
-    font-size: 12rem;
-    padding-left: 25%;
-    font-weight: bold;
-    color: #fff;
-}
-#mc-area{
-    width: 800px;
-    height: 250px;
-    margin-left: 15%;
-    /* border-top: 2px solid #fff; */
-    /* background-color: #fff; */
-}
-#mcbox{
-    display: flex;
-    text-align: center;
-    gap: 20%;
-    justify-content: space-around;
-    width: 1000px;
-    height: 280px;
-    cursor: pointer;
-    background-color: rgb(9, 10, 99);
+.ht img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.8);
 }
 
-.mcbox h4{
-    font-size: 3rem;
-    text-decoration: overline;
+.ht1 h4 {
+  position: absolute;
+  top: 75%;
+  width: 45%;
+  text-align: center;
+  font-size: 3rem;
 }
-.mcbox h3{
-    font-size: 2rem;
-}
-.mc1{
-    display: flex;
-    margin: 10%;
-    width: 70px;
-    height: 70px;
-}
-
-.mc1 img{
-    width: 100%;
-    height: 100%;
-}
-.score{
-    margin-top: 30%;
-    width: 60px;
-    height: 60px;
-    font-size: 2rem;
-}
-.mcbox p:first-of-type{
-    font-weight: bold;
-    font-size: 1rem;
-}
-.ht{
-    position: relative;
-    display: flex;
-    gap: 5%;
-    width: 1500px;
-    height: 450px;
-    padding-left: 8%;
-    cursor: pointer;
-}
-.ht img{
-    width: 100%;
-    height: 100%;
-    filter: brightness(0.8);
-}
-
-.ht1 h4{
-    position: absolute;
-    top: 75%;
-    width: 45%;
-    text-align: center;
-    font-size: 3rem;
-}
-.ht2 h4{
-    position: absolute;
-    top: 75%;
-    text-align: center;
-    font-size: 3rem;
+.ht2 h4 {
+  position: absolute;
+  top: 75%;
+  text-align: center;
+  font-size: 3rem;
 }
 
 /* 메인영역 - SHOP */
 #shop-area {
-  background-color: brown;
+  /* background-color: darkgreen; */
+  position: relative;
+}
+#shop-area h1 {
+  margin-top: 5%;
+  font-size: 3rem;
+  font-family: "Noto Sans KR", sans-serif;
+  /* color: #fff; */
+}
+.sbx {
+  position: absolute;
+  top: 17%;
+  width: 100vw;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+}
+.nbx {
+  position: relative;
+  left: 0;
+  width: 200vw;
+  display: flex;
+}
+.nbx ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 1;
+  display: flex;
+}
+.nbx li {
+  flex: 1;
+  text-align: center;
+  font-size: 4vw;
+}
+.txt-ani1 {
+  animation: txt-ani1 10s linear infinite;
+}
+@keyframes txt-ani1 {
+  to {
+    left: -100%;
+  }
+}
+#kitbox {
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  overflow: hidden;
+  top: 30%;
+  margin-left: 2%;
+}
+.kitbox {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1%;
+  width: 100%;
+  height: 110%;
+}
+.kit {
+  width: 50%;
+  height: 80%;
+}
+.kit:nth-child(2n){
+  transform: translateY(10%);
+}
+.kit img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.kitbox p{
+  position: absolute;
+  top: 80%;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.kitbox .kit:nth-child(2n) p{
+  top: 90%;
+  color: #fff;
 }
