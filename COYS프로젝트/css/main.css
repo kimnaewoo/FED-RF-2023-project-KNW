@@ -16,7 +16,6 @@ section {
   width: 99.1vw;
   height: 100vh;
   overflow: hidden;
-  border-bottom: 1px solid #000;
 }
 #main-area {
   border-bottom: none;
@@ -29,7 +28,7 @@ section {
   overflow: hidden;
   background-color: #000;
   transition: 1.5s;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 .cap-box {
   position: relative;
@@ -168,7 +167,7 @@ section {
   background-color: #000;
   position: relative;
   display: none;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 #top-area video {
   margin: 0% 0%;
@@ -234,12 +233,88 @@ section {
   height: 50%;
   transform: translateY(20px);
 }
+/* 메인영역 - SHOP */
+#shop-area {
+  background-color: #fff;
+  position: relative;
+}
+#shop-area strong {
+  color: red;
+}
+.msg-box {
+  margin-top: 3%;
+}
+#shop-area h1 {
+  margin-top: 3%;
+  margin: 0 auto;
+  width: 1000px;
+  height: 220px;
+  font-size: 2.2rem;
+  line-height: 2;
+  font-family: "Bebas Neue", sans-serif;
+}
+#shop-area h2 {
+  margin: 0 auto;
+  font-size: 2.2rem;
+  width: 500px;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+#kitbox {
+  margin-top: 5%;
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  overflow: hidden;
+  top: 30%;
+  margin-left: 2%;
+}
+.kitbox {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1%;
+  width: 130%;
+  height: 120%;
+}
+.kit {
+  width: 50%;
+  height: 80%;
+  cursor: pointer;
+}
+.kit:nth-child(2n) {
+  transform: translateY(10%);
+}
+.kit img {
+  width: 100%;
+  height: 90%;
+}
+.kitbox p {
+  position: absolute;
+  top: 75%;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.kitbox p::after {
+  content: "";
+  margin: 8% 50% 0% 37%;
+  width: 65%;
+  height: 2px;
+  background-color: red;
+  transition: 1s;
+  display: none;
+}
+.kit:hover p::after {
+  display: block;
+}
+.kitbox .kit:nth-child(2n) p {
+  top: 75%;
+  color: #fff;
+}
 
 /* 메인영역 - SPURS NEWS */
 #main-area {
   position: relative;
   background-color: #fff;
-
 }
 .n-tit {
   padding-right: 15%;
@@ -247,7 +322,7 @@ section {
   text-align: center;
   font-weight: bold;
   color: rgb(9, 10, 99);
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 .news-area {
   display: grid;
@@ -279,7 +354,7 @@ section {
   top: 65%;
   width: 100%;
   height: 100%;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   background-color: #fff0;
   z-index: 1;
@@ -296,7 +371,7 @@ section {
   top: 65%;
   width: 100%;
   height: 100%;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   background-color: #fff0;
   z-index: 1;
@@ -312,7 +387,7 @@ section {
   top: 65%;
   width: 100%;
   height: 100%;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   background-color: #fff0;
   z-index: 1;
@@ -328,7 +403,7 @@ section {
   top: 65%;
   width: 100%;
   height: 100%;
-  font-size: 3rem;
+  font-size: 2.3rem;
   color: #fff;
   background-color: #fff0;
   z-index: 1;
@@ -344,7 +419,7 @@ section {
   top: 40%;
   width: 100%;
   height: 100%;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   background-color: #fff0;
   z-index: 1;
@@ -364,7 +439,7 @@ section {
   padding-left: 25%;
   font-weight: bold;
   /* color: #fff; */
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 #mc-area {
   width: 800px;
@@ -439,85 +514,89 @@ section {
   text-align: center;
   font-size: 3rem;
 }
-
-/* 메인영역 - SHOP */
-#shop-area {
-  /* background-color: darkgreen; */
-  position: relative;
+/* footer-area */
+#footer-area {
+  height: 35vh;
+  background-color: rgb(9, 10, 99);
 }
-#shop-area h1 {
-  margin-top: 5%;
-  font-size: 3rem;
-  font-family: "Noto Sans KR", sans-serif;
-  /* color: #fff; */
-}
-.sbx {
-  position: absolute;
-  top: 17%;
-  width: 100vw;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: bold;
-}
-.nbx {
-  position: relative;
-  left: 0;
-  width: 200vw;
+.spon {
+  margin: 3% 0% 0% 30%;
+  width: 600px;
   display: flex;
+  gap: 10%;
 }
-.nbx ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  flex: 1;
-  display: flex;
-}
-.nbx li {
-  flex: 1;
-  text-align: center;
-  font-size: 4vw;
-}
-.txt-ani1 {
-  animation: txt-ani1 10s linear infinite;
-}
-@keyframes txt-ani1 {
-  to {
-    left: -100%;
-  }
-}
-#kitbox {
-  width: 100vw;
-  height: 50vh;
-  position: absolute;
-  overflow: hidden;
-  top: 30%;
-  margin-left: 2%;
-}
-.kitbox {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 1%;
-  width: 100%;
-  height: 110%;
-}
-.kit {
-  width: 50%;
-  height: 80%;
-}
-.kit:nth-child(2n){
-  transform: translateY(10%);
-}
-.kit img {
+.sp img {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
 }
-.kitbox p{
-  position: absolute;
-  top: 80%;
-  font-size: 1.4rem;
-  font-weight: bold;
+.spon1 {
+  margin: 3% 0% 0% 25%;
+  width: 800px;
+  height: 30px;
+  display: flex;
+  gap: 10px;
 }
-.kitbox .kit:nth-child(2n) p{
-  top: 90%;
+.sp1 img {
+  width: 100%;
+  height: 100%;
+}
+.spon2 {
+  margin: 2% 0% 0% 35%;
+  width: 800px;
+  height: 30px;
+  display: flex;
+  gap: 10px;
+}
+.sp2 img {
+  width: 100%;
+  height: 100%;
+}
+/* last-area */
+.last-area {
+  height: 13vh;
+  background-color: #fff;
+}
+
+.spon3 {
+  margin: 2% 0% 0% 25%;
+  width: 800px;
+  height: 50px;
+  display: flex;
+  gap: 10%;
+}
+.sp3 img {
+  width: 100%;
+  height: 100%;
+}
+#adress-area {
+  height: 25vh;
+  background-color: rgb(9, 10, 99);
   color: #fff;
+}
+#adress-area ul {
+  margin: 1% 0% 0% 30%;
+  display: flex;
+  width: 550px;
+  height: 40px;
+  font-size: 1rem;
+  gap: 4%;  
+}
+#adress-area ul:nth-child(2){
+  margin: 1% 0% 0% 39%;
+  display: flex;
+  width: 550px;
+  height: 40px;
+  font-size: 1rem;
+  gap: 4%;  
+}
+
+
+
+#adress-area .lm {
+  margin: 1% 0% 0% 25%;
+  display: flex;
+  width: 850px;
+  height: 40px;
+  font-size: 1rem;
+  gap: 4%; 
 }
