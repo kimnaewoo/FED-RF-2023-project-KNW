@@ -5,7 +5,7 @@ export function TopArea() {
     <>
       <section id="top-area" className="top-area">
         <video muted autoplay loop>
-          <source src="./videos/main_video.mp4" type="video/mp4" />
+          <source src="../.././videos/main_video.mp4" type="video/mp4" />
         </video>
         <h1>WE ARE INEVITABLE</h1>
         <h2>CREATIVES IN FOOTBALL</h2>
