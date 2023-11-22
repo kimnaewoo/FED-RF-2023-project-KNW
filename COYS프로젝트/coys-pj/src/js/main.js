@@ -9,27 +9,27 @@ const intro = dFn.qs("#intro-area");
 const topArea = dFn.qs("#top-area");
 
 // 인트로 이벤트 
-// setTimeout(() => {
-//   fir.style.top = "60%";
-//   fir.style.opacity = 1;
-// }, 1000);
-// setTimeout(() => {
-//   sec.style.top = "73%";
-//   sec.style.opacity = 1;
-// }, 2000);
-// setTimeout(() => {
-//   rom.style.transform = "translate(-40%, -50%)";
-// }, 3000);
-// setTimeout(() => {
-//   mad.style.transform = "translate(-36%, -50%)";
-// }, 4000);
-// setTimeout(() => {
-//   son.style.transform = "translate(-45%, -50%)";
-// }, 5000);
-// setTimeout(() => {
-//   intro.style.height = "0vh";
-//   topArea.style.display = "block";
-// }, 7000);
+setTimeout(() => {
+  fir.style.top = "60%";
+  fir.style.opacity = 1;
+}, 1000);
+setTimeout(() => {
+  sec.style.top = "73%";
+  sec.style.opacity = 1;
+}, 2000);
+setTimeout(() => {
+  rom.style.transform = "translate(-40%, -50%)";
+}, 3000);
+setTimeout(() => {
+  mad.style.transform = "translate(-36%, -50%)";
+}, 4000);
+setTimeout(() => {
+  son.style.transform = "translate(-45%, -50%)";
+}, 5000);
+setTimeout(() => {
+  intro.style.height = "0vh";
+  topArea.style.display = "block";
+}, 7000);
 ///////////////////////////////////////////////////////////////////////////
 
 // const snsMenu = dFn.qs(".sns-menu");

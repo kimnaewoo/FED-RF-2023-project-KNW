@@ -20,31 +20,31 @@ export function ShopArea() {
       <div id="kitbox">
         <div className="kitbox">
           <div className="kit">
-            <img src="../../public/images/shop/hk01.jpg" alt="hk01" />
+            <img src="../images/shop/hk01.jpg" alt="hk01" />
             <p>　flex</p>
           </div>
           <div className="kit">
-            <img src="../../public/images/shop/ak02.jpg" alt="ak02" />
+            <img src="../images/shop/ak02.jpg" alt="ak02" />
             <p>　flex</p>
           </div>
           <div className="kit">
-            <img src="../../public/images/shop/tk01.jpg" alt="tk01" />
+            <img src="../images/shop/tk01.jpg" alt="tk01" />
             <p>　flex</p>
           </div>
           <div className="kit">
-            <img src="../../public/images/shop/trk02.jpg" alt="trk02" />
+            <img src="../images/shop/trk02.jpg" alt="trk02" />
             <p>　flex</p>
           </div>
           <div className="kit">
-            <img src="../../public/images/shop/hk02.jpg" alt="hk02" />
+            <img src="../images/shop/hk02.jpg" alt="hk02" />
             <p>　flex</p>
           </div>
           <div className="kit">
-            <img src="../../public/images/shop/tk_ban.jpg" alt="hk04" />
+            <img src="../images/shop/tk_ban.jpg" alt="hk04" />
             <p>　flex</p>
           </div>
           <div className="kit">
-            <img src="../../public/images/shop/hk04.jpg" alt="hk04" />
+            <img src="../images/shop/hk04.jpg" alt="hk04" />
             <p>　flex</p>
           </div>
         </div>

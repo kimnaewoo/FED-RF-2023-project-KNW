@@ -11,7 +11,7 @@ export function TopArea() {
         <h2>CREATIVES IN FOOTBALL</h2>
         <h4>" Glory, Glory, Tottenham Hotspur "</h4>
         <div className="wheel">
-          <img src="../../public/images/wheel.png" alt="마우스휠" />
+          <img src="../images/wheel.png" alt="마우스휠" />
         </div>
       </section>
     </>

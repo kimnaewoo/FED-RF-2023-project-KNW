@@ -5,7 +5,7 @@ export function Gnb() {
     <>
       <div id="gnb" className="gnb">
         <a href="tottenham.html">
-          <img src="../../public/images/logo2.png" alt="logo" />
+          <img src="../images/logo2.png" alt="logo" />
         </a>
         <div id="menu">
           <div className="top"></div>
