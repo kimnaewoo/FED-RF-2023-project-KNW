@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// 제이쿼리 불러오기
+import $ from "jquery";
+import "jquery-ui-dist/jquery-ui";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// 페이지 공통 CSS
+import "./css/common.css";
+import { TopArea } from "./layout/TopArea";
+import { MainArea } from "./layout/MainArea";
+import { FooterArea } from "./layout/FooterArea";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function App() {
+  return (
+    <>
+      <TopArea />
+      <MainArea />
+      <FooterArea />
+    </>
+  );
+}
+
+// 출력하기
+const root = createRoot(document.querySelector("#root"));
+root.render(<App />);
