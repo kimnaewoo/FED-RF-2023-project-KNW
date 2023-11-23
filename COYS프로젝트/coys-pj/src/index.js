@@ -21,13 +21,9 @@ import dFn from "../src/js/domFn";
 
 setTimeout(() => {
   $('.fir').css({top:'60%',opacity:1})
-  // fir.style.top = "60%";
-  // fir.style.opacity = 1;
 }, 1000);
 setTimeout(() => {
   $('.sec').css({top:'73%',opacity:1})
-  // sec.style.top = "73%";
-  // sec.style.opacity = 1;
 }, 2000);
 setTimeout(() => {
   $('.rom img').css({transform:"translate(-40%, -50%)"})
