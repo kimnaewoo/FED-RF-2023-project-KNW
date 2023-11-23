@@ -4,6 +4,7 @@ import "jquery-ui-dist/jquery-ui";
 
 // 리액트 불러오기
 import {createRoot} from "react-dom";
+import ReactDOM from "react-dom/client";
 
 // 페이지 공통 CSS
 import "./css/common.css";
@@ -13,12 +14,12 @@ import { Gnb } from "./modules/gnb";
 import { TopArea } from "./layout/TopArea";
 import { MainArea } from "./layout/MainArea";
 import { FooterArea } from "./layout/FooterArea";
+import { useEffect } from "react";
+import { Menu } from "./modules/Menu";
 
-import dFn from "../src/js/domFn";
 
 
 // 인트로 이벤트 
-
 setTimeout(() => {
   $('.fir').css({top:'60%',opacity:1})
 }, 1000);
@@ -38,19 +39,27 @@ setTimeout(() => {
   $('#intro-area').css({height:"0vh"})
   $('#top-Area').css({display:'block'})
 }, 7000);
-// GNB 이벤트 
-$('#menu').mouseover(()=>{
-  $('.top , .bottom').addClass('on')
-})
-$('#menu').mouseleave(()=>{
-  $('.top , .bottom').removeClass('on')
-})
+
 
 
 function App() {
+  // 랜더링후 실행 
+  useEffect(()=>{
+    // GNB이벤트
+    $('#menu').mouseover(()=>{
+      $('.top , .bottom').addClass('on');
+    })
+    $('#menu').mouseleave(()=>{
+      $('.top , .bottom').removeClass('on')
+    })
+    $('#menu').click((e)=>{
+      $('.all-menu').fadeIn(400);
+    })
+  })
   return (
     <>
       <Gnb/>
+      <Menu/>
       <Intro/>
       <TopArea />
       <MainArea />

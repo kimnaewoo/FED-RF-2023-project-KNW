@@ -12,13 +12,13 @@ export function Gnb() {
           <div className="bottom"></div>
         </div>
         <div className="sns-menu">
-          <a href="sub1.html" className="fa-brands fa-facebook">
+          <a href="sub1.html" className="fa-brands fa-facebook fk">
             <span>페이스북</span>
           </a>
-          <a href="sub1.html" className="fa-brands fa-instagram">
+          <a href="sub1.html" className="fa-brands fa-instagram is">
             <span>인스타그램</span>
           </a>
-          <a href="sub1.html" className="fa-brands fa-youtube">
+          <a href="sub1.html" className="fa-brands fa-youtube yt">
             <span>유튜브</span>
           </a>
         </div>

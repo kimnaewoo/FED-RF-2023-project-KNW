@@ -34,7 +34,7 @@
     background-color: #fff;
   }
   #menu .top.on {
-    transform: translateY(-300%);
+    transform: translateY(-400%);
     transition: .5s;
   }
   #menu .bottom {
@@ -43,7 +43,7 @@
     background-color: #fff;
   }
   #menu .bottom.on {
-    transform: translateY(300%);
+    transform: translateY(400%);
     transition: .5s;
   }
   #gnb .sns-menu {

@@ -1,0 +1,20 @@
+.all-menu{
+    position: fixed;
+    padding-left: 100px;
+    width: 99.1vw;
+    height: 100vh;
+    background-color: #000;
+    display: none;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    z-index: 998;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 93vw;
+    padding: 7%;
+    height: 75vh;
+    font-size: 11rem;
+    font-weight: bold;
+}
