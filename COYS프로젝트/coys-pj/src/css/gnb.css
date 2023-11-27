@@ -32,19 +32,19 @@
     width: 70%;
     height: 5%;
     background-color: #fff;
+    transition: .5s;
   }
   #menu .top.on {
     transform: translateY(-400%);
-    transition: .5s;
   }
   #menu .bottom {
     width: 70%;
     height: 5%;
     background-color: #fff;
+    transition: .5s;
   }
   #menu .bottom.on {
     transform: translateY(400%);
-    transition: .5s;
   }
   #gnb .sns-menu {
     display: flex;

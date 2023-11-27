@@ -1,4 +1,5 @@
 import "../css/shop_area.css";
+import { SwiperApp } from "../plugin/Swiper";
 
 export function ShopArea() {
   return (
@@ -17,38 +18,7 @@ export function ShopArea() {
           about it and <strong>make</strong> it.
         </h2>
       </div>
-      <div id="kitbox">
-        <div className="kitbox">
-          <div className="kit">
-            <img src="../images/shop/hk01.jpg" alt="hk01" />
-            <p>　flex</p>
-          </div>
-          <div className="kit">
-            <img src="../images/shop/ak02.jpg" alt="ak02" />
-            <p>　flex</p>
-          </div>
-          <div className="kit">
-            <img src="../images/shop/tk01.jpg" alt="tk01" />
-            <p>　flex</p>
-          </div>
-          <div className="kit">
-            <img src="../images/shop/trk02.jpg" alt="trk02" />
-            <p>　flex</p>
-          </div>
-          <div className="kit">
-            <img src="../images/shop/hk02.jpg" alt="hk02" />
-            <p>　flex</p>
-          </div>
-          <div className="kit">
-            <img src="../images/shop/tk_ban.jpg" alt="hk04" />
-            <p>　flex</p>
-          </div>
-          <div className="kit">
-            <img src="../images/shop/hk04.jpg" alt="hk04" />
-            <p>　flex</p>
-          </div>
-        </div>
-      </div>
+      <SwiperApp/>
     </section>
   );
 }
