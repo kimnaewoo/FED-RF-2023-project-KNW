@@ -39,17 +39,11 @@ function App() {
     let top = $(".top").offset().top;
     let bt = $(".bottom").offset().top;
     let logo = $("#gnb img").offset().top;
-
-    console.log(ins, shopTop);
+    // console.log(ins, shopTop);
     if (ins > shopTop) {
       $(".is").css({ color: "#000" });
     } else if (ins < shopTop) {
       $(".is").css({ color: "#fff" });
-    }
-    if (logo > shopTop) {
-      $("#gnb img").css({ color: "#000" });
-    } else if (ins < shopTop) {
-      $("#gnb img").css({ color: "#fff" });
     }
 
     if (fk > shopTop) {
@@ -68,6 +62,11 @@ function App() {
       $(".top, .bottom").css({ backgroundColor: "#000" });
     } else if ((top, bt < shopTop)) {
       $(".top, .bottom").css({ backgroundColor: "#fff" });
+    }
+    if (logo > shopTop) {
+      $("#gnb img").attr("src", "../images/logo.png");
+    } else if (logo < shopTop) {
+      $("#gnb img").attr("src", "../images/logo2.png");
     }
   });
 
