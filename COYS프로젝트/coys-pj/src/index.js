@@ -20,8 +20,8 @@ function App() {
   const [pgName, setPgName] = useState("main");
   const chgPgName = (v) => {
     setPgName(v);
-    $(".all-menu").fadeOut(300)
-    console.log(333);
+    $(".all-menu").fadeOut(300);
+    // console.log(333);
   };
 
   // 랜더링후 실행
@@ -31,18 +31,43 @@ function App() {
       $(".all-menu").fadeToggle(400);
     }); // click
   }); // useEffect
-
-  $(window).scroll(function () {
+  $(window).scroll(() => {
     let shopTop = $("#shop-area").offset().top;
-    const scTop = $(window).scrollTop();
-    console.log(scTop, shopTop);
+    let ins = $(".is").offset().top;
+    let fk = $(".fk").offset().top;
+    let yt = $(".yt").offset().top;
+    let top = $(".top").offset().top;
+    let bt = $(".bottom").offset().top;
+    let logo = $("#gnb img").offset().top;
 
-    if (scTop > (shopTop * 1) / 10) {
-      $(".sns-menu").css({ color: "#000" });
+    console.log(ins, shopTop);
+    if (ins > shopTop) {
+      $(".is").css({ color: "#000" });
+    } else if (ins < shopTop) {
+      $(".is").css({ color: "#fff" });
+    }
+    if (logo > shopTop) {
+      $("#gnb img").css({ color: "#000" });
+    } else if (ins < shopTop) {
+      $("#gnb img").css({ color: "#fff" });
+    }
+
+    if (fk > shopTop) {
+      $(".fk").css({ color: "#000" });
+    } else if (fk < shopTop) {
+      $(".fk").css({ color: "#fff" });
+    }
+
+    if (yt > shopTop) {
+      $(".yt").css({ color: "#000" });
+    } else if (yt < shopTop) {
+      $(".yt").css({ color: "#fff" });
+    }
+
+    if ((top, bt > shopTop)) {
       $(".top, .bottom").css({ backgroundColor: "#000" });
-      $("#gnb").css({ borderRight: "0.1px solid #000" });
-    } else if (scTop > (shopTop * 1) / 4) {
-      $(".logo").attr("src", "../images/logo.png");
+    } else if ((top, bt < shopTop)) {
+      $(".top, .bottom").css({ backgroundColor: "#fff" });
     }
   });
 
@@ -54,13 +79,7 @@ function App() {
     <>
       <Gnb />
       <Menu chgPgNameFn={chgPgName} />
-      {pgName == "main" ? (
-        <MainPage />
-      ) : pgName == "sellshop" ? (
-        <Sellshop />
-      ) : (
-        <MainArea />
-      )}
+      {pgName == "main" ? <MainPage /> : pgName == "sellshop" ? <Sellshop /> : <MainArea />}
     </>
   );
 }
