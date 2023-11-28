@@ -15,8 +15,8 @@ export function Sellshop() {
     <>
     <div className="sellshop-page">
         <div className="selltop">
-            {selData2.map((v)=>
-            <ul>
+            {selData2.map((v,i)=>
+            <ul key={i}>
                 <li>{v}</li>
             </ul>)}
         </div>

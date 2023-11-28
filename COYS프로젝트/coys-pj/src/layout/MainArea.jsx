@@ -1,4 +1,3 @@
-import { Sellshop } from "../modules/SellShop";
 import { MatchArea } from "../pages/MatchArea";
 import { NewsArea } from "../pages/NewsArea";
 import { ShopArea } from "../pages/ShopArea";
@@ -8,7 +7,6 @@ export function MainArea() {
   return (
     <>
       <ShopArea />
-      <Sellshop/>
       <MatchArea />
       <NewsArea/>
     </>

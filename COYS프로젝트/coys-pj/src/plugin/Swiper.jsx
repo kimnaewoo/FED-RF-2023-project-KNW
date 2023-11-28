@@ -20,7 +20,7 @@ export function SwiperApp() {
     let temp = [];
     for (let x = 0; x < num; x++) {
       temp[x] = (
-        <SwiperSlide className="kitbox">
+        <SwiperSlide className="kitbox" key={x}>
           <div className="kit">
             <img src={"./images/shop/hk" + (x + 1) + ".jpg"} />
             <p>　flex</p>

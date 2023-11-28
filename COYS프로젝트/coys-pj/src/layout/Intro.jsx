@@ -1,7 +1,34 @@
+import { useEffect } from "react";
 import "../css/intro.css";
 
+// 제이쿼리 불러오기
+import $ from "jquery";
+import "jquery-ui-dist/jquery-ui";
 
 export function Intro() {
+  useEffect(() => {
+    // 인트로 이벤트
+    setTimeout(() => {
+      $(".fir").css({ top: "60%", opacity: 1 });
+    }, 1000);
+    setTimeout(() => {
+      $(".sec").css({ top: "73%", opacity: 1 });
+    }, 2000);
+    setTimeout(() => {
+      $(".rom img").css({ transform: "translate(-40%, -50%)" });
+    }, 3000);
+    setTimeout(() => {
+      $(".mad img").css({ transform: "translate(-36%, -50%)" });
+    }, 4000);
+    setTimeout(() => {
+      $(".son img").css({ transform: "translate(-45%, -50%)" });
+    }, 5000);
+    setTimeout(() => {
+      $("#intro-area").css({ height: "0vh" });
+      $("#top-Area").css({ display: "block" });
+    }, 7000);
+  }, []);
+
   return (
     <>
       <div id="intro-area" className="intro-area">
