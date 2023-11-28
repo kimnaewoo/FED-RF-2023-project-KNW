@@ -4,7 +4,6 @@ import "jquery-ui-dist/jquery-ui";
 
 // 리액트 불러오기
 import { createRoot } from "react-dom";
-import ReactDOM from "react-dom/client";
 
 // 페이지 공통 CSS
 import "./css/common.css";

@@ -1,0 +1,72 @@
+.sellshop {
+  position: relative;
+  max-width: 1220px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 15%;
+  padding-bottom: 16px;
+  gap: 2vw 0;
+}
+.sellshop > div {
+  position: relative;
+  flex-basis: 23%;
+  aspect-ratio: 1/1.7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fdfdfd;
+}
+.sell-imbx img {
+  width: 100%;
+}
+.sell-titbx {
+  font-weight: bold;
+  text-align: center;
+}
+.sell-titbx h3 {
+  padding: 6px 0;
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: #000;
+  letter-spacing: 2px;
+}
+.sell-titbx h2 {
+  margin-bottom: 8px;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  .sellshop > div {
+    aspect-ratio: 1/1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .sellshop > div {
+    aspect-ratio: 1/1.6;
+    flex-basis: 49%;
+  }
+  .sell-titbx h3 {
+    font-size: 1.2vw;
+  }
+  .sell-titbx h2 {
+    font-size: 2vw;
+  }
+  .btnbx button {
+    font-size: 1.5vw;
+  }
+}
+@media screen and (max-width: 570px) {
+  .sellshop > div {
+    aspect-ratio: 1/1.4;
+    flex-basis: 100%;
+  }
+  .sell-titbx h3 {
+    font-size: 2vw;
+  }
+  .sell-titbx h2 {
+    font-size: 5vw;
+  }
+  .btnbx button {
+    font-size: 3vw;
+  }
+}

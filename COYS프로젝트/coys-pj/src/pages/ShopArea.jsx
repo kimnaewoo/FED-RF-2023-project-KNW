@@ -1,7 +1,11 @@
 import "../css/shop_area.css";
+import { Sellshop } from "../modules/SellShop";
 import { SwiperApp } from "../plugin/Swiper";
 
+
+
 export function ShopArea() {
+  
   return (
     <section id="shop-area" className="shop-area">
       <div className="msg-box">
@@ -19,6 +23,7 @@ export function ShopArea() {
         </h2>
       </div>
       <SwiperApp/>
+      
     </section>
   );
 }
