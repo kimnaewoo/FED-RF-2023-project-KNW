@@ -3,9 +3,17 @@ import { Mdata } from "../data/menu";
 // css 불러오기
 import "../css/menu.css";
 
+import $ from "jquery"
+
+import { useEffect } from "react";
+
 export function Menu(props) {
   // 선택데이터
   const Data = Mdata.menu;
+
+  useEffect(()=>{
+    $('html,body').css({overflowY:"visible"})
+  })
 
   const goPage = (txt) => {
     const pg = {"HOME":"main","TEAM":"main","SPURS SHOP":"sellshop","CONTECT":"main"}
