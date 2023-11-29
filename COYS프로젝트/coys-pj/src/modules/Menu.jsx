@@ -8,7 +8,8 @@ export function Menu(props) {
   const Data = Mdata.menu;
 
   const goPage = (txt) => {
-    props.chgPgNameFn(txt);
+    const pg = {"HOME":"main","TEAM":"main","SPURS SHOP":"sellshop","CONTECT":"main"}
+    props.chgPgNameFn(pg[txt]);
   };
 
   return (
@@ -17,7 +18,7 @@ export function Menu(props) {
         <ul className="header">
           {Data.map((v, i) => (
             <li className="header-nav" key={i}>
-              <a href="#" onClick={() => goPage("sellshop")}>
+              <a href="#" onClick={() => goPage(v)}>
                 {v}
               </a>
             </li>

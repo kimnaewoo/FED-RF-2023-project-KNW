@@ -33,9 +33,9 @@ function App() {
       $(".top , .bottom").toggleClass("on");
       $(".all-menu").fadeToggle(400);
     }); // click
-    $(window).scroll(() => {
-      scrollFn();
-    }); // scroll
+    // $(window).scroll(() => {
+    //   scrollFn();
+    // }); // scroll
   },[]); // useEffect
 
   useLayoutEffect(() => {
