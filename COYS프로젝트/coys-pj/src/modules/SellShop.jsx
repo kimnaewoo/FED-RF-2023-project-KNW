@@ -5,7 +5,20 @@ import { sellbanData } from "../data/sellban";
 // 섹션소개모듈용 CSS 불러오기
 import "../css/sellshop.css";
 
+import $ from "jquery";
+import "jquery-ui-dist/jquery-ui";
+import { useEffect } from "react";
+import { scrollFn } from "../func/jquery-windowscroll_evt";
+
 export function Sellshop() {
+
+  useEffect(() => {
+    return () => {
+      console.log("난 소멸했어~!");
+      window.removeEventListener('scroll',scrollFn);
+    }; ////////// 소멸자 return //////
+  }, []); /////// useEffect ///////////
+
   // 선택데이터
   const selData = sellshopData;
   const selData2 = selltopData;
@@ -30,7 +43,9 @@ export function Sellshop() {
         <div className="sellban">
           {selData3.map((v, i) => (
             <div className="sellbanbx" key={i}>
-              <a href=""><img src={v.isrc} alt={v.itit} /></a>
+              <a href="">
+                <img src={v.isrc} alt={v.itit} />
+              </a>
               <h4 className="sellbanp">{v.itit}</h4>
             </div>
           ))}
