@@ -14,6 +14,7 @@ import { MainPage } from "./pages/MainPage";
 import { Sellshop } from "./modules/SellShop";
 import { Gnb } from "./modules/Gnb";
 import { Menu } from "./modules/Menu";
+import { scrollFn } from "./func/jquery-windowscroll_evt";
 
 
 
@@ -35,7 +36,7 @@ function App() {
     $(window).scroll(() => {
       scrollFn();
     }); // scroll
-  }, []); // useEffect
+  },[]); // useEffect
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);

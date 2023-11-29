@@ -5,18 +5,18 @@ import { sellbanData } from "../data/sellban";
 // 섹션소개모듈용 CSS 불러오기
 import "../css/sellshop.css";
 
-import $ from "jquery";
-import "jquery-ui-dist/jquery-ui";
 import { useEffect } from "react";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
 
 export function Sellshop() {
 
   useEffect(() => {
-    return () => {
-      console.log("난 소멸했어~!");
+    // 자동스크롤 이벤트 설정하기 /////
+    window.addEventListener('scroll',scrollFn);
+    return (() => {
       window.removeEventListener('scroll',scrollFn);
-    }; ////////// 소멸자 return //////
+      console.log("난 소멸했어~!");
+    }); ////////// 소멸자 return //////
   }, []); /////// useEffect ///////////
 
   // 선택데이터
