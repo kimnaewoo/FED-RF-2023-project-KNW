@@ -29,10 +29,12 @@
 }
 .kitbox p {
   position: absolute;
-  top: 75%;
+  top: 73%;
+  left: -9%;
   font-size: 1.4rem;
   font-weight: bold;
 }
+
 .kitbox p::after {
   content: "";
   margin: 8% 50% 0% 37%;
@@ -50,12 +52,12 @@
   color: #fff;
 }
 .swiper-button-prev {
- display: none;
+  display: none;
 }
 .swiper-button-next {
   display: none;
 }
-.swiper-pagination{
+.swiper-pagination {
   padding-left: 40%;
   text-align: justify;
 }

@@ -1,6 +1,7 @@
 #main-area {
   position: relative;
   background-color: #fff;
+  padding-left: 150px;
 }
 .n-tit {
   padding-right: 15%;
@@ -12,12 +13,13 @@
 }
 .news-area {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  width: 50vw;
-  padding: 0% 0% 2% 10%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    width: 80vw;
+    padding: 0% 0% 2% 8%;
 }
+
 .news {
   position: relative;
   width: 400px;
@@ -30,8 +32,8 @@
   filter: brightness(0.75);
 }
 .n4 {
+  width: 875px;
   grid-column: 3/1;
-  width: 850px;
 }
 .n1::before {
   content: '"Son" 50 at the Stadium in 50 seconds';
@@ -102,7 +104,7 @@
   content: "Ange’s verdict: “It was an outstanding effort,the lads gave everything”";
   display: block;
   position: absolute;
-  top: 40%;
+  top: 60%;
   width: 100%;
   height: 100%;
   font-size: 2rem;

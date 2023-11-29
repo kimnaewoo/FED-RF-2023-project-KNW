@@ -68,7 +68,7 @@ function App() {
     } else if (logo < shopTop) {
       $("#gnb img").attr("src", "../images/logo2.png");
     }
-  });
+  }); // scroll 
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);

@@ -14,8 +14,8 @@ export function MatchArea() {
               <div className="score">VS</div>
               <img src="../images/match/wol.png" alt="" />
             </div>
-            <p>premier League</p>
-            <p>TottenhamHotspur stadium,london</p>
+            <p className="mc2">premier League</p>
+            <p className="mc2">TottenhamHotspur stadium,london</p>
           </div>
           <div className="mcbox">
             <h4>Friday</h4>
@@ -25,8 +25,8 @@ export function MatchArea() {
               <div className="score">VS</div>
               <img src="../images/match/ast.png" alt="" />
             </div>
-            <p>premier League</p>
-            <p>TottenhamHotspur stadium,london</p>
+            <p className="mc2">premier League</p>
+            <p className="mc2">TottenhamHotspur stadium,london</p>
           </div>
         </div>
       </div>
