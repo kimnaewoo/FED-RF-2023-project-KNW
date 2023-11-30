@@ -1,5 +1,4 @@
 import $ from "jquery";
-import { FooterArea } from "../layout/FooterArea";
 
 export function scrollFn() {
   console.log("나야나~");
