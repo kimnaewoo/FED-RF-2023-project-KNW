@@ -10,9 +10,9 @@ export function MatchArea() {
             <h4>Tuesday</h4>
             <h3>24 OCT, 04:00</h3>
             <div className="mc1">
-              <img src="../images/match/son.png" alt="" />
+              <img src="../images/match/son.png" alt="son" />
               <div className="score">VS</div>
-              <img src="../images/match/wol.png" alt="" />
+              <img src="../images/match/wol.png" alt="wol" />
             </div>
             <p className="mc2">premier League</p>
             <p className="mc2">TottenhamHotspur stadium,london</p>
@@ -21,9 +21,9 @@ export function MatchArea() {
             <h4>Friday</h4>
             <h3>27 OCT, 21:00</h3>
             <div className="mc1">
-              <img src="../images/match/son.png" alt="" />
+              <img src="../images/match/son.png" alt="son" />
               <div className="score">VS</div>
-              <img src="../images/match/ast.png" alt="" />
+              <img src="../images/match/ast.png" alt="ast" />
             </div>
             <p className="mc2">premier League</p>
             <p className="mc2">TottenhamHotspur stadium,london</p>

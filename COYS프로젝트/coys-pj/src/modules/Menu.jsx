@@ -16,7 +16,7 @@ export function Menu(props) {
   })
 
   const goPage = (txt) => {
-    const pg = {"HOME":"main","TEAM":"main","SPURS SHOP":"sellshop","CONTECT":"main"}
+    const pg = {"HOME":"main","TEAM":"main","SPURS SHOP":"sellshop","CONTECT":"contect"}
     props.chgPgNameFn(pg[txt]);
   };
 

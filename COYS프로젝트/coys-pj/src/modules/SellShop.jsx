@@ -7,10 +7,12 @@ import "../css/sellshop.css";
 
 import { useEffect } from "react";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
+import { FooterArea } from "../layout/FooterArea";
+
+import $ from 'jquery';
+import { ShopArea } from "../pages/ShopArea";
 
 export function Sellshop() {
-
-  
   // 선택데이터
   const selData = sellshopData;
   const selData2 = selltopData;
@@ -31,6 +33,7 @@ export function Sellshop() {
             ))}
           </ul>
         </div>
+        <ShopArea/>
         <p>Home kit</p>
         <div className="sellban">
           {selData3.map((v, i) => (
@@ -42,7 +45,7 @@ export function Sellshop() {
             </div>
           ))}
         </div>
-        <section className="sellshop">
+        <div className="sellshop">
           {selData.map((v, i) => (
             <div key={i}>
               <div className="sell-imbx">
@@ -59,7 +62,9 @@ export function Sellshop() {
               </div>
             </div>
           ))}
-        </section>
+        </div>
+        <div className="shop-main"></div>
+        <FooterArea />
       </div>
     </>
   );

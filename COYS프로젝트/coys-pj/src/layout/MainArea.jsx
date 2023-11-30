@@ -1,3 +1,4 @@
+import { HomeArea } from "../pages/HomeArea";
 import { MatchArea } from "../pages/MatchArea";
 import { NewsArea } from "../pages/NewsArea";
 import { ShopArea } from "../pages/ShopArea";
@@ -9,6 +10,7 @@ export function MainArea() {
       <ShopArea />
       <MatchArea />
       <NewsArea/>
+      <HomeArea/>
     </>
   );
 } // MainArea 컴포넌트

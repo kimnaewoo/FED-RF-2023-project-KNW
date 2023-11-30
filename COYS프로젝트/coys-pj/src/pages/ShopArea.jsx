@@ -1,5 +1,4 @@
 import "../css/shop_area.css";
-import { Sellshop } from "../modules/SellShop";
 import { SwiperApp } from "../plugin/Swiper";
 
 
