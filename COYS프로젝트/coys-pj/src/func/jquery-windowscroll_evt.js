@@ -11,9 +11,9 @@ export function scrollFn() {
   let bt = $(".bottom").offset().top;
   let logo = $("#gnb img").offset().top;
   // console.log(ins, shopTop);
-  if (ins < footTop && ins > shopTop) {
+  if (ins < footTop && ins > shopTop ) {
     $(".is").css({ color: "#000" });
-  } else if (ins < shopTop || ins > footTop) {
+  } else if (ins < shopTop || ins > footTop ) {
     $(".is").css({ color: "#fff" });
   }
   if (fk < footTop && fk > shopTop) {

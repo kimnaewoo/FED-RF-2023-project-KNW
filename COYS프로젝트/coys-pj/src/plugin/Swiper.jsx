@@ -23,7 +23,7 @@ export function SwiperApp() {
         <SwiperSlide className="kitbox" key={x}>
           <div className="kit">
             <img src={"./images/shop/hk" + (x + 1) + ".jpg"} />
-            <p>　flex</p>
+            <p>　COYS</p>
           </div>
         </SwiperSlide>
       );
@@ -34,7 +34,7 @@ export function SwiperApp() {
     <>
       <Swiper
         slidesPerView={4}
-        spaceBetween={0}
+        spaceBetween={-200}
         pagination={{
           clickable: true,
         }}
@@ -47,7 +47,7 @@ export function SwiperApp() {
         modules={[Pagination, Navigation, Autoplay]}
         id="kitbox"
       >
-        {makeList(9)}
+        {makeList(11)}
       </Swiper>
     </>
   );

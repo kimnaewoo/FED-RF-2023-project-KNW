@@ -1,23 +1,27 @@
 import { useEffect } from "react";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
 
+import $ from "jquery"
+
 import "../css/contect.css";
 import { FooterArea } from "../layout/FooterArea";
 
 import { contectData } from "../data/contect";
+import { conscrollFn } from "../func/contect_scroll";
 
 export function Contect() {
-  useEffect(() => {
-    // 자동스크롤 이벤트 설정하기 /////
-    // window.addEventListener("scroll", scrollFn);
-    // return () => {
-    //   window.removeEventListener("scroll", scrollFn);
-    //   console.log("난 소멸했어~!");
-    // }; ////////// 소멸자 return //////
-  }, []); /////// useEffect ///////////
-
   // 선택된 데이터
   const selData = contectData;
+  
+  useEffect(() => {
+    // 자동스크롤 이벤트 설정하기 /////
+    window.addEventListener("scroll", conscrollFn);
+
+    return () => {
+      window.removeEventListener("scroll", scrollFn);
+      console.log("난 소멸했어~!");
+    }; ////////// 소멸자 return //////
+  },[]); /////// useEffect ///////////
   return (
     <>
       <div id="ct-area" className="ct-area">
