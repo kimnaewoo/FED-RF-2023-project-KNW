@@ -7,7 +7,7 @@ export const contectData = [
   },
   {
     tit: "SUSTAINABILITY",
-    stit: "Tottenham Houspur is dedicated to minimising the environmental impacts of its activities across all Club operations",
+    stit: "Tottenham Houspur is dedicated to minimising the environmental ",
     cthis: "MORE INFO",
     link: "/Contect",
   },
