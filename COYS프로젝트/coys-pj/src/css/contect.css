@@ -208,7 +208,7 @@
     background-color: #72edc8;
     top: 95%;
     text-align: center;
-    border: 1px solid #000;
+    border-radius: 15px;
 }
 .titbx:hover{
     background-color: #fff;
@@ -216,6 +216,7 @@
 .titbx:hover .evtbtn{
     background: linear-gradient(to right, #ed766f 0%, #f6d25c 100%);
 }
+
 .evt-tit{
     margin-top: 5%;
     font-family: MonomaniacOne-Regular;
