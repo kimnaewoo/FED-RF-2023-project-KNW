@@ -43,12 +43,12 @@ export function Sellshop() {
             ))}
           </ul>
         </div>
-        <ShopArea/>
+        <ShopArea />
         <p>Home kit</p>
         <div className="sellban">
           {selData3.map((v, i) => (
             <div className="sellbanbx" key={i}>
-              <a href="">
+              <a href="/">
                 <img src={v.isrc} alt={v.itit} />
               </a>
               <h4 className="sellbanp">{v.itit}</h4>

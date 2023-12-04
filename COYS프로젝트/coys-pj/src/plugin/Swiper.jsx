@@ -33,7 +33,7 @@ export function SwiperApp() {
   return (
     <>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={5}
         spaceBetween={-200}
         pagination={{
           clickable: true,

@@ -1,18 +1,19 @@
 import { useEffect } from "react";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
 
-import $ from "jquery"
+import $, { css } from "jquery";
 
 import "../css/contect.css";
 import { FooterArea } from "../layout/FooterArea";
 
 import { contectData } from "../data/contect";
 import { conscrollFn } from "../func/contect_scroll";
+import { eventData } from "../data/event";
 
 export function Contect() {
   // 선택된 데이터
   const selData = contectData;
-  
+
   useEffect(() => {
     // 자동스크롤 이벤트 설정하기 /////
     window.addEventListener("scroll", conscrollFn);
@@ -21,7 +22,16 @@ export function Contect() {
       window.removeEventListener("scroll", scrollFn);
       console.log("난 소멸했어~!");
     }; ////////// 소멸자 return //////
-  },[]); /////// useEffect ///////////
+   
+  }, []); /////// useEffect ///////////
+  
+  const eventList = () => {
+    const hcode = [];
+    for (let i = 1; i < 6; i++) {
+      hcode[i] = <img src={"./images/contect/event/evt" + i + ".png"} />;
+    }
+    return hcode;
+  };
   return (
     <>
       <div id="ct-area" className="ct-area">
@@ -89,6 +99,34 @@ export function Contect() {
               </div>
             ))}
           </div>
+        </div>
+        <div id="event-area" className="event-area">
+          <h1 className="event-tit">
+            <span>EVENTS</span> & <span>CONCERTS</span>
+          </h1>
+          <h1 className="event-stit">
+            Welcome to Tottenham Hotspur Stadium, a world-class venue bringing you
+            <br />
+            <p>the very best in live sport and music.</p>
+          </h1>
+          <div className="list-area">
+            <ul className="listbx">
+              <li className="list">{eventList()}</li>
+            </ul>
+          </div>
+          <ul className="eventbx">
+            {eventData.map((v, i) => (
+              <li className="evtbx" key={i}>
+                <img src={v.isrc} alt="event" />
+                <div className="titbx">
+                  <h3 className="evt-tit">{v.tit}</h3>
+                  <div className="btnbx">
+                    <button className="evtbtn">{v.cthis}</button>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       <FooterArea />

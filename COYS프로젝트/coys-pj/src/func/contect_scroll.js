@@ -38,3 +38,4 @@ export function conscrollFn() {
     $("#gnb img").attr("src", "../images/logo2.png");
   }
 }
+

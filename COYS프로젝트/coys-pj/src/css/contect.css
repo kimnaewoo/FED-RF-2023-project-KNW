@@ -1,16 +1,27 @@
+@font-face {
+    font-family: "RubikBubbles-Regular";
+    src: url(../static/fonts/RubikBubbles-Regular.woff);
+  }
+@font-face {
+    font-family: "MonomaniacOne-Regular";
+    src: url(../static/fonts/MonomaniacOne-Regular.woff);
+  }
+
+
 #ct-area{
     width: 100vw;
-    height: 300vh;
+    height: 400vh;
     overflow: hidden;
     /* background-color: #000; */
     font-family: "Bebas Neue", sans-serif;
     border-right: 1px solid #9e9e9e78;
+    background-color: #f8f5f4;
 }
 .ct-top{
     position: relative;
     width: 70vw;
     height: 75vh;
-    margin-left: 14%;
+    margin-left: 15%;
     background: url(../../public/images/contect/stadium01.jpg) no-repeat center/cover;
     color: #fff;
 }
@@ -27,12 +38,12 @@
     font-size: 6rem;
 }
 .ct-tit{
-    margin:2% 0% 2% 25%;
+    margin:2% 0% 2% 27%;
     font-size: 4rem;
 }
 .ct-intro{
     display: flex;
-    margin-left: 14%;
+    margin-left: 15%;
     width: 80vw;
     height: 73vh;
     gap: 80px;
@@ -74,12 +85,12 @@
     color: #fff;
 }
 .ct-info{
-    margin-left: 14%;
+    margin-left: 22%;
     width: 60vw;
-    height: 60vh;
+    height: 90vh;
 }
 .info-tit{
-    margin-left: 30%;
+    margin-left: 40%;
     font-size: 4rem;
 }
 .infobx{
@@ -140,3 +151,91 @@
  .info-etc button:hover{
     background-color: #fff;
  }
+.event-tit{
+    font-family: RubikBubbles-Regular;
+    font-size: 6rem;
+    margin-left: 22%;
+}
+.event-tit span:nth-child(1){
+    color: green;
+}
+.event-tit span:last-child{
+    color: hotpink;
+}
+.event-stit{
+    font-family: MonomaniacOne-Regular;
+    margin-left: 25%;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: bold;
+}
+.event-stit p{
+    font-family: MonomaniacOne-Regular;
+    margin-left: 10%;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+.listbx{
+    margin-left: 20%;
+}
+.list{
+    display: flex;
+    gap: 5%;
+}
+.list img{
+    cursor: pointer;
+}
+.eventbx{
+    display: flex;
+    gap: 1%;
+    margin: 3% 0% 0% 8%;
+    width: 80vw;
+    height: 30vh;
+}
+.evtbx{
+    position: relative;
+    width: 400px;
+    height: 300px;
+}
+.evtbx img{
+    width: 100%;
+    height: 100%;
+}
+.titbx{
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    background-color: #72edc8;
+    top: 95%;
+    text-align: center;
+    border: 1px solid #000;
+}
+.titbx:hover{
+    background-color: #fff;
+}
+.titbx:hover .evtbtn{
+    background: linear-gradient(to right, #ed766f 0%, #f6d25c 100%);
+}
+.evt-tit{
+    margin-top: 5%;
+    font-family: MonomaniacOne-Regular;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+.btnbx{
+    margin: 10% 0% 0% 25%;
+    width: 50%;
+    border-radius: 5%;
+    height: 30%;
+}
+
+.evtbtn{
+    width: 100%;
+    border-radius: 50px;
+    height: 100%;
+    background-color: #ffffff00;
+    cursor: pointer;
+}
+
+
+
