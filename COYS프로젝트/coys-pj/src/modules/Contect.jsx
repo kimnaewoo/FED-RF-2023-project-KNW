@@ -43,7 +43,7 @@ export function Contect() {
         <h1 className="ct-tit">WELCOME TO TOTTENHAM HOTSUP STADIUM</h1>
         <div className="ct-intro">
           <div className="intro-img">
-            <img src="../../public/images/contect/stadium02.jpg" alt="" />
+            <img src="./images/contect/stadium02.jpg" alt="" />
           </div>
           <div className="intro-ex">
             <h3>The Stadium</h3>

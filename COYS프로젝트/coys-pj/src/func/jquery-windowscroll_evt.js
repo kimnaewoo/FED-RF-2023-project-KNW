@@ -34,8 +34,8 @@ export function scrollFn() {
     $(".top, .bottom").css({ backgroundColor: "#fff" });    
   }
   if (logo > shopTop) {
-    $("#gnb img").attr("src", "../images/logo.png");
+    $("#gnb img").attr("src", "./images/logo.png");
   } else if (logo < shopTop) {
-    $("#gnb img").attr("src", "../images/logo2.png");
+    $("#gnb img").attr("src", "./images/logo2.png");
   }
 }

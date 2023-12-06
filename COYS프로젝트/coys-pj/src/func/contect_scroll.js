@@ -33,9 +33,9 @@ export function conscrollFn() {
     $(".top, .bottom").css({ backgroundColor: "#fff" });    
   }
   if (logo < footTop) {
-    $("#gnb img").attr("src", "../images/logo.png");
+    $("#gnb img").attr("src", "./images/logo.png");
   } else if (logo >= footTop) {
-    $("#gnb img").attr("src", "../images/logo2.png");
+    $("#gnb img").attr("src", "./images/logo2.png");
   }
 }
 

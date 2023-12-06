@@ -12,7 +12,7 @@ function temp(){
   console.log(sts);
 
   if(sts){
-    logo.attr("src", "../../public/images/logo2.png");
+    logo.attr("src", "./images/logo2.png");
     menu.css({ backgroundColor: "#fff" });
     sns.css({ color: "#fff" });
     $('html,body').css({overflow:"hidden"})
@@ -34,7 +34,7 @@ export function Gnb() {
     <>
       <div id="gnb" className="gnb">
         <a href="tottenham.html">
-          <img className="logo" src="../../public/images/logo2.png" alt="logo" />
+          <img className="logo" src="./images/logo2.png" alt="logo"/>
         </a>
         <div id="menu" onClick={temp}>
           <div className="top"></div>
