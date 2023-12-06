@@ -15,6 +15,7 @@ import { Sellshop } from "./modules/SellShop";
 import { Gnb } from "./modules/Gnb";
 import { Menu } from "./modules/Menu";
 import { Contect } from "./modules/Contect";
+import { Team } from "./modules/Team";
 
 
 
@@ -46,7 +47,7 @@ function App() {
     <>
       <Gnb />
       <Menu chgPgNameFn={chgPgName} />
-      {pgName == "main" ? <MainPage /> : pgName == "sellshop" ? <Sellshop /> : pgName == "contect" ? <Contect/> : <MainPage/>}
+      {pgName == "main" ? <MainPage /> : pgName == "sellshop" ? <Sellshop /> : pgName == "contect" ? <Contect/> : pgName == "team"? <Team/> : <MainPage/>}
     </>
   );
 }

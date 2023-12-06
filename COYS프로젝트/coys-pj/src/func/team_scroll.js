@@ -1,8 +1,7 @@
 import $ from "jquery";
 
-export function scrollFn() {
+export function teamscrollFn() {
   console.log("나야나~");
-  let shopTop = $("#shop-area").offset().top;
   let footTop = $("#footer-area").offset().top;
   let ins = $(".is").offset().top;
   let fk = $(".fk").offset().top;
@@ -10,31 +9,32 @@ export function scrollFn() {
   let top = $(".top").offset().top;
   let logo = $("#gnb img").offset().top;
   // console.log(ins, shopTop);
-  if (ins < footTop && ins > shopTop ) {
+  if (ins < footTop ) {
     $(".is").css({ color: "#000" });
-  } else if (ins < shopTop || ins > footTop ) {
+  } else if ( ins >= footTop ) {
     $(".is").css({ color: "#fff" });
   }
-  if (fk < footTop && fk > shopTop) {
+  if (fk < footTop) {
     $(".fk").css({ color: "#000" });
-  } else if (fk < shopTop || fk > footTop) {
+  } else if ( fk >= footTop) {
     $(".fk").css({ color: "#fff" });
   }
 
-  if (yt < footTop && yt > shopTop) {
+  if (yt < footTop) {
     $(".yt").css({ color: "#000" });
-  } else if (yt < shopTop || yt > footTop) {
+  } else if ( yt >= footTop) {
     $(".yt").css({ color: "#fff" });
   }
 
-  if ((top < footTop && top> shopTop)) {
+  if (top < footTop ) {
     $(".top, .bottom").css({ backgroundColor: "#000" });
-  } else if ((top < shopTop || top > footTop)) {
+  } else if ( top >= footTop) {
     $(".top, .bottom").css({ backgroundColor: "#fff" });    
   }
-  if (logo > shopTop) {
+  if (logo < footTop) {
     $("#gnb img").attr("src", "./images/logo.png");
-  } else if (logo < shopTop) {
+  } else if (logo >= footTop) {
     $("#gnb img").attr("src", "./images/logo2.png");
   }
 }
+

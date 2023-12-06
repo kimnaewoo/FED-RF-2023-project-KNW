@@ -28,7 +28,7 @@ export function Gnb() {
   return (
     <>
       <div id="gnb" className="gnb">
-        <a href="/">
+        <a href="/kimnaewoo-react-pj">
           <img className="logo" src="./images/logo2.png" alt="logo" />
         </a>
         <div id="menu" onClick={temp}>
