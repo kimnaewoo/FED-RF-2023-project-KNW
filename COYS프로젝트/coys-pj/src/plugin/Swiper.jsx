@@ -39,13 +39,14 @@ export function SwiperApp() {
           clickable: true,
         }}
         autoplay={{
-          delay: 3000,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         loop={true}
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
         id="kitbox"
+        
       >
         {makeList(11)}
       </Swiper>
