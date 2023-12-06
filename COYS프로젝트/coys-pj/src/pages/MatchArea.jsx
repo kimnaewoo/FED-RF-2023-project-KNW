@@ -10,9 +10,9 @@ export function MatchArea() {
             <h4>Tuesday</h4>
             <h3>24 OCT, 04:00</h3>
             <div className="mc1">
-              <img src="../images/match/son.png" alt="son" />
+              <img src="../../public/images/match/son.png" alt="son" />
               <div className="score">VS</div>
-              <img src="../images/match/wol.png" alt="wol" />
+              <img src="../../public/images/match/wol.png" alt="wol" />
             </div>
             <p className="mc2">premier League</p>
             <p className="mc2">TottenhamHotspur stadium,london</p>
@@ -21,9 +21,9 @@ export function MatchArea() {
             <h4>Friday</h4>
             <h3>27 OCT, 21:00</h3>
             <div className="mc1">
-              <img src="../images/match/son.png" alt="son" />
+              <img src="../../public/images/match/son.png" alt="son" />
               <div className="score">VS</div>
-              <img src="../images/match/ast.png" alt="ast" />
+              <img src="../../public/images/match/ast.png" alt="ast" />
             </div>
             <p className="mc2">premier League</p>
             <p className="mc2">TottenhamHotspur stadium,london</p>
@@ -32,11 +32,11 @@ export function MatchArea() {
       </div>
       <div className="ht">
         <div className="ht1">
-          <img src="../images/match/match.jpg" alt="ht" />
+          <img src="../../public/images/match/match.jpg" alt="ht" />
           <h4>Spurs vs Liverfool | Key Highlights | 2023/24</h4>
         </div>
         <div className="ht2">
-          <img src="../images/match/match02.jpg" alt="ht" />
+          <img src="../../public/images/match/match02.jpg" alt="ht" />
           <h4>Spurs vs Chelsea | Key Highlights | 2023/24</h4>
         </div>
       </div>
