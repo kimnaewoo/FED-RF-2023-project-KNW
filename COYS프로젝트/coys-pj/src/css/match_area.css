@@ -91,3 +91,11 @@
   text-align: center;
   font-size: 3rem;
 }
+@media screen and (max-width: 500px){
+  #match-area{
+    padding-left: 0px;
+  }
+  #match-area h1{
+    font-size: 5rem;
+  }
+}

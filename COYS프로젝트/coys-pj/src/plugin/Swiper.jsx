@@ -45,6 +45,11 @@ export function SwiperApp() {
         loop={true}
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
+        breakpoints={{
+          500: {
+            slidesPerView: 1,
+          }
+}}
         id="kitbox"
         
       >

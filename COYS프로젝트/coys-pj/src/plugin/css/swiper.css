@@ -63,5 +63,10 @@
   text-align: justify;
 }
 @media screen and (max-width: 500px){
-  
+  .kitbox p{
+    display: none;
+  }
+  .swiper-pagination{
+    display: none;
+  }
 }
