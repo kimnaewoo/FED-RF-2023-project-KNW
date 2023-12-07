@@ -49,6 +49,10 @@ export function SwiperApp() {
             slidesPerView: 1,
             spaceBetween: 5,
           },
+          1600:{
+            slideActiveClass:6,
+            spaceBetween: -200,
+          }
         }}
         id="kitbox"
       >
