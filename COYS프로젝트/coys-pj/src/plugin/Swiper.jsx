@@ -14,7 +14,6 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 // 컨텍스트 API를 사용하는 컴포넌트 파일에서 불러옴!
 
 export function SwiperApp() {
-  
   // 리스트 만들기 함수
   const makeList = (num) => {
     let temp = [];
@@ -46,12 +45,12 @@ export function SwiperApp() {
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
         breakpoints={{
-          500: {
+          425: {
             slidesPerView: 1,
-          }
-}}
+            spaceBetween: 5,
+          },
+        }}
         id="kitbox"
-        
       >
         {makeList(11)}
       </Swiper>

@@ -70,6 +70,24 @@
   transform: translateY(20px);
 }
 @media screen and (max-width: 500px) {
+  #top-area {
+    background-color: #000;
+    position: relative;
+    display: block;
+    font-family: "Bebas Neue", sans-serif;
+    height: 90vh;
+    width: 105vw;
+    padding-left: 0%;
+  }
+  #top-area video {
+    margin: 0% 0%;
+    width: 104.7vw;
+    height: 100vh;
+    background-color: #000;
+    object-fit: none;
+    /* margin-left: -32%; */
+    filter: brightness(0.6);
+  }
   #top-area h1 {
     position: absolute;
     top: 60%;
@@ -97,8 +115,8 @@
     left: 30px;
     font-size: 1.5rem;
     filter: brightness(0.85);
-}
-.wheel{
-  display: none;
-}
+  }
+  .wheel {
+    display: none;
+  }
 }

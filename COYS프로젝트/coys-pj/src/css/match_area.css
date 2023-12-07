@@ -91,11 +91,89 @@
   text-align: center;
   font-size: 3rem;
 }
-@media screen and (max-width: 500px){
-  #match-area{
+@media screen and (max-width: 500px) {
+  #match-area {
     padding-left: 0px;
-  }
-  #match-area h1{
+    height: 90vh;
+}
+  #match-area h1 {
     font-size: 5rem;
   }
+  #mc-area {
+    width: 800px;
+    height: 170px;
+    margin-left: 21%;
+}
+  #mcbox {
+    display: flex;
+    padding: 5% 0% 0% 0%;
+    width: 297px;
+    height: 252px;
+    gap: 0%;
+    justify-content: space-around;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #000;
+    border-bottom: none;
+}
+  .mcbox h4 {
+    font-size: 1rem;
+    margin-bottom: 1%;
+  }
+  .mcbox h3 {
+    font-size: 1rem;
+  }
+  .mc1 {
+    display: flex;
+    margin: 3% 0% 0% 33%;
+    width: 20px;
+    height: 20px;
+  }
+  .score {
+    margin-top: 8%;
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+}
+.mcbox p:first-of-type {
+  font-weight: bold;
+  margin: 2% 0% 0% -5%;
+  font-size: 0.7rem;
+}
+.mc2 {
+  font-size: 0.5rem;
+  font-weight: bold;
+  padding: 0%;
+  height: 20px;
+}
+.ht {
+  position: relative;
+  display: flex;
+  gap: 2%;
+  width: 330px;
+  height: 450px;
+  cursor: pointer;
+  color: #fff;
+  flex-direction: column;
+  margin-left: 13%;
+}
+.ht img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.9);
+}
+.ht1 h4 {
+  position: absolute;
+  top: 35%;
+  width: 90%;
+  text-align: center;
+  font-size: 1rem;
+}
+.ht2 h4 {
+  position: absolute;
+  top: 86%;
+  text-align: center;
+  font-size: 1rem;
+}
+
 }
