@@ -248,23 +248,23 @@
   }
   .ct-top {
     position: relative;
-    width: 100vw;
+    width: 85vw;
     height: 50vh;
-    margin-left: 0%;
+    margin-left: 15%;
     background: url(../../public/images/contect/stadium01.jpg) no-repeat center/cover;
     color: #fff;
   }
   .ct-top h2 {
     position: absolute;
     top: 60%;
-    margin-left: 20%;
-    font-size: 6rem;
+    margin-left: 5%;
+    font-size: 5rem;
   }
   .ct-top h3 {
     position: absolute;
     top: 80%;
-    margin-left: 20%;
-    font-size: 5.5rem;
+    margin-left: 5%;
+    font-size: 5rem;
   }
   .ct-tit {
     margin: 2% 0% 2% 25%;

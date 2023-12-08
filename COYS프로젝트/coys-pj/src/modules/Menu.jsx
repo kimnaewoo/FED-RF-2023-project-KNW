@@ -1,6 +1,5 @@
 import { Mdata } from "../data/menu";
 
-// css 불러오기
 import "../css/menu.css";
 
 import $ from "jquery"

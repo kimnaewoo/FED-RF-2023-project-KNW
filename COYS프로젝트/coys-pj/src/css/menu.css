@@ -38,17 +38,5 @@
     font-weight: bold;
     padding-top: 50%;
   }
-  #gnb {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 80px;
-    height: 100vh;
-    padding-left: 4%;
-    border-right: 0.1px solid #9e9e9e78;
-    z-index: 999;
-    overflow: hidden;
-    /* display: none; */
-  }
+  
 }
