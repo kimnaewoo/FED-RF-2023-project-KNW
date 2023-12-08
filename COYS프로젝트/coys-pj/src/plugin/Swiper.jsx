@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 
 import "./css/swiper.css";
 
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Navigation, Autoplay, Scrollbar } from "swiper/modules";
 
 // 컨텍스트 API를 사용하는 컴포넌트 파일에서 불러옴!
 
@@ -54,6 +54,7 @@ export function SwiperApp() {
             spaceBetween: -200,
           }
         }}
+        Scrollbar
         id="kitbox"
       >
         {makeList(11)}
