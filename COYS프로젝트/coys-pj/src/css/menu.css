@@ -27,7 +27,7 @@
 
 /* h1 {font-size: 80px; color: transparent; -webkit-text-stroke: 1px #fff; font-weight: bold; text-align: center; padding: 30px;} */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 375px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -38,5 +38,16 @@
     font-weight: bold;
     padding-top: 50%;
   }
+  .all-menu {
+    background-color: #000000d1;
+    color: #fff;
+    display: none;
+    font-family: Bebas Neue,sans-serif;
+    height: 100vh;
+    padding-left: 0%;
+    position: fixed;
+    width: 100vw;
+    z-index: 998;
+}
   
 }

@@ -45,7 +45,7 @@ export function SwiperApp() {
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
         breakpoints={{
-          425: {
+          375: {
             slidesPerView: 1,
             spaceBetween: 5,
           },

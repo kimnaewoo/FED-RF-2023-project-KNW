@@ -24,9 +24,10 @@
   width: 500px;
   font-family: "Bebas Neue", sans-serif;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 375px){
   #shop-area{
-    height: 85vh;
+    height: 100vh;
+    padding: 0%;
   }
   #shop-area h1 {
     margin-top: 3%;
@@ -42,6 +43,7 @@
     font-size: 1.9rem;
     width: 400px;
     font-family: "Bebas Neue", sans-serif;
+    margin-left: 8%;
   }
 }
 

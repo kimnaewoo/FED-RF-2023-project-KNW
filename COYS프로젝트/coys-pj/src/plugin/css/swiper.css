@@ -62,7 +62,7 @@
   padding-left: 45%;
   text-align: justify;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 375px) {
   .kitbox p {
     display: none;
   }
@@ -71,12 +71,12 @@
   }
   #kitbox {
     margin-top: 5%;
-    width: 70vw;
-    height: 50vh;
+    width: 90vw;
+    height: 60vh;
     position: absolute;
     overflow: hidden;
     /* top: 14%; */
-    margin-left: 0%;
+    margin-left: 3%;
 }
 .kitbox{
   width: 250px;

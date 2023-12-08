@@ -91,23 +91,23 @@
   text-align: center;
   font-size: 3rem;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 375px) {
   #match-area {
     padding-left: 0px;
-    height: 90vh;
+    height: 100vh;
 }
   #match-area h1 {
     font-size: 5rem;
+    padding-left: 12%;
   }
   #mc-area {
     width: 800px;
     height: 170px;
-    margin-left: 21%;
 }
   #mcbox {
     display: flex;
     padding: 5% 0% 0% 0%;
-    width: 297px;
+    width: 310px;
     height: 252px;
     gap: 0%;
     justify-content: space-around;
@@ -150,12 +150,11 @@
   position: relative;
   display: flex;
   gap: 2%;
-  width: 330px;
+  width: 340px;
   height: 450px;
   cursor: pointer;
   color: #fff;
   flex-direction: column;
-  margin-left: 13%;
 }
 .ht img {
   width: 100%;

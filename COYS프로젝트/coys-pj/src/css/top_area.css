@@ -69,7 +69,7 @@
   height: 50%;
   transform: translateY(20px);
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 375px) {
   #top-area {
     background-color: #000;
     position: relative;
@@ -91,7 +91,6 @@
   #top-area h1 {
     position: absolute;
     top: 60%;
-    left: 30px;
     width: 100vw;
     height: 12vh;
     text-align: center;
@@ -102,7 +101,6 @@
   #top-area h2 {
     position: absolute;
     top: 65%;
-    left: 30px;
     width: 100vw;
     height: 12vh;
     text-align: center;
@@ -112,7 +110,6 @@
   }
   #top-area h4 {
     top: 73%;
-    left: 30px;
     font-size: 1.5rem;
     filter: brightness(0.85);
   }

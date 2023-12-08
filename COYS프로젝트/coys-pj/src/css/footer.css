@@ -79,24 +79,25 @@
   font-size: 1rem;
   gap: 4%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 375px) {
   #footer-area {
+    width: 100vw;
     height: 25vh;
     background-color: rgb(9, 10, 99);
   }
   .spon {
-    margin: 5% 0% 0% 0%;
-    width: 290px;
+    margin: 5% 0% 0% -20%;
+    width: 100%;
     display: flex;
     gap: 10%;
   }
   .spon1 {
-    margin: 10% 0% 0% 0%;
-    width: 310px;
-    height: 30px;
+    margin: 10% 0% 0% -25%;
+    width: 110%;
+    height: 25%;
     display: flex;
-    gap: 5px;
-  }
+    gap: 1%;
+}
   .spon2 {
     margin: 10% 0% 0% 0%;
     width: 300px;
@@ -104,45 +105,57 @@
     display: flex;
     gap: 10px;
   }
+  .sp1{
+    width: 100%;
+    height: 100%;
+  }
   .last-area {
+    width: 100vw;
     height: 8vh;
     background-color: #9e9e9ede;
   }
+  .spon2 {
+    margin: 10% 0% 0% -22%;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    gap: 10px;
+  }
   .spon3 {
-    margin: 3% 0% 0% 0%;
-    width: 420px;
-    height: 40px;
+    margin: 2% 0% 0% -20%;
+    width: 100%;
+    height: 90%;
     display: flex;
     gap: 10%;
   }
   #adress-area {
+    width: 100vw;
     height: 20vh;
     background-color: rgb(9, 10, 99);
     color: #fff;
   }
   #adress-area ul {
-    margin: 5% 0% 0% 0%;
+    margin: 5% 0% 0% -28%;
     display: flex;
-    width: 200px;
-    height: 40px;
+    width: 100%;
+    height: 25%;
     font-size: 0.6rem;
     gap: 5%;
     font-weight: bold;
-  }
+}
   #adress-area ul:nth-child(2) {
-    margin: 0% 0% 0% 10%;
+    margin: 0% 0% 0% -10%;
     display: flex;
-    width: 230px;
-    height: 40px;
+    width: 100%;
+    height: 35%;
     font-size: 1rem;
     gap: 4%;
   }
   #adress-area .lm {
-    margin: 0% 0% 0% 0%;
+    margin: 0% 0% 0% -22%;
     display: flex;
-    width: 290px;
-    /* height: 13px; */
+    width: 120%;
     font-size: 0.4rem;
     gap: 1%;
-  }
+}
 }
