@@ -10,6 +10,14 @@ export function scrollFn() {
   let top = $(".top").offset().top;
   let logo = $("#gnb img").offset().top;
   // console.log(ins, shopTop);
+  
+  const media = matchMedia("screen and (max-width: 375px)")
+
+media.removeEventListener((a) => {
+  console.log(a)
+})
+출처: https://hohoya33.tistory.com/130 [개발 메모장:티스토리]
+
   if (ins < footTop && ins > shopTop ) {
     $(".is").css({ color: "#000" });
   } else if (ins < shopTop || ins > footTop ) {
@@ -37,4 +45,5 @@ export function scrollFn() {
   } else if (logo < shopTop) {
     $("#gnb img").attr("src", "./images/logo2.png");
   }
+  
 }
