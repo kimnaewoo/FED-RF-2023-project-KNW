@@ -25,6 +25,7 @@ function App() {
   const chgPgName = (v) => {
     setPgName(v);
     $(".all-menu").fadeOut(300);
+    $(".top , .bottom").removeClass("on");
     // console.log(333);
   };
 

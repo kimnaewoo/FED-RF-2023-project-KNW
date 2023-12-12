@@ -1,6 +1,6 @@
 #kitbox {
   margin-top: 5%;
-  width: 90vw;
+  width: 100vw;
   height: 50vh;
   position: absolute;
   overflow: hidden;
@@ -59,7 +59,7 @@
   display: none;
 }
 .swiper-pagination {
-  padding-left: 45%;
+  padding-left: 40%;
   text-align: justify;
 }
 @media screen and (max-width: 375px) {
