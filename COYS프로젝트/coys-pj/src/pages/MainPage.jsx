@@ -11,11 +11,14 @@ export function MainPage() {
     // 자동스크롤 이벤트 설정하기 /////
     window.addEventListener("scroll", scrollFn);
     
-    if (window.matchMedia("(min-width:375px)").matches) {
+    if (window.matchMedia("(max-width:375px)").matches) {
       // 미디어 쿼리에 따라 이벤트 핸들러 연결
-      window.removeEventListener("resize", scrollFn);
+      window.removeEventListener("scroll", scrollFn);
       console.log("미디어쿼리~");
     } 
+    else{
+      window.addEventListener("scroll", scrollFn);
+    }
     return () => {
       window.removeEventListener("scroll", scrollFn);
       console.log("난 소멸했어~!");

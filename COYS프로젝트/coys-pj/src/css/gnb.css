@@ -69,20 +69,20 @@
     border: none;
     display: flex;
     flex-direction: row;
-    height: 10vh;
+    height: 8vh;
     margin: 0% 0 0 0%;
     overflow: hidden;
     width: 100vw;
     z-index: 999;
-    justify-content: space-around;
-    background-color: #FF9800;
+    /* justify-content: space-around; */
+    background-color: rgb(9, 10, 99);
   }
   #gnb a {
     width: 10%;
     height: 100%;
   }
     #gnb a img {
-      margin-top: 10%;
+      margin-top: 20%;
       width: 100%;
       height: 80%;
     }
