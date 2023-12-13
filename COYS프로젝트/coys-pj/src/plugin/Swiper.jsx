@@ -54,7 +54,6 @@ export function SwiperApp() {
             spaceBetween: -200,
           }
         }}
-        Scrollbar
         id="kitbox"
       >
         {makeList(11)}
