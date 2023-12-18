@@ -5,6 +5,7 @@ import "../css/team.css";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
 import { teamscrollFn } from "../func/team_scroll";
 import { teamData } from "../data/team";
+import { loanData } from "../data/loan";
 
 export function Team() {
   useEffect(() => {
@@ -32,6 +33,26 @@ export function Team() {
         <div className="teambx">
           <div className="team">
             {teamData.map((v, i) => (
+              <div className="pro" key={i}>
+                <div className="pro-img">
+                  <img src={v.isrc} alt={v.tit} />
+                </div>
+                <div className="pro-data">
+                  <p className="pro-tit">{v.tit}</p>
+                  <p className="pro-from">{v.from}</p>
+                </div>
+                <div className="pro-num">{v.number}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="loan-area">
+        <div className="loan-top"></div>
+        <h1 className="loan-tit">LOAN</h1>
+        <div className="loanbx">
+          <div className="loan">
+            {loanData.map((v, i) => (
               <div className="pro" key={i}>
                 <div className="pro-img">
                   <img src={v.isrc} alt={v.tit} />
