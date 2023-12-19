@@ -33,6 +33,8 @@ export function Sellshop() {
       window.removeEventListener("scroll", scrollFn);
       console.log("난 소멸했어~!");
     }; ////////// 소멸자 return //////
+
+  
   }, []); /////// useEffect ///////////
 
   return (
@@ -50,12 +52,11 @@ export function Sellshop() {
             ))}
           </ul>
           <div className="gsbx">
-            <a href="#" className="fa-solid fa-magnifying-glass gs">
-            </a>
-            <p>What are you looking for?</p>
+            <a href="#" className="fa-solid fa-magnifying-glass gs"></a>
+            <p className="gstit">What are you looking for?</p>
           </div>
-          <a href="#" className="fa-solid fa-user us">
-          </a>
+          <a href="#" className="fa-solid fa-user us" />
+          <a href="#" className="fa-solid fa-cart-shopping cart" />
         </div>
         <ShopArea />
         <p>Home kit</p>

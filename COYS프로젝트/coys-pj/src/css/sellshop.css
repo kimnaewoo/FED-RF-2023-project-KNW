@@ -8,25 +8,55 @@
   background: url(../../public/images/shop/sell_topban.jpg) no-repeat 50% 0%/100%;
 }
 .gsbx {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  width: 250px;
-  height: 40px;
-  border: 1px solid #000;
-  border-radius: 15px;
   position: absolute;
-  top: 10%;
-  right: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  top: 9%;
+  right: 12%;
+  width: 14.5vw;
+  height: 5vh;
+  border-radius: 15px;
+  text-align: center;
 }
-.gsbx p{
-  font-size: 1rem;
+.gsbx:hover{
+  border: 1px solid #000;
+}
+
+.gs {
+  line-height: 1.4;
+  font-size: 2rem;
+  color: rgb(9, 10, 99);
+}
+.gstit{
+  padding: 0;
+  color: rgb(9, 10, 99);
+  line-height: 2.5;
+  font-size: 1.1rem;
 }
 .us {
   position: absolute;
   top: 10%;
   right: 8%;
+  font-size: 1.7rem;
 }
+.cart{
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  font-size: 1.7rem;
+}
+.cart::after {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: red;
+  width: 70%;
+  height: 70%;
+  top: -30%;
+  left: 60%;
+  border-radius: 50%;
+}
+
 
 .tit {
   font-family: "Bebas Neue", sans-serif;
@@ -114,7 +144,7 @@ p {
 .sell-titbx h3 {
   padding: 6px 0;
   margin-bottom: 5px;
-  font-size: 2.2rem;
+  font-size: 1.7rem;
   color: #000;
 }
 .sell-titbx h2 {
