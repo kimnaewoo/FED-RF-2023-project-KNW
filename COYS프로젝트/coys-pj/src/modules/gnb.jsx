@@ -36,6 +36,7 @@ export function Gnb() {
           <div className="bottom"></div>
         </div>
         <div className="sns-menu">
+        <a href="#" className="fa-solid fa-user user" />
           <a href="#" className="fa-brands fa-facebook fk">
             <span>페이스북</span>
           </a>

@@ -4,6 +4,7 @@ export function scrollFn() {
   console.log("나야나~");
   let shopTop = $("#shop-area").offset().top;
   let footTop = $("#footer-area").offset().top;
+  let user = $(".user").offset().top;
   let ins = $(".is").offset().top;
   let fk = $(".fk").offset().top;
   let yt = $(".yt").offset().top;
@@ -15,6 +16,11 @@ export function scrollFn() {
     $(".is").css({ color: "#000" });
   } else if (ins < shopTop || ins > footTop ) {
     $(".is").css({ color: "#fff" });
+  }
+  if (user < footTop && user > shopTop ) {
+    $(".user").css({ color: "#000" });
+  } else if (user < shopTop || user > footTop ) {
+    $(".user").css({ color: "#fff" });
   }
   if (fk < footTop && fk > shopTop) {
     $(".fk").css({ color: "#000" });
