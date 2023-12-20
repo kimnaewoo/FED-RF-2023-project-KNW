@@ -25,6 +25,7 @@ function temp() {
 } // temp
 
 export function Gnb() {
+
   return (
     <>
       <div id="gnb" className="gnb">

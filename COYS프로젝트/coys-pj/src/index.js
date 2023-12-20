@@ -4,6 +4,7 @@ import "jquery-ui-dist/jquery-ui";
 
 // 리액트 불러오기
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 
 // 페이지 공통 CSS
 import "./css/common.css";
@@ -17,11 +18,10 @@ import { Menu } from "./modules/Menu";
 import { Contect } from "./modules/Contect";
 import { Team } from "./modules/Team";
 
-
-
 function App() {
   // 상태변경 관리변수
   const [pgName, setPgName] = useState("main");
+
   const chgPgName = (v) => {
     setPgName(v);
     $(".all-menu").fadeOut(300);
@@ -38,18 +38,18 @@ function App() {
     // $(window).scroll(() => {
     //   scrollFn();
     // }); // scroll
-  },[]); // useEffect
+  }, []); // useEffect
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }); // useLayoutEffect
 
   return (
-    <>
+    <BrowserRouter>
       <Gnb />
       <Menu chgPgNameFn={chgPgName} />
-      {pgName == "main" ? <MainPage /> : pgName == "sellshop" ? <Sellshop /> : pgName == "contect" ? <Contect/> : pgName == "team"? <Team/> : <MainPage/>}
-    </>
+      {pgName == "main" ? <MainPage /> : pgName == "sellshop" ? <Sellshop /> : pgName == "contect" ? <Contect /> : pgName == "team" ? <Team /> : <MainPage />}
+    </BrowserRouter>
   );
 }
 
