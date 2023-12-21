@@ -32,9 +32,16 @@ function temp() {
 
 export function Gnb() {
   
+  // 상태변경 관리변수
   const [pgName, setPgName] = useState("main");
 
-  
+  const chgPgName = (v) => {
+    setPgName(v);
+    $(".all-menu").fadeOut(300);
+    $(".top , .bottom").removeClass("on");
+    // console.log(333);
+  };
+
   // 랜더링후 실행
   useEffect(() => {
     $("#menu").click(() => {
@@ -46,19 +53,13 @@ export function Gnb() {
     }); // scroll
   }, []); // useEffect
 
-  const chgPgName = (v) => {
-    setPgName(v);
-    $(".all-menu").fadeOut(300);
-    $(".top , .bottom").removeClass("on");
-    // console.log(333);
-  };
   return (
     <>
       <div id="gnb" className="gnb">
         <a href="/kimnaewoo-react-pj">
           <img className="logo" src="./images/logo2.png" alt="logo" />
         </a>
-        <div id="menu" onClick={temp}>
+        <div id="menu" onClick={() => temp()}>
           <div className="top"></div>
           <div className="bottom"></div>
         </div>

@@ -21,17 +21,7 @@ import { Team } from "./modules/Team";
 import { HomeArea } from "./pages/HomeArea";
 
 function App() {
-  // 상태변경 관리변수
-  const [pgName, setPgName] = useState("main");
-
-  const chgPgName = (v) => {
-    setPgName(v);
-    $(".all-menu").fadeOut(300);
-    $(".top , .bottom").removeClass("on");
-    // console.log(333);
-  };
-
-
+  
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }); // useLayoutEffect
