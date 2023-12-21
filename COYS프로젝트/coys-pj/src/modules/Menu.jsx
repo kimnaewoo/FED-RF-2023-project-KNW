@@ -5,8 +5,12 @@ import "../css/menu.css";
 import $ from "jquery"
 
 import { useEffect } from "react";
+import { Layout } from "../layout/Layout";
+import { Sellshop } from "./SellShop";
+import { Contect } from "./Contect";
+import { Team } from "./Team";
 
-export function Menu(props) {
+export function Menu(props, pgName) {
   // 선택데이터
   const Data = Mdata.menu;
 
@@ -26,6 +30,7 @@ export function Menu(props) {
           {Data.map((v, i) => (
             <li className="header-nav" key={i}>
               <a href="#" onClick={() => goPage(v)}>
+              {pgName == "main" ? <Layout /> : pgName == "sellshop" ? <Sellshop /> : pgName == "contect" ? <Contect /> : pgName == "team" ? <Team /> : <Layout />}
                 {v}
               </a>
             </li>

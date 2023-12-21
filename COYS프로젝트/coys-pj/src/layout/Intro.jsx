@@ -25,7 +25,6 @@ export function Intro() {
     }, 5000);
     setTimeout(() => {
       $("#intro-area").css({ height: "0vh" });
-      $("#top-Area").css({ display: "block" });
     }, 7000);
   }, []);
 

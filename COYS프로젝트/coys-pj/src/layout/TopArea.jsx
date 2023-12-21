@@ -1,9 +1,10 @@
 import "../css/top_area.css";
+import { Gnb } from "../pages/Gnb";
 import { Intro } from "./Intro";
 export function TopArea() {
   return (
     <>
-      <Intro />
+    <Gnb/>
       <section id="top-area" className="top-area">
         <video muted autoPlay loop>
           <source src="./videos/main_video.mp4" type="video/mp4" />

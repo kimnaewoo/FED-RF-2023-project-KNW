@@ -1,6 +1,13 @@
 import "../css/gnb.css";
 
 import $ from "jquery";
+import { Menu } from "../modules/Menu";
+import { Layout } from "../layout/Layout";
+import { Sellshop } from "../modules/SellShop";
+import { Contect } from "../modules/Contect";
+import { Team } from "../modules/Team";
+import { useEffect, useState } from "react";
+import { scrollFn } from "../func/jquery-windowscroll_evt";
 
 function temp() {
   let logo = $("#gnb img");
@@ -20,12 +27,31 @@ function temp() {
     // menu.css({ backgroundColor: "#000" });
     // sns.css({ color: "#000" });
     $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" });
-    
   }
 } // temp
 
 export function Gnb() {
+  
+  const [pgName, setPgName] = useState("main");
 
+  
+  // 랜더링후 실행
+  useEffect(() => {
+    $("#menu").click(() => {
+      $(".top , .bottom").toggleClass("on");
+      $(".all-menu").fadeToggle(400);
+    }); // click
+    $(window).scroll(() => {
+      scrollFn();
+    }); // scroll
+  }, []); // useEffect
+
+  const chgPgName = (v) => {
+    setPgName(v);
+    $(".all-menu").fadeOut(300);
+    $(".top , .bottom").removeClass("on");
+    // console.log(333);
+  };
   return (
     <>
       <div id="gnb" className="gnb">
@@ -37,7 +63,7 @@ export function Gnb() {
           <div className="bottom"></div>
         </div>
         <div className="sns-menu">
-        <a href="#" className="fa-solid fa-user user" />
+          <a href="#" className="fa-solid fa-user user" />
           <a href="#" className="fa-brands fa-facebook fk">
             <span>페이스북</span>
           </a>

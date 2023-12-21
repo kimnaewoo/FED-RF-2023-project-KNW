@@ -4,19 +4,21 @@ import "jquery-ui-dist/jquery-ui";
 
 // 리액트 불러오기
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
 // 페이지 공통 CSS
 import "./css/common.css";
 
-import { MainArea } from "./layout/MainArea";
 import { useEffect, useLayoutEffect, useState } from "react";
-import { MainPage } from "./pages/MainPage";
+import { Layout, MainPage } from "./layout/Layout";
+import { Main } from "./pages/Main";
+import { Login } from "./pages/Login";
 import { Sellshop } from "./modules/SellShop";
-import { Gnb } from "./modules/Gnb";
+import { Gnb } from "./pages/Gnb";
 import { Menu } from "./modules/Menu";
 import { Contect } from "./modules/Contect";
 import { Team } from "./modules/Team";
+import { HomeArea } from "./pages/HomeArea";
 
 function App() {
   // 상태변경 관리변수
@@ -29,16 +31,6 @@ function App() {
     // console.log(333);
   };
 
-  // 랜더링후 실행
-  useEffect(() => {
-    $("#menu").click(() => {
-      $(".top , .bottom").toggleClass("on");
-      $(".all-menu").fadeToggle(400);
-    }); // click
-    // $(window).scroll(() => {
-    //   scrollFn();
-    // }); // scroll
-  }, []); // useEffect
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -46,9 +38,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Gnb />
-      <Menu chgPgNameFn={chgPgName} />
-      {pgName == "main" ? <MainPage /> : pgName == "sellshop" ? <Sellshop /> : pgName == "contect" ? <Contect /> : pgName == "team" ? <Team /> : <MainPage />}
+      <Routes>
+        <Route path="/" element={<Layout/>} />
+        <Route index element={<Main />} />
+      </Routes>
     </BrowserRouter>
   );
 }

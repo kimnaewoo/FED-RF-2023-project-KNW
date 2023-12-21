@@ -1,16 +1,15 @@
-import { HomeArea } from "../pages/HomeArea";
-import { MatchArea } from "../pages/MatchArea";
-import { NewsArea } from "../pages/NewsArea";
-import { ShopArea } from "../pages/ShopArea";
+// MainArea 컴포넌트
 
-// 라우터 역할을 하는 MainArea 컴포넌트
+import { Outlet } from "react-router-dom";
+
+
+
 export function MainArea() {
+  // cat 속성으로 메뉴분류 전달
+
   return (
-    <>
-      <ShopArea />
-      <MatchArea />
-      <NewsArea/>
-      <HomeArea/>
-    </>
+    <main className="cont">
+      <Outlet />
+    </main>
   );
 } // MainArea 컴포넌트
