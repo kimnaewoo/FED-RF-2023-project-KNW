@@ -1,4 +1,5 @@
 import "../css/top_area.css";
+import { Menu } from "../modules/Menu";
 import { Gnb } from "../pages/Gnb";
 import { Intro } from "./Intro";
 export function TopArea() {
