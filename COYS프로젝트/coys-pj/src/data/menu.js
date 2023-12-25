@@ -1,3 +1,20 @@
 export const Mdata = {
-    menu:["HOME","TEAM","SPURS SHOP","CONTECT"]
-}
+  menu: [
+    {
+      label: "HOME",
+      path: "/",
+    },
+    {
+      label: "TEAM",
+      path: "/team",
+    },
+    {
+      label: "SPURS SHOP",
+      path: "/shop",
+    },
+    {
+      label: "CONTECT",
+      path: "/contect",
+    },
+  ],
+};

@@ -5,12 +5,9 @@ import "../css/menu.css";
 import $ from "jquery"
 
 import { useEffect } from "react";
-import { Layout } from "../layout/Layout";
-import { Sellshop } from "./SellShop";
-import { Contect } from "./Contect";
-import { Team } from "./Team";
+import { Link } from "react-router-dom";
 
-export function Menu(props, pgName) {
+export function Menu() {
   // 선택데이터
   const Data = Mdata.menu;
 
@@ -18,10 +15,7 @@ export function Menu(props, pgName) {
     $('html,body').css({overflowY:"visible"})
   })
 
-  const goPage = (txt) => {
-    const pg = {"HOME":"main","TEAM":"team","SPURS SHOP":"sellshop","CONTECT":"contect"}
-    props.chgPgNameFn(pg[txt]);
-  };
+
 
   return (
     <>
@@ -29,10 +23,9 @@ export function Menu(props, pgName) {
         <ul className="header">
           {Data.map((v, i) => (
             <li className="header-nav" key={i}>
-              <a href="#" onClick={() => goPage(v)}>
-              {pgName == "main" ? <Layout /> : pgName == "sellshop" ? <Sellshop /> : pgName == "contect" ? <Contect /> : pgName == "team" ? <Team /> : <Layout />}
-                {v}
-              </a>
+              <Link to={v.path}>
+                {v.label}
+              </Link>
             </li>
           ))}
         </ul>

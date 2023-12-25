@@ -2,14 +2,10 @@
 
 import { useCallback, useEffect } from "react";
 import { FooterArea } from "./FooterArea";
-import { MainArea } from "../pages/Main";
-import { TopArea } from "./TopArea";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
 import { Gnb } from "../pages/Gnb";
-import { Menu } from "../modules/Menu";
 import { useNavigate } from "react-router-dom";
 import { dcCon } from "../modules/dcContext";
-import { Provider } from "react";
 import { Main } from "../pages/Main";
 export function Layout() {
   useEffect(() => {
@@ -19,13 +15,11 @@ export function Layout() {
     if (window.matchMedia("(max-width:375px)").matches) {
       // 미디어 쿼리에 따라 이벤트 핸들러 연결
       window.removeEventListener("scroll", scrollFn);
-      console.log("미디어쿼리~");
     } else {
       window.addEventListener("scroll", scrollFn);
     }
     return () => {
       window.removeEventListener("scroll", scrollFn);
-      console.log("난 소멸했어~!");
     }; ////////// 소멸자 return //////
   }, []); /////// useEffect ///////////
 
@@ -38,7 +32,7 @@ export function Layout() {
 
   return (
     <dcCon.Provider >
-      <TopArea />
+      <Gnb/>
       <Main />
       <FooterArea />
     </dcCon.Provider>

@@ -1,13 +1,10 @@
 import "../css/gnb.css";
 
 import $ from "jquery";
-import { Menu } from "../modules/Menu";
-import { Layout } from "../layout/Layout";
-import { Sellshop } from "../modules/SellShop";
-import { Contect } from "../modules/Contect";
-import { Team } from "../modules/Team";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
+import { Menu } from "../modules/Menu";
+import { Link } from "react-router-dom";
 
 function temp() {
   let logo = $("#gnb img");
@@ -15,7 +12,6 @@ function temp() {
   let sns = $(".sns-menu a");
 
   let sts = menu.first().is(".on");
-  // console.log(sts);
 
   if (sts) {
     logo.attr("src", "./images/logo2.png");
@@ -31,16 +27,6 @@ function temp() {
 } // temp
 
 export function Gnb() {
-  
-  // 상태변경 관리변수
-  const [pgName, setPgName] = useState("main");
-
-  const chgPgName = (v) => {
-    setPgName(v);
-    $(".all-menu").fadeOut(300);
-    $(".top , .bottom").removeClass("on");
-    // console.log(333);
-  };
 
   // 랜더링후 실행
   useEffect(() => {
@@ -55,23 +41,24 @@ export function Gnb() {
 
   return (
     <>
+      <Menu/>
       <div id="gnb" className="gnb">
-        <a href="/kimnaewoo-react-pj">
+        <Link to="/">
           <img className="logo" src="./images/logo2.png" alt="logo" />
-        </a>
+        </Link>
         <div id="menu" onClick={() => temp()}>
           <div className="top"></div>
           <div className="bottom"></div>
         </div>
         <div className="sns-menu">
-          <a href="#" className="fa-solid fa-user user" />
-          <a href="#" className="fa-brands fa-facebook fk">
+          <a href="/" className="fa-solid fa-user user"></a>
+          <a href="/" className="fa-brands fa-facebook fk">
             <span>페이스북</span>
           </a>
-          <a href="#" className="fa-brands fa-instagram is">
+          <a href="/" className="fa-brands fa-instagram is">
             <span>인스타그램</span>
           </a>
-          <a href="#" className="fa-brands fa-youtube yt">
+          <a href="/" className="fa-brands fa-youtube yt">
             <span>유튜브</span>
           </a>
         </div>

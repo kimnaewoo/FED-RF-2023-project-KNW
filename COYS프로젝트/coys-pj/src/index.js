@@ -1,27 +1,17 @@
-// 제이쿼리 불러오기
-import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
 // 리액트 불러오기
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // 페이지 공통 CSS
 import "./css/common.css";
 
-import { useEffect, useLayoutEffect, useState } from "react";
-import { Layout, MainPage } from "./layout/Layout";
-import { Main } from "./pages/Main";
-import { Login } from "./pages/Login";
-import { Sellshop } from "./modules/SellShop";
-import { Gnb } from "./pages/Gnb";
-import { Menu } from "./modules/Menu";
-import { Contect } from "./modules/Contect";
+import { useLayoutEffect } from "react";
+import { Layout } from "./layout/Layout";
 import { Team } from "./modules/Team";
-import { HomeArea } from "./pages/HomeArea";
-
+import { Main } from "./pages/Main";
 function App() {
-  
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }); // useLayoutEffect
@@ -29,8 +19,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout/>} />
-        <Route index element={<Main />} />
+        <Route element={<Layout />}>
+          {/* <Route index element={<Main />} /> */}
+          <Route path="" element={<Layout />} />
+          <Route path="/team" element={<Team />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

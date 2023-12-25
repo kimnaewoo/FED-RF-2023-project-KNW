@@ -3,7 +3,6 @@
 // [ 로컬쓰 클리어 ] /////////
 const clearData = () => {
   localStorage.clear();
-  console.log("로컬쓰 클리어!");
 }; /////////// clearData //////////////
 
 // [ 로컬쓰 초기체크셋팅! ] ////////////
@@ -12,7 +11,7 @@ const initData = () => {
   if (localStorage.getItem("mem-data") === null) {
     localStorage.setItem(
       "mem-data",
-        `
+      `
             [
                 {
                     "idx": "1",
