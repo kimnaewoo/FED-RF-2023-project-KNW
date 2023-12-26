@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../css/home_area.css";
 
 export function HomeArea() {
@@ -15,7 +16,7 @@ export function HomeArea() {
             Club. For total Spurs news coverage, visit NewsNow.co.uk, the UK's #1 football news aggregator.
           </h2>
           <div className="jump">
-            <a href="#">contect us</a>
+            <Link to="/contect"><a href="#">contect us</a></Link>
           </div>
         </div>
         </div>

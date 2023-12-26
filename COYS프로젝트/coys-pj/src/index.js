@@ -10,6 +10,8 @@ import "./css/common.css";
 import { useLayoutEffect } from "react";
 import { Layout } from "./layout/Layout";
 import { Team } from "./modules/Team";
+import { Sellshop } from "./modules/SellShop";
+import { Contect } from "./modules/Contect";
 import { Main } from "./pages/Main";
 function App() {
   useLayoutEffect(() => {
@@ -23,6 +25,8 @@ function App() {
           {/* <Route index element={<Main />} /> */}
           <Route path="" element={<Layout />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/shop" element={<Sellshop />} />
+          <Route path="/contect" element={<Contect />} />
         </Route>
       </Routes>
     </BrowserRouter>
