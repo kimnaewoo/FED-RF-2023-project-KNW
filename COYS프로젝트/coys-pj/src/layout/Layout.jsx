@@ -31,8 +31,8 @@ export function Layout() {
 
 
   return (
-    <dcCon.Provider >
-      <Gnb/>
+    <dcCon.Provider value={chgPage}>
+      <Gnb chgPageFn={chgPage}/>
       <Main />
       <FooterArea />
     </dcCon.Provider>

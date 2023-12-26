@@ -12,7 +12,6 @@ import { Layout } from "./layout/Layout";
 import { Team } from "./modules/Team";
 import { Sellshop } from "./modules/SellShop";
 import { Contect } from "./modules/Contect";
-import { Main } from "./pages/Main";
 function App() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);

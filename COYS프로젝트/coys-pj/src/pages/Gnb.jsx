@@ -1,10 +1,11 @@
 import "../css/gnb.css";
 
 import $ from "jquery";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
 import { Menu } from "../modules/Menu";
 import { Link } from "react-router-dom";
+import { dcCon } from "../modules/dcContext";
 
 function temp() {
   let logo = $("#gnb img");
@@ -26,7 +27,9 @@ function temp() {
   }
 } // temp
 
-export function Gnb() {
+export function Gnb(props) {
+  // 컨텍스트 API 사용하기
+  const myCon = useContext(dcCon);
 
   // 랜더링후 실행
   useEffect(() => {
@@ -41,9 +44,15 @@ export function Gnb() {
 
   return (
     <>
-      <Menu/>
+      <Menu />
       <div id="gnb" className="gnb">
-        <Link to="/">
+        <Link
+          to="/"
+          onClick={() =>
+            // 컨텍스트 API 함수호출!
+            myCon.chgPage("/", {})
+          }
+        >
           <img className="logo" src="./images/logo2.png" alt="logo" />
         </Link>
         <div id="menu" onClick={() => temp()}>
