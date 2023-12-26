@@ -1,13 +1,15 @@
 // 메인 페이지
 
-import { useCallback, useEffect } from "react";
+import { useCallback, useLayoutEffect } from "react";
 import { FooterArea } from "./FooterArea";
 import { Gnb } from "../pages/Gnb";
 import { useNavigate } from "react-router-dom";
 import { dcCon } from "../modules/dcContext";
 import { MainArea } from "./MainArea";
 export function Layout() {
- 
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   // 라우터 이동객체설정
   const goNav = useNavigate();

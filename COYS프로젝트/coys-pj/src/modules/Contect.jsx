@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { scrollFn } from "../func/jquery-windowscroll_evt";
 
 
 import $ from "jquery"
@@ -21,19 +20,19 @@ export function Contect() {
       // 미디어 쿼리에 따라 이벤트 핸들러 연결
       window.removeEventListener("scroll", conscrollFn);
       console.log("미디어쿼리~");
-    } 
+    }
     else{
       window.addEventListener("scroll", conscrollFn);
     }
 
     return () => {
-      window.removeEventListener("scroll", scrollFn);
+      window.removeEventListener("scroll", conscrollFn);
       console.log("난 소멸했어~!");
     }; ////////// 소멸자 return //////
-   
+
   }, []); /////// useEffect ///////////
-  
-  
+
+
   const eventList = () => {
     const hcode = [];
     for (let i = 1; i < 6; i++) {

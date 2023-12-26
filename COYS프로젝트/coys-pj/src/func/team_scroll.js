@@ -9,9 +9,10 @@ export function teamscrollFn() {
   let top = $(".top").offset().top;
   let logo = $("#gnb img").offset().top;
   // console.log(ins, shopTop);
-  if (user < footTop ) {
+
+  if (user < footTop) {
     $(".user").css({ color: "#000" });
-  } else if ( user > footTop) {
+  } else if (user > footTop) {
     $(".user").css({ color: "#fff" });
   }
   if (ins < footTop) {

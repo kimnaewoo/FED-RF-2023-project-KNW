@@ -1,8 +1,8 @@
 import $ from "jquery";
 
 export function scrollFn() {
-  if($("#shop-area"))  return;
-  
+  // if ($("#shop-area")) return;
+
   let shopTop = $("#shop-area").offset().top;
   let footTop = $("#footer-area").offset().top;
   let user = $(".user").offset().top;
@@ -12,6 +12,17 @@ export function scrollFn() {
   let top = $(".top").offset().top;
   let logo = $("#gnb img").offset().top;
   // console.log(ins, shopTop);
+
+  // let snsMenu = document.querySelectorAll(".sns-menu > a");
+  // snsMenu.forEach((v) => {
+  //   console.log(v.offsetTop);
+  //   console.log(footTop);
+  //   if (v.offsetTop > footTop) {
+  //     v.style.color = "#fff";
+  //   } else {
+  //     v.style.color = "#000";
+  //   }
+  // });
 
   if (ins < footTop && ins > shopTop) {
     $(".is").css({ color: "#000" });
