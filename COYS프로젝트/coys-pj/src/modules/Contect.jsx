@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
 
 
+import $ from "jquery"
 import "../css/contect.css";
-import { FooterArea } from "../layout/FooterArea";
 
 import { contectData } from "../data/contect";
 import { conscrollFn } from "../func/contect_scroll";
@@ -14,6 +14,7 @@ export function Contect() {
   const selData = contectData;
 
   useEffect(() => {
+    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" })
     // 자동스크롤 이벤트 설정하기 /////
     window.addEventListener("scroll", conscrollFn);
     if (window.matchMedia("(max-width:375px)").matches) {
@@ -137,7 +138,6 @@ export function Contect() {
           </ul>
         </div>
       </div>
-      <FooterArea />
     </>
   );
 }

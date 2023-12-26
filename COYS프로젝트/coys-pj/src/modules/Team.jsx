@@ -1,13 +1,14 @@
 import { useEffect } from "react";
-import { FooterArea } from "../layout/FooterArea";
 
 import "../css/team.css";
 import { teamscrollFn } from "../func/team_scroll";
 import { teamData } from "../data/team";
 import { loanData } from "../data/loan";
+import $ from "jquery";
 
 export function Team() {
   useEffect(() => {
+    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" })
     // 자동스크롤 이벤트 설정하기 /////
     window.addEventListener("scroll", teamscrollFn);
     if (window.matchMedia("(max-width:375px)").matches) {
@@ -18,6 +19,10 @@ export function Team() {
     else{
       window.addEventListener("scroll", teamscrollFn);
     }
+    return () => {
+      window.removeEventListener("scroll", teamscrollFn);
+      console.log("난 소멸했어~!");
+    }; ////////// 소멸자 return /////
 
   }, []); /////// useEffect ///////////
   return (
@@ -62,7 +67,6 @@ export function Team() {
           </div>
         </div>
       </div>
-      <FooterArea />
     </>
   );
 }

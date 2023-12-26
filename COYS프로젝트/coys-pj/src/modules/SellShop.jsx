@@ -7,9 +7,9 @@ import "../css/sellshop.css";
 
 import { useEffect } from "react";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
-import { FooterArea } from "../layout/FooterArea";
 
 import { ShopArea } from "../pages/ShopArea";
+import $ from "jquery"
 
 export function Sellshop() {
   // 선택데이터
@@ -18,12 +18,12 @@ export function Sellshop() {
   const selData3 = sellbanData;
 
   useEffect(() => {
+    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" })
     // 자동스크롤 이벤트 설정하기 /////
-    window.addEventListener("scroll", scrollFn);
+    // window.addEventListener("scroll", scrollFn);
     if (window.matchMedia("(max-width:375px)").matches) {
       // 미디어 쿼리에 따라 이벤트 핸들러 연결
       window.removeEventListener("scroll", scrollFn);
-      console.log("미디어쿼리~");
     } else {
       window.addEventListener("scroll", scrollFn);
     }
@@ -88,7 +88,6 @@ export function Sellshop() {
           ))}
         </div>
         <div className="shop-main"></div>
-        <FooterArea />
       </div>
     </>
   );
