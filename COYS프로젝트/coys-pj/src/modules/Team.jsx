@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { FooterArea } from "../layout/FooterArea";
 
 import "../css/team.css";
-import { scrollFn } from "../func/jquery-windowscroll_evt";
 import { teamscrollFn } from "../func/team_scroll";
 import { teamData } from "../data/team";
 import { loanData } from "../data/loan";
@@ -20,10 +19,6 @@ export function Team() {
       window.addEventListener("scroll", teamscrollFn);
     }
 
-    return () => {
-      window.removeEventListener("scroll", scrollFn);
-      console.log("난 소멸했어~!");
-    }; ////////// 소멸자 return //////
   }, []); /////// useEffect ///////////
   return (
     <>

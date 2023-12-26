@@ -47,11 +47,11 @@ export function Gnb(props) {
       <Menu />
       <div id="gnb" className="gnb">
         <Link
-          to="/"
-          onClick={() =>
-            // 컨텍스트 API 함수호출!
-            myCon.chgPage("/", {})
-          }
+          to=""
+          // onClick={() =>
+          //   // 컨텍스트 API 함수호출!
+          //   myCon.chgPage("/", {})
+          // }
         >
           <img className="logo" src="./images/logo2.png" alt="logo" />
         </Link>

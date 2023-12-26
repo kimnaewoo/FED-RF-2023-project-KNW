@@ -1,6 +1,8 @@
 import $ from "jquery";
 
 export function scrollFn() {
+  if($("#shop-area"))  return;
+  
   let shopTop = $("#shop-area").offset().top;
   let footTop = $("#footer-area").offset().top;
   let user = $(".user").offset().top;

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../css/home_area.css";
 
 import { dcCon } from "../modules/dcContext";
+import { useContext } from "react";
 
 export function HomeArea() {
    // 컨텍스트 API 사용하기

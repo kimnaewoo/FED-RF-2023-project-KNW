@@ -12,17 +12,20 @@ import { Layout } from "./layout/Layout";
 import { Team } from "./modules/Team";
 import { Sellshop } from "./modules/SellShop";
 import { Contect } from "./modules/Contect";
+import { Main } from "./pages/Main";
 function App() {
   useLayoutEffect(() => {
-    window.scrollTo(0, 0);
+    window.onload=()=>{
+      window.scrollTo(0, 0);
+    };
   }); // useLayoutEffect
 
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          {/* <Route index element={<Main />} /> */}
-          <Route path="" element={<Layout />} />
+          <Route index element={<Main />} />
+          <Route path="/" element={<Main />} />
           <Route path="team" element={<Team />} />
           <Route path="shop" element={<Sellshop />} />
           <Route path="contect" element={<Contect />} />
