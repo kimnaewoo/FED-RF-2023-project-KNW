@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
 
-import $, { css } from "jquery";
 
 import "../css/contect.css";
 import { FooterArea } from "../layout/FooterArea";

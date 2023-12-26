@@ -24,9 +24,9 @@ function App() {
         <Route element={<Layout />}>
           {/* <Route index element={<Main />} /> */}
           <Route path="" element={<Layout />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/shop" element={<Sellshop />} />
-          <Route path="/contect" element={<Contect />} />
+          <Route path="team" element={<Team />} />
+          <Route path="shop" element={<Sellshop />} />
+          <Route path="contect" element={<Contect />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -9,7 +9,6 @@ import { useEffect } from "react";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
 import { FooterArea } from "../layout/FooterArea";
 
-import $ from "jquery";
 import { ShopArea } from "../pages/ShopArea";
 
 export function Sellshop() {
