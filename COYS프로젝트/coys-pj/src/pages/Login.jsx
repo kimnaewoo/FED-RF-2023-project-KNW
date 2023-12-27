@@ -4,18 +4,36 @@
 import { dcCon } from "../modules/dcContext";
 
 // CSS 불러오기 - 디자인은 회원가입과 동일!
-import { useState, useContext } from "react";
-import "../css/member.css";
+import { useState, useContext, useEffect } from "react";
+import "../css/login.css";
 
 // 로컬스토리지 초기화함수
 import { initData } from "../func/mem_fn";
 
 // 제이쿼리 불러오기
 import $ from "jquery";
+import { ShopscrollFn } from "../func/shop_scroll";
 
 export function Login() {
   // 컨텍스트 API 사용하기
   const myCon = useContext(dcCon);
+
+  useEffect(() => {
+    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" });
+    // 자동스크롤 이벤트 설정하기 /////
+    // window.addEventListener("scroll", scrollFn);
+    if (window.matchMedia("(max-width:375px)").matches) {
+      // 미디어 쿼리에 따라 이벤트 핸들러 연결
+      window.removeEventListener("scroll", ShopscrollFn);
+    } else {
+      window.addEventListener("scroll", ShopscrollFn);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", ShopscrollFn);
+      console.log("난 소멸했어~!");
+    }; ////////// 소멸자 return //////
+  }, []); /////// useEffect ///////////
 
   // [상태관리변수];
   // [1] 입력요소 상태변수
@@ -137,12 +155,12 @@ export function Login() {
           localStorage.setItem("minfo", JSON.stringify(findD));
 
           // 2. 컨텍스트 API에 공개된 로그인상태 업데이트하기!
-          myCon.setLogSts(localStorage.getItem('minfo'));
+          myCon.setLogSts(localStorage.getItem("minfo"));
 
-          const usrIcon = ["🧙‍♂️","🦸‍♂️","🧛‍♂️","🧚‍♂️","🧟‍♂️"]
+          const usrIcon = ["🧙‍♂️", "🦸‍♂️", "🧛‍♂️", "🧚‍♂️", "🧟‍♂️"];
 
-          // 3. 컨텍스트 API에 공개된 로그인 메시지 업데이트하기 
-          myCon.setLogMsg("welcome "+findD.unm+usrIcon[Math.floor(Math.random()*5)])
+          // 3. 컨텍스트 API에 공개된 로그인 메시지 업데이트하기
+          myCon.setLogMsg("welcome " + findD.unm + usrIcon[Math.floor(Math.random() * 5)]);
 
           // 버튼에 메시지
           $(".sbtn").text("넌 로그인된거야");
@@ -204,66 +222,58 @@ export function Login() {
 
     // 4-3. 유효성검사 불통과시
     // else {
-      //console.log("실패");
+    //console.log("실패");
     // } // else
   }; // onSubmit 함수
 
   // 리턴코드 ///////////////////////////////////////
   return (
-    <div className="outbx">
-      {/* 모듈코드 */}
-      <section className="membx" style={{ minHeight: "350px" }}>
-        <h2>LOG IN</h2>
-        <form method="post" action="process.php">
-          <ul>
-            <li>
-              {/* 1. 아이디 */}
-              <label>ID : </label>
-              <input
-                type="text"
-                maxLength="20"
-                placeholder="Please enter your ID"
-                value={userId}
-                onChange={changeUserId}
-              />
-              {
-                // 에러가 맞을때 메시지 출력
-                // 조건문 && 요소
-                userIdError && (
-                  <div className="msg">
-                    <small style={{ color: "red", fontSize: "10px" }}>{idMsg}</small>
-                  </div>
-                )
-              }
-            </li>
-            <li>
-              {/* 2. 비밀번호 */}
-              <label>Password : </label>
-              <input
-                type="password"
-                maxLength="20"
-                placeholder="Please enter your Password"
-                value={pwd}
-                onChange={changePwd}
-              />
-              {
-                // 에러시 메시지 출력
-                pwdError && (
-                  <div className="msg">
-                    <small style={{ color: "red", fontSize: "10px" }}>{pwdMsg}</small>
-                  </div>
-                )
-              }
-            </li>
-            <li style={{ overfliw: "hidden" }}>
-              {/* 3. 서브밋 버튼 */}
-              <button className="sbtn" onClick={onSubmit}>
-                Submit
-              </button>
-            </li>
-          </ul>
-        </form>
-      </section>
+    <>
+    <div className="login">
+
+      <h1 className="memtit">Welcome to SPURS</h1>
+      <div className="outbx">
+        {/* 모듈코드 */}
+        <section className="membx">
+          <h2>Sign in</h2>
+          <form method="post" action="process.php">
+            <ul>
+              <li>
+                {/* 1. 아이디 */}
+                <input type="text" maxLength="20" placeholder="Your ID" value={userId} onChange={changeUserId} />
+                {
+                  // 에러가 맞을때 메시지 출력
+                  // 조건문 && 요소
+                  userIdError && (
+                    <div className="msg">
+                      <small style={{ color: "red", fontSize: "10px" }}>{idMsg}</small>
+                    </div>
+                  )
+                }
+              </li>
+              <li>
+                {/* 2. 비밀번호 */}
+                <input type="password" maxLength="20" placeholder="Your Password" value={pwd} onChange={changePwd} />
+                {
+                  // 에러시 메시지 출력
+                  pwdError && (
+                    <div className="msg">
+                      <small style={{ color: "red", fontSize: "10px" }}>{pwdMsg}</small>
+                    </div>
+                  )
+                }
+              </li>
+              <li style={{ overfliw: "hidden" }}>
+                {/* 3. 서브밋 버튼 */}
+                <button className="sbtn" onClick={onSubmit}>
+                  Submit
+                </button>
+              </li>
+            </ul>
+          </form>
+        </section>
+      </div>
     </div>
+    </>
   );
 }

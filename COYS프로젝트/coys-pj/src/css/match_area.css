@@ -2,6 +2,7 @@
   background-color: #fff;
   padding-left: 150px;
   /* color: #fff; */
+  height: 110vh;
 }
 #match-area h1 {
   font-size: 12rem;
@@ -12,14 +13,14 @@
 }
 #mc-area {
   width: 800px;
-  height: 250px;
+  height: 350px;
   margin-left: 8%;
 }
 #mcbox {
   display: flex;
   padding-top: 1%;
   width: 1344px;
-  height: 252px;
+  height: 350px;
   gap: 0%;
   justify-content: space-around;
   cursor: pointer;

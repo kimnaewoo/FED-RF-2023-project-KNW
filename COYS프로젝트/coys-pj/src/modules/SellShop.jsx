@@ -6,10 +6,12 @@ import { sellbanData } from "../data/sellban";
 import "../css/sellshop.css";
 
 import { useEffect } from "react";
-import { scrollFn } from "../func/jquery-windowscroll_evt";
 
-import { ShopArea } from "../pages/ShopArea";
-import $ from "jquery"
+import $ from "jquery";
+
+import { ShopscrollFn } from "../func/shop_scroll";
+
+import { Swipershop } from "../plugin/Swipershop";
 
 export function Sellshop() {
   // 선택데이터
@@ -18,22 +20,20 @@ export function Sellshop() {
   const selData3 = sellbanData;
 
   useEffect(() => {
-    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" })
+    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" });
     // 자동스크롤 이벤트 설정하기 /////
     // window.addEventListener("scroll", scrollFn);
     if (window.matchMedia("(max-width:375px)").matches) {
       // 미디어 쿼리에 따라 이벤트 핸들러 연결
-      window.removeEventListener("scroll", scrollFn);
+      window.removeEventListener("scroll", ShopscrollFn);
     } else {
-      window.addEventListener("scroll", scrollFn);
+      window.addEventListener("scroll", ShopscrollFn);
     }
 
     return () => {
-      window.removeEventListener("scroll", scrollFn);
+      window.removeEventListener("scroll", ShopscrollFn);
       console.log("난 소멸했어~!");
     }; ////////// 소멸자 return //////
-
-  
   }, []); /////// useEffect ///////////
 
   return (
@@ -57,7 +57,6 @@ export function Sellshop() {
           <a href="#" className="fa-solid fa-user us" />
           <a href="#" className="fa-solid fa-cart-shopping cart" />
         </div>
-        <ShopArea />
         <p>Home kit</p>
         <div className="sellban">
           {selData3.map((v, i) => (
@@ -87,6 +86,7 @@ export function Sellshop() {
             </div>
           ))}
         </div>
+        <Swipershop />
         <div className="shop-main"></div>
       </div>
     </>
