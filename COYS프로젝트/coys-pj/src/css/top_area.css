@@ -34,7 +34,7 @@
 #top-area h4 {
   top: 65%;
   font-size: 2.5rem;
-  filter: brightness(0.85);
+  /* filter: brightness(0.85); */
 }
 .wheel {
   position: absolute;
@@ -111,7 +111,7 @@
   #top-area h4 {
     top: 73%;
     font-size: 1.5rem;
-    filter: brightness(0.85);
+    /* filter: brightness(0.85); */
   }
   .wheel {
     display: none;

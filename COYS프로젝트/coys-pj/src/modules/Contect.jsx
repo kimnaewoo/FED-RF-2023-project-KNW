@@ -36,7 +36,7 @@ export function Contect() {
   const eventList = () => {
     const hcode = [];
     for (let i = 1; i < 6; i++) {
-      hcode[i] = <img src={"./images/contect/event/evt" + i + ".png"} />;
+      hcode[i] = <img src={"./images/contect/event/evt" + i + ".png"} key={i}/>;
     }
     return hcode;
   };
