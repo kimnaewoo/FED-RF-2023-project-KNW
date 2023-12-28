@@ -13,6 +13,8 @@ import { Sellshop } from "./modules/SellShop";
 import { Contect } from "./modules/Contect";
 import { Main } from "./pages/Main";
 import { Login } from "./pages/Login";
+import { Member } from "./pages/Member";
+
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +26,7 @@ function App() {
           <Route path="shop" element={<Sellshop />} />
           <Route path="contect" element={<Contect />} />
           <Route path="login" element={<Login />} />
+          <Route path="member" element={<Member />} />
         </Route>
       </Routes>
     </BrowserRouter>

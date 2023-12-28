@@ -13,6 +13,7 @@ import { initData } from "../func/mem_fn";
 // 제이쿼리 불러오기
 import $ from "jquery";
 import { ShopscrollFn } from "../func/shop_scroll";
+import { Link } from "react-router-dom";
 
 export function Login() {
   // 컨텍스트 API 사용하기
@@ -21,7 +22,6 @@ export function Login() {
   useEffect(() => {
     $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" });
     // 자동스크롤 이벤트 설정하기 /////
-    // window.addEventListener("scroll", scrollFn);
     if (window.matchMedia("(max-width:375px)").matches) {
       // 미디어 쿼리에 따라 이벤트 핸들러 연결
       window.removeEventListener("scroll", ShopscrollFn);
@@ -157,13 +157,8 @@ export function Login() {
           // 2. 컨텍스트 API에 공개된 로그인상태 업데이트하기!
           myCon.setLogSts(localStorage.getItem("minfo"));
 
-          const usrIcon = ["🧙‍♂️", "🦸‍♂️", "🧛‍♂️", "🧚‍♂️", "🧟‍♂️"];
-
           // 3. 컨텍스트 API에 공개된 로그인 메시지 업데이트하기
-          myCon.setLogMsg("welcome " + findD.unm + usrIcon[Math.floor(Math.random() * 5)]);
-
-          // 버튼에 메시지
-          $(".sbtn").text("넌 로그인된거야");
+          myCon.setLogMsg("welcome "+"Our" + findD.unm );
 
           // 2. 라우팅 페이지 이동하기(useNavigate)
           // 컨텍스트 API 함수호출!
@@ -263,7 +258,7 @@ export function Login() {
                   }
                 </li>
                 <li style={{ overfliw: "hidden" }}>
-                  {/* 3. 서브밋 버튼 */}
+                  {/* 3. 로그인 버튼 */}
                   <button className="sbtn" onClick={onSubmit}>
                     Submit
                   </button>
@@ -275,7 +270,7 @@ export function Login() {
             <h2 className="regtit">Not Registered? Sign up</h2>
             <form method="post" action="process.php">
               <div className="regct">
-                <h3 >Get closer to Tottenham Hotspur by signing up.</h3>
+                <h3>Get closer to Tottenham Hotspur by signing up.</h3>
                 <br />
                 <h4>
                   Customise your experience and stay in touch with the latest from your Club including offers and ticket
@@ -283,22 +278,20 @@ export function Login() {
                 </h4>
               </div>
               {/* 3. 회원가입 버튼 */}
-              <button
-                className="rbtn"
-                style={{
-                  textDecoration: "none",
-                }}
-                onClick={onSubmit}
-              >
-                Register
-              </button>
+              <Link to="/member">
+                <button
+                  className="rbtn"
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
+                  Register
+                </button>
+              </Link>
             </form>
           </section>
         </div>
       </div>
-      {/* <div className="login_image">
-        <img src="./images/login_ban.jpg" alt="login_ban" />
-      </div> */}
     </>
   );
 }

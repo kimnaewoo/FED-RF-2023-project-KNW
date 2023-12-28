@@ -1,17 +1,36 @@
-// DC PJ 회원가입 페이지 컴포넌트
+// CSS 불러오기
+import "../css/member.css";
 
 // 컨텍스트 API 불러오기
 import { dcCon } from "../modules/dcContext";
 
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../css/member.css";
-import { useContext, useState } from "react";
 
 // 로컬스토리지 생성 JS
 import { initData } from "../func/mem_fn";
 
-export function Member() {
+// 전역 스크롤 이벤트 불러오기
+import { ShopscrollFn } from "../func/shop_scroll";
 
+import $ from "jquery";
+
+export function Member() {
+  useEffect(() => {
+    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" });
+    // 자동스크롤 이벤트 설정하기 /////
+    if (window.matchMedia("(max-width:375px)").matches) {
+      // 미디어 쿼리에 따라 이벤트 핸들러 연결
+      window.removeEventListener("scroll", ShopscrollFn);
+    } else {
+      window.addEventListener("scroll", ShopscrollFn);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", ShopscrollFn);
+      console.log("난 소멸했어~!");
+    }; ////////// 소멸자 return //////
+  }, []); /////// useEffect ///////////
 
   // 컨텍스트 API 사용
   const myCon = useContext(dcCon);
@@ -248,11 +267,8 @@ export function Member() {
       // 5. 로컬스토리지에 반영하기
       localStorage.setItem("mem-data", JSON.stringify(memData));
 
-      // 6. 로그인 페이지로 이동(라우터 이동) - 보류!
-      document.querySelector(".sbtn").innerText = "님은 이제 회원입니다.";
-
-      // 7. 페이지 이동 : 로그인 페이지
-      myCon.chgPage('login',{})
+      // 6. 페이지 이동 : 로그인 페이지
+      myCon.chgPage("login");
     } // if
     // 3. 불통과시
     else {
@@ -262,22 +278,15 @@ export function Member() {
 
   // 리턴코드
   return (
-    <div className="outbx">
+    <div className="regbx2">
       {/* 회원가입 모듈코드 */}
-      <section className="membx">
-        <h2>Join US</h2>
+      <section className="membx2">
+        <h2>COME ON YOUR SPURS</h2>
         <form action="process.php" method="post">
           <ul>
             <li>
               {/* 1. 아이디 */}
-              <label>ID : </label>
-              <input
-                type="text"
-                maxLength="20"
-                placeholder="Please enter your ID"
-                value={userId}
-                onChange={changeUserId}
-              />
+              <input type="text" maxLength="20" placeholder="your ID*" value={userId} onChange={changeUserId} />
               {
                 // 에러가 맞을때 메시지 출력
                 // 조건문 && 요소
@@ -301,14 +310,7 @@ export function Member() {
             </li>
             <li>
               {/* 2. 비밀번호 */}
-              <label>Password : </label>
-              <input
-                type="password"
-                maxLength="20"
-                placeholder="Please enter your Password"
-                value={pwd}
-                onChange={changePwd}
-              />
+              <input type="password" maxLength="20" placeholder="your Password*" value={pwd} onChange={changePwd} />
               {
                 // 에러시 메시지 출력
                 pwdError && (
@@ -320,11 +322,11 @@ export function Member() {
             </li>
             <li>
               {/* 3. 비밀번호 학인 */}
-              <label>Confirm Password : </label>
+
               <input
                 type="password"
                 maxLength="20"
-                placeholder="Please enter your Confirm Password"
+                placeholder="Confirm your Password*"
                 value={chkpwd}
                 onChange={changeChkPwd}
               />
@@ -339,14 +341,7 @@ export function Member() {
             </li>
             <li>
               {/* 4. 이름 */}
-              <label>User Name : </label>
-              <input
-                type="text"
-                maxLength="20"
-                placeholder="Please enter your Name"
-                value={userName}
-                onChange={changeUserName}
-              />
+              <input type="text" maxLength="20" placeholder="your Name*" value={userName} onChange={changeUserName} />
               {
                 // 에러시 메시지 출력
                 userNameError && (
@@ -358,14 +353,7 @@ export function Member() {
             </li>
             <li>
               {/* 5. 이메일 */}
-              <label>E-mail : </label>
-              <input
-                type="text"
-                maxLength="50"
-                placeholder="Please enter your E-mail"
-                value={email}
-                onChange={changeEmail}
-              />
+              <input type="text" maxLength="50" placeholder="your E-mail*" value={email} onChange={changeEmail} />
               {
                 // 에러시 메시지 출력
                 emailError && (
