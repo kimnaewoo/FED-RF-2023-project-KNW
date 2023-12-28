@@ -1,9 +1,8 @@
 /* 회원가입 CSS -member.css */
-body {
-  font-family: "Bebas Neue", sans-serif;
-}
+
 .login {
   background: url(../../public/images/login.jpg) no-repeat 8.8% 100%/49.3%;
+  font-family: "Bebas Neue", sans-serif;
 }
 .outbx {
   padding: 25px;
