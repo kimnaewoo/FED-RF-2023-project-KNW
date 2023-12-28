@@ -229,51 +229,76 @@ export function Login() {
   // 리턴코드 ///////////////////////////////////////
   return (
     <>
-    <div className="login">
-
-      <h1 className="memtit">Welcome to SPURS</h1>
-      <div className="outbx">
-        {/* 모듈코드 */}
-        <section className="membx">
-          <h2>Sign in</h2>
-          <form method="post" action="process.php">
-            <ul>
-              <li>
-                {/* 1. 아이디 */}
-                <input type="text" maxLength="20" placeholder="Your ID" value={userId} onChange={changeUserId} />
-                {
-                  // 에러가 맞을때 메시지 출력
-                  // 조건문 && 요소
-                  userIdError && (
-                    <div className="msg">
-                      <small style={{ color: "red", fontSize: "10px" }}>{idMsg}</small>
-                    </div>
-                  )
-                }
-              </li>
-              <li>
-                {/* 2. 비밀번호 */}
-                <input type="password" maxLength="20" placeholder="Your Password" value={pwd} onChange={changePwd} />
-                {
-                  // 에러시 메시지 출력
-                  pwdError && (
-                    <div className="msg">
-                      <small style={{ color: "red", fontSize: "10px" }}>{pwdMsg}</small>
-                    </div>
-                  )
-                }
-              </li>
-              <li style={{ overfliw: "hidden" }}>
-                {/* 3. 서브밋 버튼 */}
-                <button className="sbtn" onClick={onSubmit}>
-                  Submit
-                </button>
-              </li>
-            </ul>
-          </form>
-        </section>
+      <div className="login">
+        <h1 className="memtit">Welcome to SPURS</h1>
+        <div className="outbx">
+          {/* 모듈코드 */}
+          <section className="membx">
+            <h2>Sign in</h2>
+            <form method="post" action="process.php">
+              <ul>
+                <li>
+                  {/* 1. 아이디 */}
+                  <input type="text" maxLength="20" placeholder="Your ID" value={userId} onChange={changeUserId} />
+                  {
+                    // 에러가 맞을때 메시지 출력
+                    // 조건문 && 요소
+                    userIdError && (
+                      <div className="msg">
+                        <small style={{ color: "red", fontSize: "10px" }}>{idMsg}</small>
+                      </div>
+                    )
+                  }
+                </li>
+                <li>
+                  {/* 2. 비밀번호 */}
+                  <input type="password" maxLength="20" placeholder="Your Password" value={pwd} onChange={changePwd} />
+                  {
+                    // 에러시 메시지 출력
+                    pwdError && (
+                      <div className="msg">
+                        <small style={{ color: "red", fontSize: "10px" }}>{pwdMsg}</small>
+                      </div>
+                    )
+                  }
+                </li>
+                <li style={{ overfliw: "hidden" }}>
+                  {/* 3. 서브밋 버튼 */}
+                  <button className="sbtn" onClick={onSubmit}>
+                    Submit
+                  </button>
+                </li>
+              </ul>
+            </form>
+          </section>
+          <section className="regbx">
+            <h2 className="regtit">Not Registered? Sign up</h2>
+            <form method="post" action="process.php">
+              <div className="regct">
+                <h3 >Get closer to Tottenham Hotspur by signing up.</h3>
+                <br />
+                <h4>
+                  Customise your experience and stay in touch with the latest from your Club including offers and ticket
+                  updates plus much more.
+                </h4>
+              </div>
+              {/* 3. 회원가입 버튼 */}
+              <button
+                className="rbtn"
+                style={{
+                  textDecoration: "none",
+                }}
+                onClick={onSubmit}
+              >
+                Register
+              </button>
+            </form>
+          </section>
+        </div>
       </div>
-    </div>
+      {/* <div className="login_image">
+        <img src="./images/login_ban.jpg" alt="login_ban" />
+      </div> */}
     </>
   );
 }
