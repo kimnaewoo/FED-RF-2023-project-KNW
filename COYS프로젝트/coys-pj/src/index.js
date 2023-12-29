@@ -2,7 +2,7 @@ import "jquery-ui-dist/jquery-ui";
 
 // 리액트 불러오기
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 // 페이지 공통 CSS
 import "./css/common.css";
@@ -17,7 +17,7 @@ import { Member } from "./pages/Member";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Main />} />
@@ -29,7 +29,7 @@ function App() {
           <Route path="member" element={<Member />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
