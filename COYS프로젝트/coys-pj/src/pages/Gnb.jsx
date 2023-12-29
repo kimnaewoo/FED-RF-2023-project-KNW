@@ -44,18 +44,17 @@ export const Gnb = memo(({ logSts, logOut }) => {
           <div className="top"></div>
           <div className="bottom"></div>
         </div>
-        {logSts !== null && (
-          <>
-            <h1 className="user logout" onClick={logOut}>
-              LOG OUT
-            </h1>
-          </>
-        )}
         {logSts === null && (
           <>
             <Link to="login" className="fa-solid fa-user user"></Link>
           </>
         )}
+        {logSts !== null && (
+          <>
+            <h1 className="fa-solid fa-user-slash user logout" onClick={logOut}></h1>
+          </>
+        )}
+        
 
         <div className="sns-menu">
           <a href="/" className="fa-brands fa-facebook fk">

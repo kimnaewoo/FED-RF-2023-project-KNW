@@ -24,7 +24,7 @@ export function Layout() {
     setLogMsg(null);
     // 4. 첫페이지로 이동
     // chgPage('/',{});
-    // $('.fa-user').css({display:'none'});
+    $('.fa-user').css({display:'none'});
   }, []); // logOut 함수
 
   // 렌더링 후 실행구역 - 한번만
