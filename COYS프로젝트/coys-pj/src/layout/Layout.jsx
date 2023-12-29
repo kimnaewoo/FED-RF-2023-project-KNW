@@ -6,6 +6,7 @@ import { Gnb } from "../pages/Gnb";
 import { useNavigate } from "react-router-dom";
 import { dcCon } from "../modules/dcContext";
 import { MainArea } from "./MainArea";
+import $ from 'jquery'
 export function Layout() {
   // 1. 로그인 상태체크 변수 : 로컬스 'minfo' 초기할당!
   const [logSts, setLogSts] = useState(localStorage.getItem("minfo"));
@@ -23,6 +24,7 @@ export function Layout() {
     setLogMsg(null);
     // 4. 첫페이지로 이동
     // chgPage('/',{});
+    // $('.fa-user').css({display:'none'});
   }, []); // logOut 함수
 
   // 렌더링 후 실행구역 - 한번만
@@ -32,7 +34,7 @@ export function Layout() {
       const minfo = JSON.parse(localStorage.getItem("minfo"));
       // 컨텍스트 API에 공개된 로그인 메시지 업데이트하기
       setLogMsg("welcome " +"Our "+ minfo.unm );
-      console.log('나야나');
+      // console.log('나야나');
     }
   }, []);
 

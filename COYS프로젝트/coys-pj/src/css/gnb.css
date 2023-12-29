@@ -48,9 +48,11 @@
 }
 .logout {
   position: absolute;
+  top: 62%;
+  left: 26%;
+  font-size: 1rem;
+  line-height: 1;
   color: #fff;
-  top: 60%;
-  cursor: pointer;
 }
 #gnb .sns-menu {
   display: flex;

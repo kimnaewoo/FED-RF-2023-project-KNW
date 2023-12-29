@@ -46,7 +46,7 @@ export const Gnb = memo(({ logSts, logOut }) => {
         </div>
         {logSts !== null && (
           <>
-            <h1 className="logout" onClick={logOut}>
+            <h1 className="user logout" onClick={logOut}>
               LOG OUT
             </h1>
           </>

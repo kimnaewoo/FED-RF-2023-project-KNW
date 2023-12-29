@@ -5,6 +5,7 @@ export function scrollFn() {
 
   let shopTop = $("#shop-area").offset().top;
   let footTop = $("#footer-area").offset().top;
+  // let logout = $(".logout").offset().top;
   let user = $(".user").offset().top;
   let ins = $(".is").offset().top;
   let fk = $(".fk").offset().top;
@@ -23,16 +24,33 @@ export function scrollFn() {
   //     v.style.color = "#000";
   //   }
   // });
+  ////////////////////////////////////////////////////////////
+  // const chglogin = () => {
+  //   if (localStorage.getItem("mem-data") !== null) {
+  //     if (logout < footTop && logout > shopTop) {
+  //       $(".logout").css({ color: "#000" });
+  //     } else if (logout < shopTop || logout > footTop) {
+  //       $(".logout").css({ color: "#fff" });
+  //     }
+  //   } else {
+  //     if (user < footTop && user > shopTop) {
+  //       $(".user").css({ color: "#000" });
+  //     } else if (user < shopTop || user > footTop) {
+  //       $(".user").css({ color: "#fff" });
+  //     }
+  //   }
+  // };
+  ////////////////////////////////////////////////////////////
+  if (user < footTop && user > shopTop) {
+    $(".user").css({ color: "#000" });
+  } else if (user < shopTop || user > footTop) {
+    $(".user").css({ color: "#fff" });
+  }
 
   if (ins < footTop && ins > shopTop) {
     $(".is").css({ color: "#000" });
   } else if (ins < shopTop || ins > footTop) {
     $(".is").css({ color: "#fff" });
-  }
-  if (user < footTop && user > shopTop) {
-    $(".user").css({ color: "#000" });
-  } else if (user < shopTop || user > footTop) {
-    $(".user").css({ color: "#fff" });
   }
   if (fk < footTop && fk > shopTop) {
     $(".fk").css({ color: "#000" });
@@ -56,4 +74,5 @@ export function scrollFn() {
   } else if (logo < shopTop) {
     $("#gnb img").attr("src", "./images/logo2.png");
   }
+  // chglogin();
 }
