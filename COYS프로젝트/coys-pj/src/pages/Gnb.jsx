@@ -1,37 +1,36 @@
 import "../css/gnb.css";
 
 import $ from "jquery";
-import { useEffect } from "react";
-import { scrollFn } from "../func/jquery-windowscroll_evt";
+import { memo, useEffect } from "react";
 import { Menu } from "../modules/Menu";
 import { Link } from "react-router-dom";
 
 function temp() {
   let logo = $("#gnb img");
   let menu = $("#menu div");
+  let user = $(".user");
   let sns = $(".sns-menu a");
 
-  let sts = $('.top').is(".on");
+  let sts = $(".top").is(".on");
 
   if (sts) {
     logo.attr("src", "./images/logo2.png");
     menu.css({ backgroundColor: "#fff" });
+    user.css({ color: "#fff" });
     sns.css({ color: "#fff" });
     $("html,body").css({ overflow: "hidden" });
   } else {
-    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+1px" }).animate({scrollTop:"-1px"});
-    
+    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+1px" }).animate({ scrollTop: "-1px" });
   }
 } // temp
 
-export function Gnb() {
+export const Gnb = memo(({ logSts, logOut }) => {
   // 랜더링후 실행
   useEffect(() => {
     $("#menu").click(() => {
       $(".top , .bottom").toggleClass("on");
       $(".all-menu").fadeToggle(400);
     }); // click
-    
   }, []); // useEffect
 
   return (
@@ -45,8 +44,20 @@ export function Gnb() {
           <div className="top"></div>
           <div className="bottom"></div>
         </div>
+        {logSts !== null && (
+          <>
+            <h1 className="logout" onClick={logOut}>
+              LOG OUT
+            </h1>
+          </>
+        )}
+        {logSts === null && (
+          <>
+            <Link to="login" className="fa-solid fa-user user"></Link>
+          </>
+        )}
+
         <div className="sns-menu">
-          <Link to="login" className="fa-solid fa-user user"></Link>
           <a href="/" className="fa-brands fa-facebook fk">
             <span>페이스북</span>
           </a>
@@ -60,4 +71,4 @@ export function Gnb() {
       </div>
     </>
   );
-}
+});

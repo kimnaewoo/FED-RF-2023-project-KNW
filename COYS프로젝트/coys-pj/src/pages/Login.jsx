@@ -156,6 +156,7 @@ export function Login() {
 
           // 2. 컨텍스트 API에 공개된 로그인상태 업데이트하기!
           myCon.setLogSts(localStorage.getItem("minfo"));
+          console.log('로그인완료');
 
           // 3. 컨텍스트 API에 공개된 로그인 메시지 업데이트하기
           myCon.setLogMsg("welcome "+"Our" + findD.unm );

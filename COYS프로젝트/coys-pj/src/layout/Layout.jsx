@@ -32,6 +32,7 @@ export function Layout() {
       const minfo = JSON.parse(localStorage.getItem("minfo"));
       // 컨텍스트 API에 공개된 로그인 메시지 업데이트하기
       setLogMsg("welcome " +"Our "+ minfo.unm );
+      console.log('나야나');
     }
   }, []);
 
@@ -45,13 +46,13 @@ export function Layout() {
 
   // 라우터 이동함수 : pgName - 페이지이름 / param - 전달값
   const chgPage = useCallback((pgName) => {
-    console.log("asdada");
+    // console.log("asdada");
     goNav(pgName);
   }, []);
 
   return (
     <dcCon.Provider value={{ chgPage, setLogMsg, logSts, setLogSts }}>
-      <Gnb chgPageFn={chgPage} />
+      <Gnb chgPageFn={chgPage} logSts={logSts} logOut={logOut}/>
       <MainArea logMsg={logMsg} />
       <FooterArea />
     </dcCon.Provider>

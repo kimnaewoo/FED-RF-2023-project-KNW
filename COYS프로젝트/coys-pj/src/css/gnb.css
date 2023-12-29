@@ -46,6 +46,12 @@
 #menu .bottom.on {
   transform: translateY(400%);
 }
+.logout {
+  position: absolute;
+  color: #fff;
+  top: 60%;
+  cursor: pointer;
+}
 #gnb .sns-menu {
   display: flex;
   color: #fff;
@@ -54,6 +60,15 @@
   flex-direction: column;
   justify-content: space-around;
 }
+.user {
+  position: absolute;
+  top: 59%;
+  left: 27%;
+  font-size: 1.8rem;
+  line-height: 3;
+  color: #fff;
+}
+
 #gnb .sns-menu a {
   font-size: 1.8rem;
   line-height: 3;
@@ -81,37 +96,37 @@
     width: 10%;
     height: 100%;
   }
-    #gnb a img {
-      margin-top: 20%;
-      width: 100%;
-      height: 80%;
-    }
-    #menu {
-      align-items: stretch;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: space-evenly;
-      position: relative;
-      width: 10%;
+  #gnb a img {
+    margin-top: 20%;
+    width: 100%;
+    height: 80%;
   }
-    #menu .top {
-      position: absolute;
-      top: 40%;
-      width: 100%;
-      height: 2%;
-      background-color: #fff;
-      transition: 0.5s;
-    }
-    #menu .bottom {
-      position: absolute;
-      width: 100%;
-      height: 2%;
-      background-color: #fff;
-      transition: 0.5s;
-    }
-    #gnb .sns-menu {
-      display: none;
-    }
+  #menu {
+    align-items: stretch;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    position: relative;
+    width: 10%;
+  }
+  #menu .top {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 2%;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  #menu .bottom {
+    position: absolute;
+    width: 100%;
+    height: 2%;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  #gnb .sns-menu {
+    display: none;
+  }
 }

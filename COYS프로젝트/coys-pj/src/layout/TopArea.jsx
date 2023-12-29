@@ -10,7 +10,7 @@ export const TopArea = memo(({logmsg}) => {
         <h1>WE ARE INEVITABLE</h1>
         <h2>CREATIVES IN FOOTBALL</h2>
         <h4>" Glory, Glory, Tottenham Hotspur "</h4>
-        <h5>{logmsg}</h5>
+        <h5 className="logmsg">{logmsg}</h5>
         <div className="wheel">
           <img src="./images/wheel.png" alt="마우스휠" />
         </div>
