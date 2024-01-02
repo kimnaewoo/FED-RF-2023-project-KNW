@@ -12,10 +12,10 @@
   overflow: hidden;
   /* display: none; */
 }
-#gnb a{
+#gnb>a{
   width: 80%;
 }
-#gnb a img {
+#gnb>a img {
   width: 100%;
   height: 100%;
   margin: -5% 0% 0% 5%;
@@ -27,7 +27,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: stretch;
-  /* padding-left: 5%; */
   margin-left: 15%;
   cursor: pointer;
 }
@@ -49,38 +48,44 @@
 #menu .bottom.on {
   transform: translateY(400%);
 }
+.log{
+  position: relative;
+}
 .logout {
   position: absolute;
   top: 62%;
-  left: 26%;
-  font-size: 1rem;
-  line-height: 1;
+  left: 30%;
+  font-size: 1.65rem;
+  line-height: 3;
   color: #fff;
+  cursor: pointer;
+}
+.user {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  font-size: 1.65rem;
+  line-height: 4;
+  color: #fff;
+  cursor: pointer;
 }
 #gnb .sns-menu {
   display: flex;
   color: #fff;
   width: 100%;
   height: 10%;
+  margin-left: 26%;
   flex-direction: column;
   justify-content: space-around;
 }
-.user {
-  position: absolute;
-  top: 60%;
-  left: 22%;
-  font-size: 1.65rem;
-  line-height: 3;
-  color: #fff;
-}
 
-#gnb .sns-menu a {
+#gnb .sns-menu .fa-brands {
   font-size: 1.75rem;
   line-height: 3;
 }
-#gnb .sns-menu a:last-child {
+#gnb .sns-menu .yt {
   font-size: 1.6rem;
-  margin-left: -5%;
+  margin-left: -6%;
 }
 #gnb .sns-menu span {
   display: none;

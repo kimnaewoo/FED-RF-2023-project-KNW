@@ -19,8 +19,6 @@ export function Menu() {
     })
   },)
 
-
-
   return (
     <>
       <div className="all-menu">

@@ -29,7 +29,6 @@ export function Layout() {
 
   // 렌더링 후 실행구역 - 한번만
   useEffect(() => {
-    
     if (localStorage.getItem("minfo")) {
       const minfo = JSON.parse(localStorage.getItem("minfo"));
       // 컨텍스트 API에 공개된 로그인 메시지 업데이트하기
@@ -55,7 +54,7 @@ export function Layout() {
   return (
     <dcCon.Provider value={{ chgPage, setLogMsg, logSts, setLogSts }}>
       <Gnb chgPageFn={chgPage} logSts={logSts} logOut={logOut}/>
-      <MainArea logMsg={logMsg} />
+      <MainArea logMsg={logMsg} chgPageFn={chgPage} />
       <FooterArea />
     </dcCon.Provider>
   );

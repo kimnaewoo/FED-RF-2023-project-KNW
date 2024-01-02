@@ -4,7 +4,6 @@ import { NewsArea } from "./NewsArea";
 import { ShopArea } from "./ShopArea";
 import { Intro } from "../layout/Intro";
 import { TopArea } from "../layout/TopArea";
-import $ from 'jquery';
 import { scrollFn } from "../func/jquery-windowscroll_evt";
 import { useEffect } from "react";
 

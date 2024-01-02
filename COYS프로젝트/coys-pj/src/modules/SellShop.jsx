@@ -5,15 +5,19 @@ import { sellbanData } from "../data/sellban";
 // 섹션소개모듈용 CSS 불러오기
 import "../css/sellshop.css";
 
-import { useEffect } from "react";
+import { memo, useContext, useEffect } from "react";
 
 import $ from "jquery";
 
 import { ShopscrollFn } from "../func/shop_scroll";
 
 import { Swipershop } from "../plugin/Swipershop";
+import { Link } from "react-router-dom";
+import { dcCon } from "./dcContext";
 
-export function Sellshop() {
+export const Sellshop = memo(({ logSts}) => {
+  // 컨텍스트 API 사용하기
+  const myCon = useContext(dcCon);
   // 선택데이터
   const selData = sellshopData;
   const selData2 = selltopData;
@@ -32,9 +36,9 @@ export function Sellshop() {
 
     return () => {
       window.removeEventListener("scroll", ShopscrollFn);
-      console.log("난 소멸했어~!");
+      console.log("Sellshop.jsx 에서 소멸할 스크롤");
     }; ////////// 소멸자 return //////
-  }, []); /////// useEffect ///////////
+  },[]); /////// useEffect ///////////
 
   return (
     <>
@@ -43,19 +47,18 @@ export function Sellshop() {
           <h1 className="tit">
             <a href="#">SPURS SHOP</a>
           </h1>
-          <ul className="sell-gnb">
+          <div className="sell-gnb">
             {selData2.map((v, i) => (
-              <li className="" key={i}>
-                <a href="#">{v}</a>
-              </li>
+              <ul key={i}>
+                <li href="#">{v}</li>
+              </ul>
             ))}
-          </ul>
+          </div>
           <div className="gsbx">
             <a href="#" className="fa-solid fa-magnifying-glass gs"></a>
             <p className="gstit">What are you looking for?</p>
           </div>
-          <a href="#" className="fa-solid fa-user us" />
-          <a href="#" className="fa-solid fa-cart-shopping cart" />
+          <a href="/" className="fa-solid fa-cart-shopping cart" />
         </div>
         <p>Home kit</p>
         <div className="sellban">
@@ -91,4 +94,4 @@ export function Sellshop() {
       </div>
     </>
   );
-} ////////////// Sellshop 컴포넌트 ///////////
+}) ////////////// Sellshop 컴포넌트 ///////////

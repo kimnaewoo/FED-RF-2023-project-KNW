@@ -44,28 +44,31 @@ export const Gnb = memo(({ logSts, logOut }) => {
           <div className="top"></div>
           <div className="bottom"></div>
         </div>
-        {logSts === null && (
-          <>
-            <Link to="login" className="fa-solid fa-user user"></Link>
-          </>
-        )}
-        {logSts !== null && (
-          <>
-            <h1 className="fa-solid fa-user-slash user logout" onClick={logOut}></h1>
-          </>
-        )}
-        
-
+        <div className="log">
+          {logSts === null && (
+            <>
+              <Link to="login" className="fa-solid fa-user user"></Link>
+            </>
+          )}
+          {logSts !== null && (
+            <>
+              <h1 className="fa-solid fa-user-slash user logout" onClick={logOut}></h1>
+            </>
+          )}
+        </div>
         <div className="sns-menu">
-          <a href="/" className="fa-brands fa-facebook fk">
-            <span>페이스북</span>
-          </a>
-          <a href="/" className="fa-brands fa-instagram is">
-            <span>인스타그램</span>
-          </a>
-          <a href="/" className="fa-brands fa-youtube yt">
-            <span>유튜브</span>
-          </a>
+          <Link
+            to="https://www.facebook.com/TottenhamHotspur/?locale=ko_KR"
+            className="fa-brands fa-facebook fk"
+          ></Link>
+          <span>페이스북</span>
+          <Link to="https://www.instagram.com/spursofficial/ " className="fa-brands fa-instagram is"></Link>
+          <span>페이스북</span>
+          <Link
+            to="https://www.youtube.com/channel/UCEg25rdRZXg32iwai6N6l0w"
+            className="fa-brands fa-youtube yt"
+          ></Link>
+          <span>페이스북</span>
         </div>
       </div>
     </>

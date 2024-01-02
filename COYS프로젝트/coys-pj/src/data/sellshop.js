@@ -59,14 +59,14 @@ export const sellshopData = [
     isrc: "./images/shop/away01.jpg",
     tit: "Mens Stadium Tottenham Hotspur away Shirt",
     date: "2023/24",
-    price: "₩60,000",
+    price: "₩120,000",
     link: "/SELLSHOP",
   },
   {
     isrc: "./images/shop/away02.jpg",
     tit: "Mens Stadium Tottenham Hotspur away Shirt",
     date: "2023/24",
-    price: "₩60,000",
+    price: "₩82,500",
     link: "/SELLSHOP",
   },
   {
@@ -78,7 +78,7 @@ export const sellshopData = [
   },
   {
     isrc: "./images/shop/away04.jpg",
-    tit: "Mens Stadium Tottenham Hotspur away Shirt",
+    tit: "Son Stadium Tottenham Hotspur away Shirt",
     date: "2023/24",
     price: "₩60,000",
     link: "/SELLSHOP",
@@ -87,14 +87,14 @@ export const sellshopData = [
     isrc: "./images/shop/third01.jpg",
     tit: "Mens Stadium Tottenham Hotspur third Shirt",
     date: "2023/24",
-    price: "₩60,000",
+    price: "₩120,000",
     link: "/SELLSHOP",
   },
   {
     isrc: "./images/shop/third02.jpg",
     tit: "Women Stadium Tottenham Hotspur third Shirt",
     date: "2023/24",
-    price: "₩60,000",
+    price: "₩100,000",
     link: "/SELLSHOP",
   },
   {
@@ -106,7 +106,7 @@ export const sellshopData = [
   },
   {
     isrc: "./images/shop/third04.jpg",
-    tit: "Mens Stadium Tottenham Hotspur third Shirt",
+    tit: "Son Stadium Tottenham Hotspur third Shirt",
     date: "2023/24",
     price: "₩60,000",
     link: "/SELLSHOP",

@@ -27,10 +27,10 @@ export function Contect() {
 
     return () => {
       window.removeEventListener("scroll", conscrollFn);
-      console.log("난 소멸했어~!");
+      console.log("Contect.jsx 에서 소멸할 스크롤");
     }; ////////// 소멸자 return //////
 
-  }, []); /////// useEffect ///////////
+  },[]); /////// useEffect ///////////
 
 
   const eventList = () => {
