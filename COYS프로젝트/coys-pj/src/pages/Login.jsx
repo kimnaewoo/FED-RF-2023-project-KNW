@@ -20,7 +20,7 @@ export function Login() {
   const myCon = useContext(dcCon);
 
   useEffect(() => {
-    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" });
+    // $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" });
     // 자동스크롤 이벤트 설정하기 /////
     if (window.matchMedia("(max-width:375px)").matches) {
       // 미디어 쿼리에 따라 이벤트 핸들러 연결

@@ -50,20 +50,25 @@
 }
 .log{
   position: relative;
+  top: 90px;
 }
 .logout {
-  position: absolute;
+  /* position: absolute;
   top: 62%;
-  left: 30%;
+  left: 30%; */
+  display: block;
+  text-align: center;
   font-size: 1.65rem;
   line-height: 3;
   color: #fff;
   cursor: pointer;
 }
 .user {
-  position: absolute;
+  /* position: absolute;
   top: 60%;
-  left: 30%;
+  left: 30%; */
+  display: block;
+  text-align: center;
   font-size: 1.65rem;
   line-height: 4;
   color: #fff;
@@ -74,7 +79,8 @@
   color: #fff;
   width: 100%;
   height: 10%;
-  margin-left: 26%;
+  text-align: center;
+  /* margin-left: 26%; */
   flex-direction: column;
   justify-content: space-around;
 }

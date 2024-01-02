@@ -24,7 +24,7 @@ export const Sellshop = memo(({ logSts}) => {
   const selData3 = sellbanData;
 
   useEffect(() => {
-    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" });
+    // $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" });
     // 자동스크롤 이벤트 설정하기 /////
     // window.addEventListener("scroll", scrollFn);
     if (window.matchMedia("(max-width:375px)").matches) {

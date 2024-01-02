@@ -18,9 +18,9 @@ function temp() {
     menu.css({ backgroundColor: "#fff" });
     user.css({ color: "#fff" });
     sns.css({ color: "#fff" });
-    $("html,body").css({ overflow: "hidden" });
+    // $("html,body").css({ overflow: "hidden" });
   } else {
-    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+1px" }).animate({ scrollTop: "-1px" });
+    // $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+1px" }).animate({ scrollTop: "-1px" });
   }
 } // temp
 
@@ -52,7 +52,7 @@ export const Gnb = memo(({ logSts, logOut }) => {
           )}
           {logSts !== null && (
             <>
-              <h1 className="fa-solid fa-user-slash user logout" onClick={logOut}></h1>
+              <a href="#" className="fa-solid fa-user-slash user logout" onClick={logOut}></a>
             </>
           )}
         </div>
