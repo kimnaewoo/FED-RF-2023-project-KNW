@@ -21,7 +21,9 @@
   margin: -5% 0% 0% 5%;
 }
 #menu {
+  position: relative;
   display: flex;
+  top: 100px;
   width: 80%;
   height: 2%;
   flex-direction: column;
