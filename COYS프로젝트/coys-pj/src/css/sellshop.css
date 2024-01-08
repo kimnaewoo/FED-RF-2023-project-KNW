@@ -4,7 +4,7 @@
 }
 .selltop {
   position: relative;
-  width: 100vw;
+  width: 99.1vw;
   height: 600px;
   background: url(../../public/images/shop/sell_topban.jpg) no-repeat 50% 0%/100%;
 }
@@ -40,7 +40,7 @@
   right: 5%;
   font-size: 1.7rem;
 }
-.cart::after {
+/* .cart::after {
   position: absolute;
   content: "";
   display: block;
@@ -50,7 +50,7 @@
   top: -30%;
   left: 60%;
   border-radius: 50%;
-}
+} */
 
 .tit {
   font-family: "Bebas Neue", sans-serif;
@@ -159,7 +159,7 @@ p {
 @media screen and (max-width: 375px) {
   .selltop {
     width: 100vw;
-    height: 40vh;
+    height: 42vh;
     background: url(../../public/images/shop/sell_topban.jpg) no-repeat 50% 100%/100%;
   }
   .tit {
@@ -177,6 +177,9 @@ p {
     text-shadow: 1px 1px 1px #000;
     font-size: 0.7rem;
     font-weight: bold;
+  }
+  .gsbx{
+    display: none;
   }
   p {
     font-size: 1.5rem;

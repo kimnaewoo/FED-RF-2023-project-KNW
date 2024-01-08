@@ -121,3 +121,41 @@
     left: 5%;
 }
 }
+@media screen and (max-width: 768px){
+  #home-area {
+    padding-left: 0px;
+    height: 80vh;
+}
+.htit {
+  margin: 1% 0% 5% 35%;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Bebas Neue", sans-serif;
+  cursor: pointer;
+}
+.home {
+  position: relative;
+  display: flex;
+  margin-left: 10%;
+  width: 85vw;
+  height: 60vh;
+}
+.hpicture{
+  width: 100%;
+    height: 100%;
+}
+.hpicture img{
+  width: 100%;
+  height: 100%;
+}
+.h-ex {
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  width: 515px;
+  height: 300px;
+  background-color: rgb(17 24 54 / 55%);
+  color: #fff;
+  cursor: pointer;
+}
+}

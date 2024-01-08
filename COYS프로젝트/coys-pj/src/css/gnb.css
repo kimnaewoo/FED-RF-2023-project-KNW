@@ -12,10 +12,10 @@
   overflow: hidden;
   /* display: none; */
 }
-#gnb>a{
+#gnb > a {
   width: 80%;
 }
-#gnb>a img {
+#gnb > a img {
   width: 100%;
   height: 100%;
   margin: -5% 0% 0% 5%;
@@ -50,7 +50,7 @@
 #menu .bottom.on {
   transform: translateY(400%);
 }
-.log{
+.log {
   position: relative;
   top: 90px;
 }
@@ -127,8 +127,15 @@
     flex-direction: column;
     height: 100%;
     justify-content: space-evenly;
-    position: relative;
+    position: absolute;
     width: 10%;
+    top: 5%;
+    left: 50%;
+  }
+  .log {
+    position: relative;
+    top: -20px;
+    left: 50px;
   }
   #menu .top {
     position: absolute;
@@ -148,4 +155,24 @@
   #gnb .sns-menu {
     display: none;
   }
+}
+@media screen and (max-width: 768px) {
+  #gnb {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60px;
+    height: 100vh;
+    /* padding-left: 1%; */
+    border-right: 0.1px solid #9e9e9e78;
+    z-index: 999;
+    overflow: hidden;
+    /* display: none; */
+  }
+  .log {
+    position: relative;
+    top: 50px;
+  }
+  
 }

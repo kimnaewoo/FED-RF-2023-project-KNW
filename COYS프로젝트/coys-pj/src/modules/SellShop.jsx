@@ -15,7 +15,7 @@ import { Swipershop } from "../plugin/Swipershop";
 import { Link } from "react-router-dom";
 import { dcCon } from "./dcContext";
 
-export const Sellshop = memo(({ logSts}) => {
+export const Sellshop = memo(({ logSts }) => {
   // 컨텍스트 API 사용하기
   const myCon = useContext(dcCon);
   // 선택데이터
@@ -38,7 +38,7 @@ export const Sellshop = memo(({ logSts}) => {
       window.removeEventListener("scroll", ShopscrollFn);
       console.log("Sellshop.jsx 에서 소멸할 스크롤");
     }; ////////// 소멸자 return //////
-  },[]); /////// useEffect ///////////
+  }, []); /////// useEffect ///////////
 
   return (
     <>
@@ -75,16 +75,16 @@ export const Sellshop = memo(({ logSts}) => {
           {selData.map((v, i) => (
             <div key={i}>
               <div className="sell-imbx">
-                <a href="#">
+                <Link to="/itemarea">
                   <img src={v.isrc} alt={v.tit} />
-                </a>
+                </Link>
               </div>
               <div className="sell-titbx">
-                <a href="#">
+                <Link to="/itemarea">
                   <h3>{v.tit}</h3>
-                  <h2>{v.date}</h2>
-                  <h1>{v.price}</h1>
-                </a>
+                </Link>
+                <h2>{v.date}</h2>
+                <h1>{v.price}</h1>
               </div>
             </div>
           ))}
@@ -94,4 +94,4 @@ export const Sellshop = memo(({ logSts}) => {
       </div>
     </>
   );
-}) ////////////// Sellshop 컴포넌트 ///////////
+}); ////////////// Sellshop 컴포넌트 ///////////

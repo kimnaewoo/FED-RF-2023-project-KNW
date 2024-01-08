@@ -7,21 +7,20 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "./css/swiper.css";
+import "./css/swiperitem.css";
 
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 
-export function SwiperApp() {
+export function Swiperitem() {
   // 리스트 만들기 함수
   const makeList = (num) => {
     let temp = [];
     for (let x = 0; x < num; x++) {
       temp[x] = (
-        <SwiperSlide className="kitbox" key={x}>
-          <div className="kit">
-            <img src={"./images/shop/hk" + (x + 1) + ".jpg"} />
-            <p>　COYS</p>
+        <SwiperSlide className="itembox" key={x}>
+          <div className="item">
+            <img src={"./images/shop/swi" + (x + 1) + ".jpg"} />
           </div>
         </SwiperSlide>
       );
@@ -32,7 +31,7 @@ export function SwiperApp() {
     <>
       <Swiper
         slidesPerView={5}
-        spaceBetween={-200}
+        spaceBetween={-50}
         pagination={{
           clickable: true,
         }}
@@ -48,18 +47,14 @@ export function SwiperApp() {
             slidesPerView: 1,
             spaceBetween: 5,
           },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 50,
-          },
           1600:{
             slideActiveClass:6,
-            spaceBetween: -200,
+            spaceBetween: -50,
           }
         }}
-        id="kitbox"
+        id="itembox"
       >
-        {makeList(11)}
+        {makeList(8)}
       </Swiper>
     </>
   );

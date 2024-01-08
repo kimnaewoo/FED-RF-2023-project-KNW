@@ -212,3 +212,101 @@
     text-align: center;
 }
 }
+@media screen and (max-width: 768px){
+  #main-area {
+    position: relative;
+    background-color: #fff;
+    padding-left: 0px;
+}
+.n-tit {
+  padding-right: 0%;
+  margin-left: 5%;
+  font-size: 7rem;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(9, 10, 99);
+  font-family: "Bebas Neue", sans-serif;
+}
+.news-area {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 95vw;
+  padding: 0% 0% 2% 9.5%;
+}
+.news {
+  position: relative;
+  width: 310px;
+  height: 200px;
+  cursor: pointer;
+}
+.n5{
+  width: 200%;
+}
+.n1::before {
+  content: '"Son" 50 at the Stadium in 50 seconds';
+  display: block;
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #fff0;
+  z-index: 1;
+  text-align: center;
+}
+.n2::before {
+  content: "Ange on injuries to Maddison, van de Ven";
+  display: block;
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #fff0;
+  z-index: 1;
+  text-align: center;
+}
+.n3::before {
+  content: "Vicario: “Fans’ applause meant a lot to us”";
+  display: block;
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #fff0;
+  z-index: 1;
+  text-align: center;
+}
+.n4::before {
+  content: "Madison praises “Son Heung-min is world class.....”";
+  display: block;
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #fff0;
+  z-index: 1;
+  text-align: center;
+}
+.n5::before {
+  content: "Ange’s verdict: “It was an outstanding effort,the lads gave everything”";
+  display: block;
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #fff0;
+  z-index: 1;
+  text-align: center;
+}
+}

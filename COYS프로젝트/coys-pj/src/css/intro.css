@@ -112,4 +112,25 @@
     text-align: center;
   }
 }
+@media screen and (max-width: 768px) {
+  .cap-box {
+    position: relative;
+    width: 90%;
+    left: 0%;
+    top: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.msg {
+  position: absolute;
+  left: 13%;
+  width: 60%;
+  height: 10%;
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  /* display: none; */
+}
+}
 

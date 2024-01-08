@@ -184,3 +184,58 @@
 }
 
 }
+@media screen and (max-width: 768px){
+  #match-area {
+    background-color: #fff;
+    padding-left: 0px;
+    /* color: #fff; */
+    height: 110vh;
+}
+  #match-area h1 {
+    font-size: 7rem;
+    padding-left: 30%;
+    font-weight: bold;
+    /* color: #fff; */
+    font-family: "Bebas Neue", sans-serif;
+}
+#mc-area {
+  width: 800px;
+  height: 350px;
+  margin-left: 9.5%;
+}
+#mcbox {
+  display: flex;
+  padding-top: 1%;
+  width: 680px;
+  height: 350px;
+  gap: 0%;
+  justify-content: space-around;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+.ht {
+  position: relative;
+  display: flex;
+  gap: 5%;
+  width: 752px;
+  height: 400px;
+  padding-left: 9.5%;
+  cursor: pointer;
+  color: #fff;
+}
+.ht1 h4 {
+  position: absolute;
+  top: 75%;
+  width: 45%;
+  text-align: center;
+  font-size: 1.9rem;
+}
+.ht2 h4 {
+  position: absolute;
+  top: 75%;
+  text-align: center;
+  font-size: 1.8rem;
+}
+}

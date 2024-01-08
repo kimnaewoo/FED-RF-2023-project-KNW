@@ -49,5 +49,16 @@
     width: 100vw;
     z-index: 998;
 }
-  
+}
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 93vw;
+    padding: 0%;
+    height: 75vh;
+    font-size: 9.5rem;
+    font-weight: bold;
+    margin-top: 10%;
+}
 }

@@ -123,3 +123,47 @@
     display: none;
   }
 }
+@media screen and (max-width: 768px) {
+  #top-area video {
+    margin: 0% 0%;
+    width: 110vw;
+    height: 80%;
+    background-color: #000;
+    object-fit: contain;
+    margin-left: -6%;
+    filter: brightness(0.6);
+}
+  #top-area h1,
+  #top-area h2,
+  #top-area h4 {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100vw;
+    height: 12vh;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  #top-area h2 {
+    top: 73%;
+    line-height: 1;
+  }
+  #top-area h4 {
+    top: 83%;
+    font-size: 2.5rem;
+    height: 0px;
+    /* filter: brightness(0.85); */
+  }
+  .wheel {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 88%;
+    left: 48%;
+    color: #fff;
+    border: 1px solid #ffffff40;
+    border-radius: 50px;
+  }
+}

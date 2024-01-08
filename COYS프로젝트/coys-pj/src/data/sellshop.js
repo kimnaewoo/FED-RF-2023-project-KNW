@@ -5,6 +5,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩‌187,500",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/sell02.jpg",
@@ -12,6 +13,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩120,000",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/sell03.jpg",
@@ -19,6 +21,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩90,000",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/sell04.jpg",
@@ -26,6 +29,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩187,500",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/sell05.jpg",
@@ -33,6 +37,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩120,000",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/sell06.jpg",
@@ -40,6 +45,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩82,500",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/sell07.jpg",
@@ -47,6 +53,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩75,000",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/sell08.jpg",
@@ -54,6 +61,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩60,000",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/away01.jpg",
@@ -61,6 +69,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩120,000",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/away02.jpg",
@@ -68,6 +77,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩82,500",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/away03.jpg",
@@ -75,6 +85,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩60,000",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/away04.jpg",
@@ -82,6 +93,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩60,000",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/third01.jpg",
@@ -89,6 +101,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩120,000",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/third02.jpg",
@@ -96,6 +109,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩100,000",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/third03.jpg",
@@ -103,6 +117,7 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩60,000",
     link: "/SELLSHOP",
+    num: 189000,
   },
   {
     isrc: "./images/shop/third04.jpg",
@@ -110,5 +125,6 @@ export const sellshopData = [
     date: "2023/24",
     price: "₩60,000",
     link: "/SELLSHOP",
+    num: 189000,
   },
 ];

@@ -14,6 +14,7 @@ import { Contect } from "./modules/Contect";
 import { Main } from "./pages/Main";
 import { Login } from "./pages/Login";
 import { Member } from "./pages/Member";
+import { ItemArea } from "./pages/ItemArea";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="contect" element={<Contect />} />
           <Route path="login" element={<Login />} />
           <Route path="member" element={<Member />} />
+          <Route path="itemarea" element={<ItemArea />} />
         </Route>
       </Routes>
     </HashRouter>

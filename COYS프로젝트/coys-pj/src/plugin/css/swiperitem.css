@@ -1,13 +1,12 @@
-#kitbox2 {
+#itembox {
   margin-top: 5%;
   width: 90vw;
   height: 50vh;
-  position: absolute;
   overflow: hidden;
   margin-left: 6%;
 }
 
-.kitbox2 {
+.itembox {
   display: flex;
   flex-wrap: nowrap;
   gap: 1%;
@@ -16,7 +15,7 @@
   cursor: pointer;
 }
 
-.kit2 img {
+.item img {
   border-radius: 15px;
   width: 100%;
   height: 100%;
@@ -33,13 +32,13 @@
   text-align: justify; */
 }
 @media screen and (max-width: 375px) {
-  .kitbox2 p {
+  .itembox p {
     display: none;
   }
   .swiper-pagination {
     display: none;
   }
-  #kitbox2 {
+  #itembox {
     margin-top: 5%;
     width: 90vw;
     height: 50vh;
@@ -48,16 +47,16 @@
     /* top: 14%; */
     margin-left: 3%;
 }
-.kitbox2{
+.itembox{
   width: 250px;
   margin-right: 5px;
 }
-  .kit2 {
+  .item {
     width: 100%;
     height: 100%;
     cursor: pointer;
 }
-  .kit2 img {
+  .item img {
     border-radius: 25px;
     width: 100%;
     height: 80%;

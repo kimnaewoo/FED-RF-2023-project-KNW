@@ -93,3 +93,34 @@
     height: 80%;
 }
 }
+@media screen and (max-width: 768px) {
+  .kitbox p {
+    display: none;
+  }
+  .swiper-pagination {
+    display: none;
+  }
+  #kitbox {
+    margin-top: 5%;
+    width: 75vw;
+    height: 60vh;
+    position: absolute;
+    overflow: hidden;
+    /* top: 14%; */
+    margin-left: 5%;
+}
+.kitbox{
+  width: 250px;
+  margin-right: 5px;
+}
+  .kit {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+  .kit img {
+    border-radius: 25px;
+    width: 100%;
+    height: 80%;
+}
+}
