@@ -7,9 +7,12 @@ import { TopArea } from "../layout/TopArea";
 import { scrollFn } from "../func/jquery-windowscroll_evt";
 import { useEffect } from "react";
 
+import $ from "jquery";
+
 // 라우터 역할을 하는 MainArea 컴포넌트
 export function Main() {
   useEffect(() => {
+    $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" });
 
     if (window.matchMedia("(max-width:375px)").matches) {
       // 미디어 쿼리에 따라 이벤트 핸들러 연결
@@ -17,7 +20,6 @@ export function Main() {
     } else {
       // 자동스크롤 이벤트 설정하기 /////
       window.addEventListener("scroll", scrollFn);
-      // document.querySelector('body').style = "overflow-y:visible";
       console.log("메인스크롤설정");
     }
     return () => {
