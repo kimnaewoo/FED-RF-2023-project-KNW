@@ -123,7 +123,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 768px) {
+@media all and (min-width:768px) and (max-width:1024px) {
   #top-area video {
     margin: 0% 0%;
     width: 110vw;
@@ -154,7 +154,6 @@
     top: 83%;
     font-size: 2.5rem;
     height: 0px;
-    /* filter: brightness(0.85); */
   }
   .wheel {
     position: absolute;

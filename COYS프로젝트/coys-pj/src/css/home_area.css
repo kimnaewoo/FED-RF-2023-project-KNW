@@ -121,7 +121,7 @@
     left: 5%;
 }
 }
-@media screen and (max-width: 768px){
+@media all and (min-width:768px) and (max-width:1024px){
   #home-area {
     padding-left: 0px;
     height: 80vh;

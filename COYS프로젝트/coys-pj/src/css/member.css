@@ -50,7 +50,7 @@
   cursor: pointer;
 }
 .membx2 .sbtn:hover {
- color: #fff;
+  color: #fff;
 }
 .membx2 ul li:last-child {
   font-size: 1.4rem;
@@ -63,4 +63,59 @@
 }
 .membx2 ul li:last-child a:hover {
   color: #494848;
+}
+@media screen and (max-width: 375px) {
+  .membx2 {
+    width: 325px;
+    height: 650px;
+    padding: 0px;
+    border: 1px solid #555;
+    margin: 20% 0% 0% 0%;
+  }
+  .membx2 h2 {
+    text-align: start;
+    padding: 15px;
+    font-size: 2.2rem;
+  }
+  .membx2 li {
+    position: relative;
+    padding: 10px;
+  }
+  .membx2 input {
+    width: 100%;
+    height: 5vh;
+    font-size: 14px;
+    vertical-align: baseline;
+  }
+  .membx2 ul li:last-child {
+    font-size: 1.4rem;
+    text-align: start;
+  }
+  .membx2 .sbtn {
+    padding: 15px;
+    background-color: #111836;
+    font-size: 20px;
+    color: #3db7e4;
+    float: right;
+    margin-right: 35%;
+    cursor: pointer;
+  }
+}
+@media all and (min-width:768px) and (max-width:1024px) {
+  .membx2 {
+    width: 650px;
+    height: 750px;
+    padding: 15px;
+    border: 1px solid #555;
+    margin: 0% 0% 0% 9%;
+  }
+  .membx2 .sbtn {
+    padding: 15px;
+    background-color: #111836;
+    font-size: 20px;
+    color: #3db7e4;
+    float: right;
+    margin-right: 40%;
+    cursor: pointer;
+}
 }

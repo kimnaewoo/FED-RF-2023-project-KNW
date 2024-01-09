@@ -47,6 +47,10 @@ export function Swipershop() {
             slidesPerView: 1,
             spaceBetween: 5,
           },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 5,
+          },
           1600:{
             slideActiveClass:6,
             spaceBetween: -50,

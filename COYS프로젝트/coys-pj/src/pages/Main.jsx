@@ -14,7 +14,7 @@ export function Main() {
   useEffect(() => {
     $("html,body").css({ overflowY: "visible" }).animate({ scrollTop: "+=1px" });
 
-    if (window.matchMedia("(max-width:375px)").matches) {
+    if (window.matchMedia("(max-width:375px and min-width:376px)").matches) {
       // 미디어 쿼리에 따라 이벤트 핸들러 연결
       window.removeEventListener("scroll", scrollFn);
     } else {

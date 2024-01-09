@@ -162,7 +162,7 @@
     gap: 1%;
   }
 }
-@media screen and (max-width: 768px) {
+@media all and (min-width:768px) and (max-width:1024px) {
   .spon {
     margin: 3% 0% 0% 0%;
     width: 600px;

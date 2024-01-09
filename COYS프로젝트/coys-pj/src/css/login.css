@@ -103,59 +103,98 @@ input::placeholder {
   .memtit {
     margin-left: 0%;
     font-size: 3.9rem;
+  }
+  .outbx {
+    display: flex;
+    gap: 0%;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .membx {
+    padding-left: 0%;
+    width: 400px;
+    height: 230px;
+    margin-left: 0%;
+    border-right: none;
+  }
+  .membx h2 {
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+  }
+  .regbx {
+    margin-left: 0%;
+    width: 385px;
+    height: 200px;
+    padding: 15px;
+    text-align: center;
+  }
+  .regtit {
+    font-size: 2rem;
+  }
+  .rbtn {
+    margin-top: 5%;
+    color: #3db7e4;
+    font-size: 1rem;
+    font-weight: 500;
+    height: 40px;
+    padding: 2px 1em 0;
+    background-color: #111836;
+    text-decoration: none;
+    margin-left: 5%;
+  }
 }
-.outbx {
-  display: flex;
-  gap: 0%;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-.membx {
-  padding-left: 0%;
-  width: 400px;
-  height: 230px;
-  margin-left: 0%;
-  border-right: none;
-}
-.membx h2 {
-  text-align: center;
-  padding: 10px;
-  font-size: 2rem;
-}
-.regbx {
-  margin-left: 0%;
-  width: 385px;
-  height: 200px;
-  padding: 15px;
-  text-align: center;
-}
-.regtit {
-  font-size: 2rem;
-}
-.rbtn {
-  margin-top: 5%;
-  color: #3db7e4;
-  font-size: 1rem;
-  font-weight: 500;
-  height: 40px;
-  padding: 2px 1em 0;
-  background-color: #111836;
-  text-decoration: none;
-  margin-left: 5%;
-}
-}
-@media screen and (max-width: 768px) {
+@media all and (min-width:768px) and (max-width:1024px) {
+  .login {
+    background: url(../../public/images/login_ban2.png) no-repeat 55% 100%/75%;
+    font-family: "Bebas Neue", sans-serif;
+    height: 100vh;
+    /* padding-top: 5%; */
+  }
   .memtit {
     margin-left: 17%;
     font-size: 6rem;
-}
+  }
+  .outbx {
+    display: flex;
+    gap: 1%;
+    flex-direction: column;
+  }
 
-.membx {
-  padding-left: 0%;
-  width: 500px;
-  height: 400px;
-  margin-left: 0%;
-  border-right: 1px solid #555;
-}
+  .membx {
+    padding-left: 0%;
+    width: 500px;
+    height: 240px;
+    margin-left: 20%;
+    border-bottom: 1px solid #555;
+    border-right: none;
+  }
+  .membx li {
+    position: relative;
+    padding: 5px;
+  }
+  .regbx {
+    margin-left: 28%;
+    width: 500px;
+    height: 400px;
+    padding: 5px;
+  }
+  .regct {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+  }
+  .rbtn {
+    margin-top: 2%;
+    color: #3db7e4;
+    font-size: 1rem;
+    font-weight: 500;
+    height: 40px;
+    padding: 2px 1em 0;
+    background-color: #111836;
+    text-decoration: none;
+    margin-left: 28%;
+  }
 }

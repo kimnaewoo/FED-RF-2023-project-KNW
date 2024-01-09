@@ -93,7 +93,7 @@
     height: 80%;
 }
 }
-@media screen and (max-width: 768px) {
+@media all and (min-width:768px) and (max-width:1024px) {
   .kitbox p {
     display: none;
   }
