@@ -13,8 +13,8 @@ export const Mdata = {
       path: "/shop",
     },
     {
-      label: "CONTECT",
-      path: "/contect",
+      label: "CONTACT",
+      path: "/contact",
     },
   ],
 };

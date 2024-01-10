@@ -18,7 +18,7 @@ export function HomeArea() {
               total Spurs news coverage, visit NewsNow.co.uk, the UK's #1 football news aggregator.
             </h2>
             <div className="jump">
-              <Link to="/contect">contect us</Link>
+              <Link to="/contact">contact us</Link>
             </div>
           </div>
         </div>
